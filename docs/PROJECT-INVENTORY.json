@@ -29,6 +29,7 @@
     "docs/HOW-IT-WAS-BUILT.md",
     "docs/INPUT-REPLAYS.md",
     "docs/KNOWN-LIMITS.md",
+    "docs/LABELS.md",
     "docs/MELTY-STATUS.md",
     "docs/MIXED-ROOM-RESOURCES.md",
     "docs/MODS-YOU-CAN-MAKE-NOW.md",
@@ -84,12 +85,12 @@
     {
       "path": ".gitignore",
       "size": 775,
-      "sha256": "a25c25380e6027934dcdeb5c52135c0d14a754b7ff88b901bdfb3dcde8c992d5"
+      "sha256": "360f6214d038d58097bb5c3b375bfd678e1be66477567aef8c79a6f550c5bf93"
     },
     {
       "path": "AGENTS.md",
-      "size": 26475,
-      "sha256": "78b2787aadcf0fcc23df56811418f2273b121f5114cc69ffdc6a1898d8c226db"
+      "size": 26900,
+      "sha256": "9697979e7da428ad9cb4e58286a8b6e42ad1a2ac4de4117edb954056b85b062e"
     },
     {
       "path": "aria/__init__.py",
@@ -113,8 +114,8 @@
     },
     {
       "path": "aria/cli.py",
-      "size": 37425,
-      "sha256": "37c377776f66ae6abd54e34b967c9d96b945c5eee844120b142e037dc9941b4d"
+      "size": 37656,
+      "sha256": "9c01972118f0bd782c6e36a26fc93e838c40e943a54bc64ea2301e0328561adb"
     },
     {
       "path": "aria/compiler.py",
@@ -177,14 +178,19 @@
       "sha256": "005db08ebb897cc2e25f23d8a045454124c52ed268abb90026ed8c38eba35944"
     },
     {
+      "path": "aria/labels.py",
+      "size": 5232,
+      "sha256": "8c8b3237070b28a5eaa1184cfade47fba1649da8cd1357dbdb29b20dab120b82"
+    },
+    {
       "path": "aria/level.py",
       "size": 8335,
       "sha256": "95b80e4518924d3f093c002c1ae7115d3fbd82e1ae01ffbba10cae8646023b47"
     },
     {
       "path": "aria/projects.py",
-      "size": 9661,
-      "sha256": "47a02cf35d2596390a8a83ab1066d7e52f62feaffc23be956aef5f46e96c21d4"
+      "size": 9675,
+      "sha256": "facf09aa468ae6105af0b2e66cd1c0190f110928bab2f02b4f79a9723c4d7eb4"
     },
     {
       "path": "aria/rendering.py",
@@ -308,8 +314,8 @@
     },
     {
       "path": "docs/COMPLETION-ROADMAP.md",
-      "size": 23004,
-      "sha256": "6cca4e3a54842a8dd74017f16207803686b59665976c1d2bc68a576b8f0a9969"
+      "size": 23698,
+      "sha256": "77bac67a91800607fddcdb4d7a6e99adc0073df7f3a94e51f60997dabe4c980c"
     },
     {
       "path": "docs/CONNECTION-PLANNING.md",
@@ -395,6 +401,11 @@
       "path": "docs/KNOWN-LIMITS.md",
       "size": 12648,
       "sha256": "21196ef2d25fa5d6fdffa4d9059935622f4cf3fba91f6047b6fd80dcea04aa3e"
+    },
+    {
+      "path": "docs/LABELS.md",
+      "size": 1754,
+      "sha256": "3951951a1120bd4849831fbbc89a02842b5583a1d16e7ffa7d1a1ff12c504eaf"
     },
     {
       "path": "docs/MELTY-STATUS.md",
@@ -792,6 +803,11 @@
       "sha256": "b574e69ccfb6f861e8358fbd043a9cf9c76f0a109c7fc3e2b259fc4076480c10"
     },
     {
+      "path": "examples/label-workshop/mod.json",
+      "size": 261,
+      "sha256": "19aa1b505096433263fa92f656f0ecfd2fb5e71b468750750e35bb19f8479dac"
+    },
+    {
       "path": "examples/named-content-workshop/mod.json",
       "size": 983,
       "sha256": "5205712bcf95b2605d1e4b8394242182541c5a1bc2641b97c18adce70f7a13e9"
@@ -988,8 +1004,8 @@
     },
     {
       "path": "framework/capabilities.json",
-      "size": 6888,
-      "sha256": "b0828d07d3eb675fed5acdee9417cdaacbf0ff66ebf58dea24ec1dbe5d8eccb4"
+      "size": 6936,
+      "sha256": "6a58859f228a0394f7953976a7ac6c90c16c725a0f66ded18f922db7be26fad1"
     },
     {
       "path": "framework/enemies.json",
@@ -1003,8 +1019,8 @@
     },
     {
       "path": "framework/roadmap.json",
-      "size": 8458,
-      "sha256": "0b54acaa84b3a7040d92d4b9c1bf3d9ce22664c9dc096e8dca6f597dab32f588"
+      "size": 8486,
+      "sha256": "d225cb544228510a3d8e6352bef6ae3c834577e48d27a2f4b7b48395f2038498"
     },
     {
       "path": "framework/tables.json",
@@ -1018,8 +1034,8 @@
     },
     {
       "path": "handoffprompt.md",
-      "size": 24334,
-      "sha256": "e2fa86488998e5547f45acbcb837c6950e62fa11c51209c084ffb19e916f7e65"
+      "size": 24808,
+      "sha256": "2f8a5457166a3aaefaae38973cc326a3a95bcfce51ec9c98bdf6060358674bb5"
     },
     {
       "path": "LICENSE",
@@ -1063,8 +1079,8 @@
     },
     {
       "path": "README.md",
-      "size": 24673,
-      "sha256": "c86d82217c7ee552b3d513a7a945672b42383a6230b984b6831f7cf1f997613f"
+      "size": 24815,
+      "sha256": "e8267bcffa57ff6f677f946ce47456ca255a3bef7ee7031bbbdc9fe8b97af53d"
     },
     {
       "path": "scripts/aria_tool.py",
@@ -1094,7 +1110,7 @@
     {
       "path": "scripts/package_framework.py",
       "size": 3150,
-      "sha256": "4365dace45eb4ded27ff57a93c90e5bde5435012ae52952e27a89eb3ec94693e"
+      "sha256": "f9eebc9c74109797f373609f4d63c92c08627d18ba57cde3758075cd0ffcc923"
     },
     {
       "path": "scripts/preview_content.py",
@@ -1180,6 +1196,11 @@
       "path": "scripts/verify_geometry.py",
       "size": 13729,
       "sha256": "d72df55a1260dbf6e47119fe2a84e9d81ef276dcd0d2b2056a4c55f541cd45eb"
+    },
+    {
+      "path": "scripts/verify_labels.py",
+      "size": 3649,
+      "sha256": "f0f1deb6fb81d1a21b7d29ff8eb365ba6192f3e4f44c43ffcbda53aacf10887d"
     },
     {
       "path": "scripts/verify_projects.py",
@@ -1305,6 +1326,11 @@
       "path": "tests/test_input_routes.py",
       "size": 2288,
       "sha256": "e4f41ea196bcadc039632f7a6eee64ed9f60debca45ecb6419d2b78ae05a8cf3"
+    },
+    {
+      "path": "tests/test_labels.py",
+      "size": 4085,
+      "sha256": "ca063f09eb2fcfcd7b192004328b88db10ffd73004be3ed3051bb50b2b51db93"
     },
     {
       "path": "tests/test_level.py",
@@ -1512,7 +1538,7 @@
     "abilities",
     "framework"
   ],
-  "framework_version": "0.37.0-foundation",
+  "framework_version": "0.38.0-foundation",
   "rendering": {
     "passed": [
       "native graphics chunk loads match preview resource mapping",

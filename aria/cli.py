@@ -11,6 +11,7 @@ from .compiler import ensure_callback
 from .level import apply_level_edits,audit_room
 from .equipment import catalog,resolve,apply_equipment_edits
 from .enemies import catalog as enemy_catalog,resolve as resolve_enemy,apply_enemy_edits
+from .labels import apply_label_edits
 from .encounters import audit_encounters
 from .abilities import install_abilities
 from .content import install_content
@@ -49,7 +50,7 @@ def apply_manifest(rom, path, compile_requested=False):
 
 def apply_manifest_data(rom,mod,folder,compile_requested=False):
     """Apply an ordinary manifest using an explicit confined payload folder."""
-    allowed = {"schema_version", "id", "description", "table_edits", "patches", "blobs", "entity_lists", "door_lists", "frame_hook", "room_edits", "equipment_edits", "enemy_edits", "enemy_encounters", "abilities", "content", "resource_edits", "geometry_edits", "room_assets", "sprite_assets"}
+    allowed = {"schema_version", "id", "description", "table_edits", "patches", "blobs", "entity_lists", "door_lists", "frame_hook", "room_edits", "equipment_edits", "enemy_edits", "enemy_encounters", "abilities", "content", "resource_edits", "geometry_edits", "room_assets", "sprite_assets", "label_edits"}
     if set(mod)-allowed:
         raise PatchError("Unknown mod properties: "+", ".join(sorted(set(mod)-allowed)))
     if mod.get("schema_version") != 1 or not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,63}", mod.get("id", "")):
@@ -86,6 +87,8 @@ def apply_manifest_data(rom,mod,folder,compile_requested=False):
         rom.enemy_report=apply_enemy_edits(rom,mod["enemy_edits"])
     if "equipment_edits" in mod:
         rom.equipment_report=apply_equipment_edits(rom,mod["equipment_edits"])
+    if "label_edits" in mod:
+        rom.label_report=apply_label_edits(rom,mod["label_edits"])
     for entry in mod.get("entity_lists", []):
         sector,index = number(entry["sector"]),number(entry["room"])
         rows = [Entity(**{k:number(v) for k,v in row.items()}) for row in entry["entities"]]
@@ -488,6 +491,7 @@ def main(argv=None):
         if hasattr(rom,"level_report"):report["room_audits"]=rom.level_report
         if hasattr(rom,"equipment_report"):report["equipment_edits"]=rom.equipment_report
         if hasattr(rom,"enemy_report"):report["enemy_edits"]=rom.enemy_report
+        if hasattr(rom,"label_report"):report["label_edits"]=rom.label_report
         if hasattr(rom,"ability_report"):report["abilities"]=rom.ability_report
         if hasattr(rom,"content_report"):report["content"]=rom.content_report
         if hasattr(rom,"resource_report"):report["resource_edits"]=rom.resource_report

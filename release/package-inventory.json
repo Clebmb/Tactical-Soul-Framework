@@ -1,11 +1,11 @@
 {
-  "fileName": "Tactical-Soul-Framework-0.37.0.zip",
-  "size": 31018337,
-  "sha256": "5cb8bc748f051999399b75399e3aa9629bce529d64d65fd17dd48d9f0c7be025",
+  "fileName": "Tactical-Soul-Framework-0.38.0.zip",
+  "size": 31024350,
+  "sha256": "2296c49063f44d8716cf834c512e63c42d861d8597969b8dc493446216709bb6",
   "entries": [
     {
       "path": "TacticalSoul/AGENTS.md",
-      "size": 26475
+      "size": 26900
     },
     {
       "path": "TacticalSoul/aria/__init__.py",
@@ -25,7 +25,7 @@
     },
     {
       "path": "TacticalSoul/aria/cli.py",
-      "size": 37425
+      "size": 37656
     },
     {
       "path": "TacticalSoul/aria/compiler.py",
@@ -76,12 +76,16 @@
       "size": 3863
     },
     {
+      "path": "TacticalSoul/aria/labels.py",
+      "size": 5232
+    },
+    {
       "path": "TacticalSoul/aria/level.py",
       "size": 8335
     },
     {
       "path": "TacticalSoul/aria/projects.py",
-      "size": 9661
+      "size": 9675
     },
     {
       "path": "TacticalSoul/aria/rendering.py",
@@ -181,7 +185,7 @@
     },
     {
       "path": "TacticalSoul/docs/COMPLETION-ROADMAP.md",
-      "size": 23004
+      "size": 23698
     },
     {
       "path": "TacticalSoul/docs/CONNECTION-PLANNING.md",
@@ -252,6 +256,10 @@
       "size": 12648
     },
     {
+      "path": "TacticalSoul/docs/LABELS.md",
+      "size": 1754
+    },
+    {
       "path": "TacticalSoul/docs/MELTY-STATUS.md",
       "size": 1585
     },
@@ -281,7 +289,7 @@
     },
     {
       "path": "TacticalSoul/docs/PROJECT-INVENTORY.json",
-      "size": 113443
+      "size": 114264
     },
     {
       "path": "TacticalSoul/docs/REA-WORKFLOW.md",
@@ -572,6 +580,10 @@
       "size": 631
     },
     {
+      "path": "TacticalSoul/examples/label-workshop/mod.json",
+      "size": 261
+    },
+    {
       "path": "TacticalSoul/examples/named-content-workshop/mod.json",
       "size": 983
     },
@@ -729,7 +741,7 @@
     },
     {
       "path": "TacticalSoul/framework/capabilities.json",
-      "size": 6888
+      "size": 6936
     },
     {
       "path": "TacticalSoul/framework/enemies.json",
@@ -741,7 +753,7 @@
     },
     {
       "path": "TacticalSoul/framework/roadmap.json",
-      "size": 8458
+      "size": 8486
     },
     {
       "path": "TacticalSoul/framework/tables.json",
@@ -753,7 +765,7 @@
     },
     {
       "path": "TacticalSoul/handoffprompt.md",
-      "size": 24334
+      "size": 24808
     },
     {
       "path": "TacticalSoul/LICENSE",
@@ -789,7 +801,7 @@
     },
     {
       "path": "TacticalSoul/README.md",
-      "size": 24673
+      "size": 24815
     },
     {
       "path": "TacticalSoul/runtime/emulator/CHANGES.txt",
@@ -1206,6 +1218,10 @@
     {
       "path": "TacticalSoul/tests/test_input_routes.py",
       "size": 2288
+    },
+    {
+      "path": "TacticalSoul/tests/test_labels.py",
+      "size": 4085
     },
     {
       "path": "TacticalSoul/tests/test_level.py",

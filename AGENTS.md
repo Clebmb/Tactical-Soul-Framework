@@ -174,6 +174,15 @@ See [Sprite inspection](docs/SPRITES.md) for `aria/sprites.py`, registered commo
 
 ## v0.25 original native sprite artwork
 
+## v0.38 custom item and enemy names
+
+`aria/labels.py` adds checked in-place `label_edits` (manifest +
+project modules, 1 ledger entry each) with a runnable
+`examples/label-workshop`. Native twin-run proof: Knife→Fangs renders
+in menus (12/26 frames, tight heat, deterministic control). 268 tests
+pass. Records 4.0→4.3. Completion: 32% (32.0/100). Next:
+campaign/event slices, audio binding or soul grant APIs.
+
 ## v0.37 viewer contracts with room-viewer wiring
 
 `aria/viewer.py` is the headless data backend for a future viewer:

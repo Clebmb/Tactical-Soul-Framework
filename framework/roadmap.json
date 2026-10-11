@@ -19,10 +19,10 @@
     {
       "id": "records",
       "weight": 10,
-      "earned_estimate": 4,
+      "earned_estimate": 4.3,
       "title": "Equipment, enemies and game data",
       "checklist": [
-        "Named equipment/enemy records and checked balance edits: implemented",
+        "Named equipment/enemy records, checked balance edits and in-place label renames with native menu render proof: implemented",
         "Arbitrary equipment graphics, animation and effects: pending",
         "Enemy sprite resource provisioning and custom AI: pending",
         "Items, souls, shops, descriptions and drop systems: partial",
@@ -125,7 +125,7 @@
     }
   ],
   "estimated_complete_percent": 32,
-  "next_milestone": "Deeper native authoring coverage (campaign/event compiler slices, audio binding, grant APIs); other rooms/actors through the attribution library; other rooms/actors through the snapshot-anchored attribution library, then a writer only with a tracer-named consumer set. Subtype-to-row formula, loader identity and Arachne-room live proof follow. Player streaming, new animations and general OBJ allocation remain separate.",
+  "next_milestone": "Campaign/event compiler slices, audio binding or soul grant APIs; other rooms/actors through the attribution library; other rooms/actors through the snapshot-anchored attribution library, then a writer only with a tracer-named consumer set. Subtype-to-row formula, loader identity and Arachne-room live proof follow. Player streaming, new animations and general OBJ allocation remain separate.",
   "completion_gates": [
     "Original-content three-room campaign passes new-game/traversal/return/death/save/fresh-continue",
     "Custom graphics, animation, audio and mechanics load through verified native paths",

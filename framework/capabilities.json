@@ -1,5 +1,5 @@
 {
-  "version": "0.37.0-foundation",
+  "version": "0.38.0-foundation",
   "target": "aos-usa-r0",
   "implemented": [
     "exact_rom_verification",
@@ -105,7 +105,8 @@
     "editor_authored_change_diffs_and_manifest_io",
     "editor_document_clean_rebuild_application",
     "editor_document_preview_wiring",
-    "viewer_room_view_model_and_document_wiring"
+    "viewer_room_view_model_and_document_wiring",
+    "checked_native_item_enemy_label_renames"
   ],
   "extension_points_not_implemented": [
     "general_level_geometry_and_collision_editor",

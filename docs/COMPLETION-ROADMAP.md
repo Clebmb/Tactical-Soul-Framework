@@ -120,6 +120,19 @@ Registered common, Julius and background-bats frame/hitbox/animation inspection 
 Registered raw/LZ 4bpp page/palette resolution and static sprite-frame rendering now cover all 216 common/Julius/background-bat frames. Pixel tests cover packed 8x8 source addressing, parts/flips/transparency and bounds; private contact sheets were visually reviewed. 222 tests pass. Graphics maturity rises from 3.9 to 4.4; total is 29.1/100, still rounded to 29%. Native sprite pixel comparisons, writes, ownership and animation lifecycle remain pending. See [sprite guide](SPRITES.md).
 
 
+### v0.38: custom item and enemy names
+
+`aria/labels.py` renames native item/enemy labels through checked
+in-place edits (ASCII, fits original length, space-padded, terminator
+preserved, one ledger entry, whole batch validated first). `label_edits`
+works in manifests and `tsf-project` modules; `examples/label-workshop`
+is runnable. Natively proven: a Knife→Fangs build (exactly 5 changed
+bytes) twin-diffed over a 26-snapshot menu tour — deterministic control,
+12 frames differ in tight menu-text cells. See [labels](LABELS.md).
+Records maturity rises from 4.0 to 4.3; total is 32.0/100, still rounded
+to 32%. Next: campaign/event slices, audio binding or soul grant APIs.
+
+
 ### v0.37: viewer contracts with room-viewer wiring
 
 `aria/viewer.py` defines the headless data backend a future graphical

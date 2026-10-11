@@ -16,17 +16,17 @@ You are Muse Spark 1.3 taking over a real, existing Aria of Sorrow ROM-modding f
 ## Latest status — refresh at the end of each turn
 
 <!-- STATUS START -->
-Updated (UTC): 2026-10-11T11:30:00+00:00
+Updated (UTC): 2026-10-11T12:30:00+00:00
 
-Current framework: **0.37.0-foundation**. Estimated completion: **32%** (31.7/100 weighted maturity points). Public git live: **https://github.com/Clebmb/Tactical-Soul-Framework**.
+Current framework: **0.38.0-foundation**. Estimated completion: **32%** (32.0/100 weighted maturity points). Public git live: **https://github.com/Clebmb/Tactical-Soul-Framework**.
 
-**Completed this turn:** v0.37 viewer contracts (`aria/viewer.py`, `docs/VIEWER.md`): pure viewport math plus room view models (visible cells, entity/door markers, cropped layer pixels, audit notes) and document views proven over two clean builds — including a real-manifest document view of the geometry workshop on the hallway. 5 new tests (3 pure-math always-run, 2 host-gated native). README status refreshed per standing rule. No version-bump-exempt work; sprite evidence unchanged.
+**Completed this turn:** v0.38 custom item/enemy names (`aria/labels.py`, `docs/LABELS.md`, `examples/label-workshop`): named resolution plus checked in-place renames (ASCII, fits original length, space-padded, terminator preserved, preimage ledger, batch-validated, duplicate-claim rejection). `label_edits` works in manifests and project modules. Natively proven by `scripts/verify_labels.py`: Knife→Fangs build changes exactly 5 ROM bytes (1 ledger entry); a 26-snapshot menu tour twin-diffed original vs renamed shows deterministic control and 12 differing frames in tight menu-text cells. An early address/offset mixup and an original-vs-patched readback bug were found and fixed for cause during testing. README status + build-today list refreshed per standing rule.
 
-**Verification actually run:** 265 unit tests pass with private host (260 existing + 5 new; exit 0, includes 2 native viewer tests). Original ROM unchanged.
+**Verification actually run:** 268 unit tests pass with private host (265 existing + 3 new label tests; exit 0). Native label proof re-ran in background with exit status preserved (EXIT:0, deterministic control, 12/26 localized diffs). Example mod builds clean (patch_count 1, SHA matches proof build). Original ROM unchanged.
 
-**Next concrete work:** Deeper native authoring coverage (campaign/event compiler slices, audio binding, grant APIs); other rooms/actors through the attribution library (writer only with a tracer-named consumer set).
+**Next concrete work:** Campaign/event compiler slices, audio binding or soul grant APIs; other rooms/actors through the attribution library (writer only with a tracer-named consumer set).
 
-**Remaining limits / unfinished work:** 32% (31.7/100 weighted). Widget frontend implementation pending (deferred); sprite rendered-consumer proof withdrawn; REA GBA unsupported; GUI deferred.
+**Remaining limits / unfinished work:** 32% (32.0/100 weighted). Longer-than-original names need a string allocator (pending); widget frontend pending (deferred); sprite rendered-consumer proof withdrawn; REA GBA unsupported; GUI deferred.
 
 **Git publication (user request, no version bump):** hardened `.gitignore` (ROMs/saves, build/, local/, tools/, bundled runtimes, all but latest release zip, venvs, `.freebuff/`, OS leftovers); `assets/tsf_banner.png` moved from root and shown at README top; README gained a self-sourced-files table (`CastlevaniaAoS.gba` + hash, libretro DLL, Zig, Pillow Python, runtimes from release zip) and a "What's to come" section; pruned 35 old release zips leaving 0.36.0 (latest by mtime); `git init`, committed 265 files, pushed `main` to public Clebmb/Tactical-Soul-Framework. Verified via dry-run and `git ls-files`: no .gba/.sav, no local/build/tools/runtime-binaries in git. Kept tracked deliberately: handoffprompt.md/AGENTS.md (release process and contributor instructions depend on them), chirp.wav and runtime.bin files (original MIT content/code), latest release zip (runnable distribution with runtimes).
 

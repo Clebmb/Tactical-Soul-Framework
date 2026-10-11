@@ -2,7 +2,7 @@
 
 ![Tactical Soul Framework banner](assets/tsf_banner.png)
 
-**Status: v0.37.0-foundation — about 32% complete (31.7/100 on the tracked roadmap).**
+**Status: v0.38.0-foundation — about 32% complete (32.0/100 on the tracked roadmap).**
 This is a working modding foundation for Castlevania: Aria of Sorrow (GBA, USA
 revision 0), not a finished editor. The goal is broad modding support; what's here
 now is a solid core of records, checked patches, allocation, room/entity/door
@@ -25,6 +25,8 @@ still ahead.
   indexed pixels (`examples/sky-invaders`).
 - **Original item icons** — draw new icons on registered pages
   (`examples/named-content-workshop`).
+- **Custom names** — rename items and enemies within their original byte
+  length, proven to render in menus (`examples/label-workshop`).
 
 [MODS-YOU-CAN-MAKE-NOW.md](docs/MODS-YOU-CAN-MAKE-NOW.md) sketches five of these
 ideas with their scope and limits. Every build writes a separate ROM; your

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "label-workshop",
+  "description": "Rename Knife to Fangs. Same byte length, verified menu render.",
+  "label_edits": [
+    {
+      "kind": "item",
+      "item": "Knife",
+      "expect": "Knife",
+      "to": "Fangs"
+    }
+  ]
+}

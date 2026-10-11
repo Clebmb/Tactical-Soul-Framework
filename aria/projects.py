@@ -8,7 +8,7 @@ from pathlib import Path
 from .core import PatchError,number
 
 LISTS={'geometry_edits','room_assets','sprite_assets','enemy_encounters','enemy_edits',
-       'equipment_edits','table_edits','resource_edits'}
+       'equipment_edits','table_edits','resource_edits','label_edits'}
 META={'schema_version','id','description'}
 
 def _json(path):
