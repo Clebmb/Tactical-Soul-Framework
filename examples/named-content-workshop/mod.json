@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "named-content-workshop",
+  "description": "Named native bindings replace all three item-icon pages with original checker artwork.",
+  "content": [
+    {
+      "id": "page-0",
+      "format": "tiles4",
+      "source": "page-0.json",
+      "target": "item-icons-0",
+      "provenance": "Original procedural checker artwork, MIT."
+    },
+    {
+      "id": "page-1",
+      "format": "tiles4",
+      "source": "page-1.json",
+      "target": "item-icons-1",
+      "provenance": "Original procedural checker artwork, MIT."
+    },
+    {
+      "id": "page-2",
+      "format": "tiles4",
+      "source": "page-2.json",
+      "target": "item-icons-2",
+      "provenance": "Original procedural checker artwork, MIT."
+    },
+    {
+      "id": "palette",
+      "format": "palette_rgb8",
+      "source": "palette.json",
+      "target": "item-icon-palettes",
+      "provenance": "Original bright checker palette, MIT."
+    }
+  ]
+}

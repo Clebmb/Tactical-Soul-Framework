@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "focus-heal",
+  "description": "Single-feature native SDK example. See docs/ABILITIES.md.",
+  "abilities": {
+    "features": [
+      {
+        "id": "focus_heal"
+      }
+    ]
+  }
+}

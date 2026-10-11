@@ -1,0 +1,1268 @@
+{
+  "fileName": "Tactical-Soul-Framework-0.36.0.zip",
+  "size": 31011453,
+  "sha256": "af17998fb3e094e5438142c26298695816c84948750ca6433ab2297265d5b2d9",
+  "entries": [
+    {
+      "path": "TacticalSoul/AGENTS.md",
+      "size": 26015
+    },
+    {
+      "path": "TacticalSoul/aria/__init__.py",
+      "size": 130
+    },
+    {
+      "path": "TacticalSoul/aria/__main__.py",
+      "size": 49
+    },
+    {
+      "path": "TacticalSoul/aria/abilities.py",
+      "size": 4954
+    },
+    {
+      "path": "TacticalSoul/aria/backgrounds.py",
+      "size": 8232
+    },
+    {
+      "path": "TacticalSoul/aria/cli.py",
+      "size": 37425
+    },
+    {
+      "path": "TacticalSoul/aria/compiler.py",
+      "size": 2467
+    },
+    {
+      "path": "TacticalSoul/aria/compression.py",
+      "size": 2428
+    },
+    {
+      "path": "TacticalSoul/aria/connection_plans.py",
+      "size": 2743
+    },
+    {
+      "path": "TacticalSoul/aria/content.py",
+      "size": 5852
+    },
+    {
+      "path": "TacticalSoul/aria/core.py",
+      "size": 5130
+    },
+    {
+      "path": "TacticalSoul/aria/editor_docs.py",
+      "size": 12974
+    },
+    {
+      "path": "TacticalSoul/aria/encounters.py",
+      "size": 4414
+    },
+    {
+      "path": "TacticalSoul/aria/enemies.py",
+      "size": 6268
+    },
+    {
+      "path": "TacticalSoul/aria/equipment.py",
+      "size": 6156
+    },
+    {
+      "path": "TacticalSoul/aria/geometry.py",
+      "size": 9317
+    },
+    {
+      "path": "TacticalSoul/aria/hooks.py",
+      "size": 1480
+    },
+    {
+      "path": "TacticalSoul/aria/input_routes.py",
+      "size": 3863
+    },
+    {
+      "path": "TacticalSoul/aria/level.py",
+      "size": 8335
+    },
+    {
+      "path": "TacticalSoul/aria/projects.py",
+      "size": 9661
+    },
+    {
+      "path": "TacticalSoul/aria/rendering.py",
+      "size": 9219
+    },
+    {
+      "path": "TacticalSoul/aria/resources.py",
+      "size": 7601
+    },
+    {
+      "path": "TacticalSoul/aria/room_assets.py",
+      "size": 5257
+    },
+    {
+      "path": "TacticalSoul/aria/room_catalog.py",
+      "size": 5579
+    },
+    {
+      "path": "TacticalSoul/aria/room_resources.py",
+      "size": 8653
+    },
+    {
+      "path": "TacticalSoul/aria/room_states.py",
+      "size": 4118
+    },
+    {
+      "path": "TacticalSoul/aria/rooms.py",
+      "size": 5253
+    },
+    {
+      "path": "TacticalSoul/aria/sprite_assets.py",
+      "size": 7498
+    },
+    {
+      "path": "TacticalSoul/aria/sprite_attribution.py",
+      "size": 3732
+    },
+    {
+      "path": "TacticalSoul/aria/sprite_rendering.py",
+      "size": 7754
+    },
+    {
+      "path": "TacticalSoul/aria/sprites.py",
+      "size": 5008
+    },
+    {
+      "path": "TacticalSoul/aria/tables.py",
+      "size": 1480
+    },
+    {
+      "path": "TacticalSoul/aria/terrain.py",
+      "size": 2014
+    },
+    {
+      "path": "TacticalSoul/aria/terrain_plans.py",
+      "size": 3117
+    },
+    {
+      "path": "TacticalSoul/aria/terrain_support.py",
+      "size": 4465
+    },
+    {
+      "path": "TacticalSoul/aria/text.py",
+      "size": 697
+    },
+    {
+      "path": "TacticalSoul/aria/world_graph.py",
+      "size": 4431
+    },
+    {
+      "path": "TacticalSoul/BUILD.md",
+      "size": 2235
+    },
+    {
+      "path": "TacticalSoul/docs/ABILITIES.md",
+      "size": 15725
+    },
+    {
+      "path": "TacticalSoul/docs/BACKGROUND-DISCOVERY.md",
+      "size": 4524
+    },
+    {
+      "path": "TacticalSoul/docs/BACKGROUND-RENDERING.md",
+      "size": 4775
+    },
+    {
+      "path": "TacticalSoul/docs/BYTE-INDEX-BACKGROUNDS.md",
+      "size": 4562
+    },
+    {
+      "path": "TacticalSoul/docs/COMPATIBILITY.md",
+      "size": 531
+    },
+    {
+      "path": "TacticalSoul/docs/COMPLETION-ROADMAP.md",
+      "size": 22385
+    },
+    {
+      "path": "TacticalSoul/docs/CONNECTION-PLANNING.md",
+      "size": 6221
+    },
+    {
+      "path": "TacticalSoul/docs/CUSTOM-CONTENT.md",
+      "size": 11968
+    },
+    {
+      "path": "TacticalSoul/docs/CUSTOM-TERRAIN.md",
+      "size": 6782
+    },
+    {
+      "path": "TacticalSoul/docs/DATA-CONTRACTS.md",
+      "size": 8225
+    },
+    {
+      "path": "TacticalSoul/docs/DOMINANCE.md",
+      "size": 233
+    },
+    {
+      "path": "TacticalSoul/docs/EDITOR-DOCUMENTS.md",
+      "size": 4314
+    },
+    {
+      "path": "TacticalSoul/docs/ENEMIES.md",
+      "size": 13707
+    },
+    {
+      "path": "TacticalSoul/docs/ENEMY-BINDING.md",
+      "size": 15901
+    },
+    {
+      "path": "TacticalSoul/docs/EQUIPMENT.md",
+      "size": 10083
+    },
+    {
+      "path": "TacticalSoul/docs/EXTENDING.md",
+      "size": 5244
+    },
+    {
+      "path": "TacticalSoul/docs/FILE-GUIDE.md",
+      "size": 23170
+    },
+    {
+      "path": "TacticalSoul/docs/FOLDER-SPLIT.md",
+      "size": 1169
+    },
+    {
+      "path": "TacticalSoul/docs/FRAMEWORK-ROADMAP.md",
+      "size": 10363
+    },
+    {
+      "path": "TacticalSoul/docs/GUI-EDITOR-ROADMAP.md",
+      "size": 7294
+    },
+    {
+      "path": "TacticalSoul/docs/HOW-IT-WAS-BUILT.md",
+      "size": 12091
+    },
+    {
+      "path": "TacticalSoul/docs/INPUT-REPLAYS.md",
+      "size": 8349
+    },
+    {
+      "path": "TacticalSoul/docs/KNOWN-LIMITS.md",
+      "size": 12648
+    },
+    {
+      "path": "TacticalSoul/docs/MELTY-STATUS.md",
+      "size": 1585
+    },
+    {
+      "path": "TacticalSoul/docs/MIXED-ROOM-RESOURCES.md",
+      "size": 3479
+    },
+    {
+      "path": "TacticalSoul/docs/MODS-YOU-CAN-MAKE-NOW.md",
+      "size": 5806
+    },
+    {
+      "path": "TacticalSoul/docs/MULTIPLAYER-FEASIBILITY.md",
+      "size": 5252
+    },
+    {
+      "path": "TacticalSoul/docs/NATIVE-CONNECTION-TESTING.md",
+      "size": 5494
+    },
+    {
+      "path": "TacticalSoul/docs/NATIVE-INTEGRATION.md",
+      "size": 5021
+    },
+    {
+      "path": "TacticalSoul/docs/PROJECT-COMPOSITION.md",
+      "size": 9372
+    },
+    {
+      "path": "TacticalSoul/docs/PROJECT-INVENTORY.json",
+      "size": 112955
+    },
+    {
+      "path": "TacticalSoul/docs/REA-WORKFLOW.md",
+      "size": 4252
+    },
+    {
+      "path": "TacticalSoul/docs/RENAMING.md",
+      "size": 1826
+    },
+    {
+      "path": "TacticalSoul/docs/RESOURCE-AUTHORING.md",
+      "size": 13202
+    },
+    {
+      "path": "TacticalSoul/docs/ROM-AND-RAM.md",
+      "size": 5814
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-ASSETS.md",
+      "size": 10973
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-CATALOG.md",
+      "size": 11483
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-DESIGN.md",
+      "size": 8832
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-GEOMETRY.md",
+      "size": 13574
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-PREVIEWS.md",
+      "size": 12185
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-RESOURCE-AUDIT.md",
+      "size": 10412
+    },
+    {
+      "path": "TacticalSoul/docs/ROOM-STATES.md",
+      "size": 4185
+    },
+    {
+      "path": "TacticalSoul/docs/SPRITE-AUTHORING.md",
+      "size": 10079
+    },
+    {
+      "path": "TacticalSoul/docs/SPRITES.md",
+      "size": 9966
+    },
+    {
+      "path": "TacticalSoul/docs/START-HERE.md",
+      "size": 19131
+    },
+    {
+      "path": "TacticalSoul/docs/TACTICAL-SOUL.md",
+      "size": 6856
+    },
+    {
+      "path": "TacticalSoul/docs/TERRAIN-PAINTING.md",
+      "size": 7376
+    },
+    {
+      "path": "TacticalSoul/docs/TERRAIN-SUPPORT.md",
+      "size": 5581
+    },
+    {
+      "path": "TacticalSoul/docs/TESTING.md",
+      "size": 20239
+    },
+    {
+      "path": "TacticalSoul/docs/THREE-ROOM-ART.md",
+      "size": 5931
+    },
+    {
+      "path": "TacticalSoul/docs/TILEMAP-MEMORY.md",
+      "size": 2249
+    },
+    {
+      "path": "TacticalSoul/docs/TOOLS.md",
+      "size": 3997
+    },
+    {
+      "path": "TacticalSoul/docs/TOTAL-CONVERSIONS.md",
+      "size": 13513
+    },
+    {
+      "path": "TacticalSoul/docs/TWO-ROOM-ART.md",
+      "size": 4473
+    },
+    {
+      "path": "TacticalSoul/docs/VERIFICATION.md",
+      "size": 1826
+    },
+    {
+      "path": "TacticalSoul/docs/WORLD-GRAPH.md",
+      "size": 4503
+    },
+    {
+      "path": "TacticalSoul/Dominance.cmd",
+      "size": 66
+    },
+    {
+      "path": "TacticalSoul/examples/ability-workshop/mod.json",
+      "size": 450
+    },
+    {
+      "path": "TacticalSoul/examples/ability-workshop/README.md",
+      "size": 858
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/art.json",
+      "size": 1784
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/assets/gallery-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/assets/gallery-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/assets/neon-bricks.json",
+      "size": 12327
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/assets/neon-palette.json",
+      "size": 190
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/assets/save-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/assets/save-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/bridge-left.json",
+      "size": 1492
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/bridge-right.json",
+      "size": 1494
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/routes.json",
+      "size": 1786
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/modules/showcase-terrain.json",
+      "size": 3291
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/project.json",
+      "size": 344
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-project/README.md",
+      "size": 1190
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/gallery-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/gallery-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/mod.json",
+      "size": 9471
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/neon-bricks.json",
+      "size": 12327
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/neon-palette.json",
+      "size": 190
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/README.md",
+      "size": 1408
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/save-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/save-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/examples/bridge-route/terrain-plan.json",
+      "size": 519
+    },
+    {
+      "path": "TacticalSoul/examples/content-workshop/chirp.wav",
+      "size": 2092
+    },
+    {
+      "path": "TacticalSoul/examples/content-workshop/colors.json",
+      "size": 1771
+    },
+    {
+      "path": "TacticalSoul/examples/content-workshop/diamonds.json",
+      "size": 51453
+    },
+    {
+      "path": "TacticalSoul/examples/content-workshop/mod.json",
+      "size": 1414
+    },
+    {
+      "path": "TacticalSoul/examples/content-workshop/README.md",
+      "size": 731
+    },
+    {
+      "path": "TacticalSoul/examples/custom-terrain-workshop/mod.json",
+      "size": 1776
+    },
+    {
+      "path": "TacticalSoul/examples/custom-terrain-workshop/README.md",
+      "size": 889
+    },
+    {
+      "path": "TacticalSoul/examples/enemy-workshop/mod.json",
+      "size": 2057
+    },
+    {
+      "path": "TacticalSoul/examples/enemy-workshop/README.md",
+      "size": 989
+    },
+    {
+      "path": "TacticalSoul/examples/equipment-workshop/mod.json",
+      "size": 1151
+    },
+    {
+      "path": "TacticalSoul/examples/equipment-workshop/README.md",
+      "size": 1000
+    },
+    {
+      "path": "TacticalSoul/examples/focus-heal/mod.json",
+      "size": 225
+    },
+    {
+      "path": "TacticalSoul/examples/frame-counter/link.ld",
+      "size": 173
+    },
+    {
+      "path": "TacticalSoul/examples/frame-counter/mod.json",
+      "size": 345
+    },
+    {
+      "path": "TacticalSoul/examples/frame-counter/runtime.bin",
+      "size": 18
+    },
+    {
+      "path": "TacticalSoul/examples/frame-counter/runtime.build.json",
+      "size": 255
+    },
+    {
+      "path": "TacticalSoul/examples/frame-counter/runtime.c",
+      "size": 261
+    },
+    {
+      "path": "TacticalSoul/examples/geometry-workshop/mod.json",
+      "size": 1060
+    },
+    {
+      "path": "TacticalSoul/examples/geometry-workshop/README.md",
+      "size": 1047
+    },
+    {
+      "path": "TacticalSoul/examples/input-routes/README.md",
+      "size": 516
+    },
+    {
+      "path": "TacticalSoul/examples/input-routes/room5-left-jump.json",
+      "size": 631
+    },
+    {
+      "path": "TacticalSoul/examples/named-content-workshop/mod.json",
+      "size": 983
+    },
+    {
+      "path": "TacticalSoul/examples/named-content-workshop/page-0.json",
+      "size": 49193
+    },
+    {
+      "path": "TacticalSoul/examples/named-content-workshop/page-1.json",
+      "size": 49193
+    },
+    {
+      "path": "TacticalSoul/examples/named-content-workshop/page-2.json",
+      "size": 60121
+    },
+    {
+      "path": "TacticalSoul/examples/named-content-workshop/palette.json",
+      "size": 1813
+    },
+    {
+      "path": "TacticalSoul/examples/named-content-workshop/README.md",
+      "size": 1032
+    },
+    {
+      "path": "TacticalSoul/examples/native-balance/mod.json",
+      "size": 648
+    },
+    {
+      "path": "TacticalSoul/examples/original-room-art/mod.json",
+      "size": 2353
+    },
+    {
+      "path": "TacticalSoul/examples/original-room-art/neon-bricks.json",
+      "size": 12327
+    },
+    {
+      "path": "TacticalSoul/examples/original-room-art/neon-palette.json",
+      "size": 190
+    },
+    {
+      "path": "TacticalSoul/examples/original-room-art/README.md",
+      "size": 988
+    },
+    {
+      "path": "TacticalSoul/examples/README.md",
+      "size": 614
+    },
+    {
+      "path": "TacticalSoul/examples/room-workshop/mod.json",
+      "size": 1227
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/make_art.py",
+      "size": 1671
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/mod.json",
+      "size": 723
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/modules/art.json",
+      "size": 700
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/modules/assets/invaders.json",
+      "size": 8230
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/modules/assets/palette.json",
+      "size": 569
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/project.json",
+      "size": 234
+    },
+    {
+      "path": "TacticalSoul/examples/sky-invaders/README.md",
+      "size": 1807
+    },
+    {
+      "path": "TacticalSoul/examples/sparse-content-workshop/mod.json",
+      "size": 3921
+    },
+    {
+      "path": "TacticalSoul/examples/sparse-content-workshop/README.md",
+      "size": 958
+    },
+    {
+      "path": "TacticalSoul/examples/still-regen/mod.json",
+      "size": 227
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/gallery-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/gallery-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/mod.json",
+      "size": 5982
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/neighbor-repair-plan.json",
+      "size": 475
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/neon-bricks.json",
+      "size": 12327
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/neon-palette.json",
+      "size": 190
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/README.md",
+      "size": 470
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/save-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/three-room-art/save-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/examples/two-room-art/mod.json",
+      "size": 3981
+    },
+    {
+      "path": "TacticalSoul/examples/two-room-art/neon-bricks.json",
+      "size": 12327
+    },
+    {
+      "path": "TacticalSoul/examples/two-room-art/neon-palette.json",
+      "size": 190
+    },
+    {
+      "path": "TacticalSoul/examples/two-room-art/README.md",
+      "size": 431
+    },
+    {
+      "path": "TacticalSoul/examples/two-room-art/save-bricks.json",
+      "size": 12329
+    },
+    {
+      "path": "TacticalSoul/examples/two-room-art/save-palette.json",
+      "size": 192
+    },
+    {
+      "path": "TacticalSoul/framework/aos-usa-r0.json",
+      "size": 3667
+    },
+    {
+      "path": "TacticalSoul/framework/capabilities.json",
+      "size": 6832
+    },
+    {
+      "path": "TacticalSoul/framework/enemies.json",
+      "size": 1419
+    },
+    {
+      "path": "TacticalSoul/framework/equipment.json",
+      "size": 1323
+    },
+    {
+      "path": "TacticalSoul/framework/roadmap.json",
+      "size": 8333
+    },
+    {
+      "path": "TacticalSoul/framework/tables.json",
+      "size": 6967
+    },
+    {
+      "path": "TacticalSoul/Framework.cmd",
+      "size": 66
+    },
+    {
+      "path": "TacticalSoul/handoffprompt.md",
+      "size": 23551
+    },
+    {
+      "path": "TacticalSoul/LICENSE",
+      "size": 1280
+    },
+    {
+      "path": "TacticalSoul/native/abilities/build.json",
+      "size": 238
+    },
+    {
+      "path": "TacticalSoul/native/abilities/dominance.h",
+      "size": 2592
+    },
+    {
+      "path": "TacticalSoul/native/abilities/features.h",
+      "size": 790
+    },
+    {
+      "path": "TacticalSoul/native/abilities/link.ld",
+      "size": 404
+    },
+    {
+      "path": "TacticalSoul/native/abilities/runtime.bin",
+      "size": 772
+    },
+    {
+      "path": "TacticalSoul/native/abilities/runtime.build.json",
+      "size": 511
+    },
+    {
+      "path": "TacticalSoul/native/abilities/runtime.c",
+      "size": 1915
+    },
+    {
+      "path": "TacticalSoul/README.md",
+      "size": 22895
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/CHANGES.txt",
+      "size": 105380
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/LICENSE.txt",
+      "size": 17099
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/blip_buf.txt",
+      "size": 26940
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/discord-rpc.txt",
+      "size": 1053
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/ffmpeg.txt",
+      "size": 18092
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/inih.txt",
+      "size": 1510
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/lame.txt",
+      "size": 25284
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/libelf.txt",
+      "size": 25275
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/libepoxy.txt",
+      "size": 2465
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/libvpx.txt",
+      "size": 1537
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/libwebp.txt",
+      "size": 1496
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/libzip.txt",
+      "size": 1452
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/mingw-std-threads.txt",
+      "size": 1296
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/openssl.txt",
+      "size": 6121
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/opus.txt",
+      "size": 1928
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/qt5.txt",
+      "size": 26530
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/rapidjson.txt",
+      "size": 5152
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/sdl2.txt",
+      "size": 930
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/x264.txt",
+      "size": 17992
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/licenses/x265.txt",
+      "size": 18120
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/mGBA.exe",
+      "size": 41641519
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/portable.ini",
+      "size": 0
+    },
+    {
+      "path": "TacticalSoul/runtime/emulator/README.html",
+      "size": 14347
+    },
+    {
+      "path": "TacticalSoul/runtime/entry.bin",
+      "size": 8
+    },
+    {
+      "path": "TacticalSoul/runtime/hook.bin",
+      "size": 48
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_asyncio.pyd",
+      "size": 78672
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_bz2.pyd",
+      "size": 87896
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_ctypes.pyd",
+      "size": 141656
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_decimal.pyd",
+      "size": 287576
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_elementtree.pyd",
+      "size": 138584
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_hashlib.pyd",
+      "size": 69464
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_lzma.pyd",
+      "size": 161112
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_multiprocessing.pyd",
+      "size": 38744
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_overlapped.pyd",
+      "size": 58200
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_queue.pyd",
+      "size": 36696
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_remote_debugging.pyd",
+      "size": 75608
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_socket.pyd",
+      "size": 87384
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_sqlite3.pyd",
+      "size": 132440
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_ssl.pyd",
+      "size": 183640
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_uuid.pyd",
+      "size": 28504
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_wmi.pyd",
+      "size": 40280
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_zoneinfo.pyd",
+      "size": 51032
+    },
+    {
+      "path": "TacticalSoul/runtime/python/_zstd.pyd",
+      "size": 503640
+    },
+    {
+      "path": "TacticalSoul/runtime/python/libcrypto-3.dll",
+      "size": 5229424
+    },
+    {
+      "path": "TacticalSoul/runtime/python/libffi-8.dll",
+      "size": 39696
+    },
+    {
+      "path": "TacticalSoul/runtime/python/libssl-3.dll",
+      "size": 794992
+    },
+    {
+      "path": "TacticalSoul/runtime/python/LICENSE.txt",
+      "size": 35407
+    },
+    {
+      "path": "TacticalSoul/runtime/python/pyexpat.pyd",
+      "size": 216920
+    },
+    {
+      "path": "TacticalSoul/runtime/python/python.cat",
+      "size": 588120
+    },
+    {
+      "path": "TacticalSoul/runtime/python/python.exe",
+      "size": 106328
+    },
+    {
+      "path": "TacticalSoul/runtime/python/python3.dll",
+      "size": 74064
+    },
+    {
+      "path": "TacticalSoul/runtime/python/python314._pth",
+      "size": 80
+    },
+    {
+      "path": "TacticalSoul/runtime/python/python314.dll",
+      "size": 6760280
+    },
+    {
+      "path": "TacticalSoul/runtime/python/python314.zip",
+      "size": 4083458
+    },
+    {
+      "path": "TacticalSoul/runtime/python/pythonw.exe",
+      "size": 104792
+    },
+    {
+      "path": "TacticalSoul/runtime/python/select.pyd",
+      "size": 33624
+    },
+    {
+      "path": "TacticalSoul/runtime/python/sqlite3.dll",
+      "size": 1584984
+    },
+    {
+      "path": "TacticalSoul/runtime/python/unicodedata.pyd",
+      "size": 758104
+    },
+    {
+      "path": "TacticalSoul/runtime/python/vcruntime140.dll",
+      "size": 120400
+    },
+    {
+      "path": "TacticalSoul/runtime/python/vcruntime140_1.dll",
+      "size": 49776
+    },
+    {
+      "path": "TacticalSoul/runtime/python/winsound.pyd",
+      "size": 33112
+    },
+    {
+      "path": "TacticalSoul/scripts/aria_tool.py",
+      "size": 220
+    },
+    {
+      "path": "TacticalSoul/scripts/emulator.py",
+      "size": 7188
+    },
+    {
+      "path": "TacticalSoul/scripts/import_indexed_png.py",
+      "size": 1477
+    },
+    {
+      "path": "TacticalSoul/scripts/package_framework.py",
+      "size": 3150
+    },
+    {
+      "path": "TacticalSoul/scripts/preview_content.py",
+      "size": 1466
+    },
+    {
+      "path": "TacticalSoul/scripts/update_handoff.py",
+      "size": 1642
+    },
+    {
+      "path": "TacticalSoul/scripts/update_inventory.py",
+      "size": 3535
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_abilities.py",
+      "size": 6712
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_background_rendering.py",
+      "size": 3247
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_backgrounds.py",
+      "size": 2001
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_bridge_route.py",
+      "size": 4542
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_connection_plans.py",
+      "size": 1470
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_connection_traversal.py",
+      "size": 5808
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_content.py",
+      "size": 2521
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_enemies.py",
+      "size": 4872
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_equipment.py",
+      "size": 5828
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_framework.py",
+      "size": 2808
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_geometry.py",
+      "size": 13729
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_projects.py",
+      "size": 2472
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_rendering.py",
+      "size": 4228
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_resources.py",
+      "size": 3493
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_room5_search.py",
+      "size": 4026
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_room_catalog.py",
+      "size": 3751
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_room_resources.py",
+      "size": 2262
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_room_states.py",
+      "size": 1793
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_rooms.py",
+      "size": 2297
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_sprite_assets.py",
+      "size": 10013
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_sprites.py",
+      "size": 3424
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_terrain_support.py",
+      "size": 1727
+    },
+    {
+      "path": "TacticalSoul/scripts/verify_world_graph.py",
+      "size": 1854
+    },
+    {
+      "path": "TacticalSoul/src/hook-template.asm",
+      "size": 488
+    },
+    {
+      "path": "TacticalSoul/TacticalSoul.cmd",
+      "size": 273
+    },
+    {
+      "path": "TacticalSoul/tests/test_abilities.py",
+      "size": 3948
+    },
+    {
+      "path": "TacticalSoul/tests/test_actor_table.py",
+      "size": 3926
+    },
+    {
+      "path": "TacticalSoul/tests/test_backgrounds.py",
+      "size": 5478
+    },
+    {
+      "path": "TacticalSoul/tests/test_connection_plans.py",
+      "size": 2367
+    },
+    {
+      "path": "TacticalSoul/tests/test_content.py",
+      "size": 3538
+    },
+    {
+      "path": "TacticalSoul/tests/test_editor_docs.py",
+      "size": 11095
+    },
+    {
+      "path": "TacticalSoul/tests/test_enemies.py",
+      "size": 6284
+    },
+    {
+      "path": "TacticalSoul/tests/test_equipment.py",
+      "size": 4074
+    },
+    {
+      "path": "TacticalSoul/tests/test_framework.py",
+      "size": 2349
+    },
+    {
+      "path": "TacticalSoul/tests/test_geometry.py",
+      "size": 4884
+    },
+    {
+      "path": "TacticalSoul/tests/test_input_routes.py",
+      "size": 2288
+    },
+    {
+      "path": "TacticalSoul/tests/test_level.py",
+      "size": 2385
+    },
+    {
+      "path": "TacticalSoul/tests/test_projects.py",
+      "size": 8808
+    },
+    {
+      "path": "TacticalSoul/tests/test_rendering.py",
+      "size": 5657
+    },
+    {
+      "path": "TacticalSoul/tests/test_resources.py",
+      "size": 5939
+    },
+    {
+      "path": "TacticalSoul/tests/test_room_assets.py",
+      "size": 7193
+    },
+    {
+      "path": "TacticalSoul/tests/test_room_catalog.py",
+      "size": 6582
+    },
+    {
+      "path": "TacticalSoul/tests/test_room_resources.py",
+      "size": 6002
+    },
+    {
+      "path": "TacticalSoul/tests/test_room_states.py",
+      "size": 2140
+    },
+    {
+      "path": "TacticalSoul/tests/test_sprite_assets.py",
+      "size": 14163
+    },
+    {
+      "path": "TacticalSoul/tests/test_sprite_attribution.py",
+      "size": 1773
+    },
+    {
+      "path": "TacticalSoul/tests/test_sprite_rendering.py",
+      "size": 8837
+    },
+    {
+      "path": "TacticalSoul/tests/test_sprites.py",
+      "size": 3346
+    },
+    {
+      "path": "TacticalSoul/tests/test_terrain.py",
+      "size": 3704
+    },
+    {
+      "path": "TacticalSoul/tests/test_terrain_plans.py",
+      "size": 2059
+    },
+    {
+      "path": "TacticalSoul/tests/test_terrain_support.py",
+      "size": 2618
+    },
+    {
+      "path": "TacticalSoul/tests/test_world_graph.py",
+      "size": 3561
+    }
+  ],
+  "distribution": "Original code/docs and licensed runtimes only. No commercial ROMs, extracted assets, saves or dev tools."
+}

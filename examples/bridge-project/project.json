@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "kind": "tsf-project",
+  "id": "bridge-project",
+  "description": "Composable modules reproduce the verified bridge-route bytes.",
+  "modules": [
+    "modules/showcase-terrain.json",
+    "modules/bridge-left.json",
+    "modules/bridge-right.json",
+    "modules/routes.json",
+    "modules/art.json"
+  ]
+}

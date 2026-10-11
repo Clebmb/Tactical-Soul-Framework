@@ -1,0 +1,70 @@
+{
+  "profile": "aos-usa-r0",
+  "source": "DSVEdit aos_constants.rb ENEMY_DNA_FORMAT, ENEMY_DNA_BITFIELD_ATTRIBUTES, BOSS_ID_TO_BOSS_INDEX; docs/formats/AoS Enemy DNA Format.txt; docs/lists/AoS Enemies.txt",
+  "editable_fields": [
+    "hp",
+    "mp",
+    "experience",
+    "attack",
+    "defense",
+    "soul_rarity"
+  ],
+  "flags": {
+    "weaknesses": {
+      "slash": 0,
+      "flame": 1,
+      "water": 2,
+      "thunder": 3,
+      "dark": 4,
+      "holy": 5,
+      "poison": 6,
+      "curse": 7,
+      "stone": 8,
+      "killer_mantle": 11
+    },
+    "resistances": {
+      "slash": 0,
+      "flame": 1,
+      "water": 2,
+      "thunder": 3,
+      "dark": 4,
+      "holy": 5,
+      "poison": 6,
+      "curse": 7,
+      "stone": 8,
+      "time_stop": 10
+    }
+  },
+  "protected_encounter_indices": [
+    33,
+    54,
+    60,
+    69,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112
+  ],
+  "clone_templates": {
+    "0": {
+      "var_a": 0,
+      "var_b": 0,
+      "byte_8": 0
+    },
+    "1": {
+      "var_a": 0,
+      "var_b": 0,
+      "byte_8": 0
+    },
+    "2": {
+      "var_a": 0,
+      "var_b": 0,
+      "byte_8": 0
+    }
+  },
+  "max_clones_per_room": 2,
+  "soul_reference_policy": "Existing soul type/index preserved. Rarity can be edited; zero disables soul drops. Cross-type reassignment and ability grants remain unimplemented."
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "equipment-workshop",
+  "description": "Starting Knife and Casual Clothes tradeoffs, plus Cape accessory. Native identities and graphics preserved.",
+  "equipment_edits": [
+    {
+      "table": "weapons",
+      "item": "knife",
+      "expect": {
+        "attack": 5,
+        "strength": 0,
+        "effects": 1
+      },
+      "fields": {
+        "attack": 17,
+        "strength": -2
+      },
+      "flags": {
+        "effects": {
+          "add": [
+            "flame"
+          ]
+        }
+      }
+    },
+    {
+      "table": "armor",
+      "item": "casual-clothes",
+      "expect": {
+        "defense": 5,
+        "luck": 0,
+        "resistances": 0
+      },
+      "fields": {
+        "defense": 14,
+        "luck": -1
+      },
+      "flags": {
+        "resistances": {
+          "add": [
+            "flame"
+          ]
+        }
+      }
+    },
+    {
+      "table": "armor",
+      "item": "cape",
+      "expect": {
+        "defense": 1,
+        "intelligence": 0
+      },
+      "fields": {
+        "defense": 3,
+        "intelligence": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "profile": "aos-usa-r0",
+  "source": "DSVEdit aos_constants.rb ITEM_BITFIELD_ATTRIBUTES and docs/formats/AoS Item Formats.txt; independently checked against local native records. Labels are reference semantics, not universal gameplay certification.",
+  "tables": {
+    "weapons": {
+      "global_base": 32,
+      "count": 59
+    },
+    "armor": {
+      "global_base": 91,
+      "count": 45
+    }
+  },
+  "signed_fields": [
+    "strength",
+    "constitution",
+    "intelligence",
+    "luck"
+  ],
+  "editable_fields": [
+    "price",
+    "attack",
+    "defense",
+    "strength",
+    "constitution",
+    "intelligence",
+    "luck"
+  ],
+  "flags": {
+    "effects": {
+      "slash": 0,
+      "flame": 1,
+      "water": 2,
+      "thunder": 3,
+      "dark": 4,
+      "holy": 5,
+      "poison": 6,
+      "curse": 7,
+      "stone": 8,
+      "killer_mantle": 11,
+      "half_damage": 12,
+      "no_interrupt_on_land": 13
+    },
+    "resistances": {
+      "slash": 0,
+      "flame": 1,
+      "water": 2,
+      "thunder": 3,
+      "dark": 4,
+      "holy": 5,
+      "poison": 6,
+      "curse": 7,
+      "stone": 8
+    }
+  },
+  "attack_types": {
+    "0": "slash",
+    "1": "overhead",
+    "2": "spear_or_rifle",
+    "3": "punch",
+    "4": "gun",
+    "5": "valmanway"
+  }
+}

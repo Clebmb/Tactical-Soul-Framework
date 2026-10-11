@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "enemy-workshop",
+  "description": "Durable rewarding Zombies, weaker Skeletons, moved hallway spawner and one same-room Skeleton clone. Original AI and graphics preserved; paired hallway shortcut for demonstration.",
+  "enemy_edits": [
+    {
+      "enemy": "zombie",
+      "expect": {
+        "hp": 18,
+        "attack": 9,
+        "experience": 1,
+        "item_1": 93,
+        "item_1_rarity": 20,
+        "weaknesses": 33,
+        "soul_rarity": 180
+      },
+      "fields": {
+        "hp": 30,
+        "attack": 11,
+        "experience": 7,
+        "soul_rarity": 0
+      },
+      "flags": {
+        "weaknesses": {
+          "add": [
+            "flame"
+          ]
+        }
+      },
+      "drops": {
+        "item_1": {
+          "item": "potion",
+          "rarity": 0
+        }
+      }
+    },
+    {
+      "enemy": "skeleton",
+      "expect": {
+        "hp": 20,
+        "experience": 3
+      },
+      "fields": {
+        "hp": 12,
+        "experience": 5
+      }
+    }
+  ],
+  "enemy_encounters": [
+    {
+      "op": "move",
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "entity_id": 3,
+      "enemy": "zombie",
+      "from": [
+        128,
+        176
+      ],
+      "to": [
+        192,
+        176
+      ]
+    },
+    {
+      "op": "clone",
+      "room": {
+        "sector": 0,
+        "room": 6
+      },
+      "source_id": 2,
+      "entity_id": 9,
+      "enemy": "skeleton",
+      "to": [
+        560,
+        176
+      ]
+    }
+  ],
+  "room_edits": {
+    "connections": [
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 3
+          },
+          "door": 2,
+          "spawn": [
+            1040,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 6
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  }
+}

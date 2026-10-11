@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "geometry-workshop",
+  "description": "Existing first-hallway main layer gains one 32px stone step; native geometry identity and resources preserved; paired save-room shortcut.",
+  "geometry_edits": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "layer": 0,
+      "expected_layout_sha256": "e97dfecebd260237038bef074a750420a705c87a6d6bd27e90386a23d7397b23",
+      "cells": [
+        {
+          "x": 10,
+          "y": 5,
+          "expect": 53,
+          "value": 49
+        }
+      ]
+    }
+  ],
+  "room_edits": {
+    "connections": [
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 3
+          },
+          "door": 2,
+          "spawn": [
+            1040,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 31
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  }
+}

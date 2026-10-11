@@ -1,0 +1,9 @@
+# Tactical Soul Framework naming and compatibility
+
+The framework was renamed from Dominance Aria Modding Framework to **Tactical Soul Framework** at the user's request. Its development folder is now `Tactical Soul Framework/` beside the independent `Aria of Mario World/` project. The old folder was moved, preserving private inputs, build outputs, saves, local evidence, tools and source. PROJECTS.md at the workspace root points to the new folder.
+
+Primary launcher: TacticalSoul.cmd. Dominance.cmd and Framework.cmd forward all arguments and return the primary launcher's exit code. They remain aliases inside the new folder; absolute paths pointing to the old folder must be updated. TSF_HOST_ROM is the preferred host environment variable; ARIA_HOST_ROM remains a fallback. Explicit --host takes precedence over defaults.
+
+The Python package remains aria, CLI implementation remains scripts/aria_tool.py, and the exact-ROM profile remains aos-usa-r0. These are technical identifiers, not public framework branding. Existing manifest schemas, mod IDs and output names are unchanged. The native SDK header dominance.h, ABI magic values, binary fingerprints and ROM/RAM addresses are intentionally retained. Renaming a project must not silently invalidate compiled callbacks or save/game compatibility.
+
+Maintained overview: docs/TACTICAL-SOUL.md. docs/DOMINANCE.md is a compatibility pointer. Current source archive is Tactical-Soul-Framework-0.7.0.zip with TacticalSoul/ as its top directory. Earlier source ZIPs in release/ are historical; use the new archive for current work. Local generated manifests can retain historical absolute output paths as evidence; rebuild to generate reports pointing to the new folder. Neither the legacy root game implementation nor the Mario project's code/assets were renamed.

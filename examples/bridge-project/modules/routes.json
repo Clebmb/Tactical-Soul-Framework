@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "routes",
+  "room_edits": {
+    "connections": [
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 3
+          },
+          "door": 2,
+          "spawn": [
+            1040,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 6
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 6
+          },
+          "door": 1,
+          "spawn": [
+            528,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 31
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 5
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 25
+          },
+          "door": 1,
+          "spawn": [
+            16,
+            0
+          ]
+        }
+      },
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 5
+          },
+          "door": 1,
+          "spawn": [
+            272,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 9
+          },
+          "door": 1,
+          "spawn": [
+            0,
+            1280
+          ]
+        }
+      }
+    ]
+  }
+}

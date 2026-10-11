@@ -1,0 +1,35 @@
+# Private game data. Dump your own cartridge; never commit, never distribute.
+*.gba
+*.sav
+*.ss*
+
+# Generated outputs and private experiments, screenshots and evidence.
+build/
+local/
+
+# Developer toolchain and native-test core (see README, re-obtain locally).
+tools/
+
+# Bundled runtimes ship inside the release zips, not in git.
+runtime/python/
+runtime/emulator/
+
+# Release archives: only the latest stays in git; older ones are pruned.
+# When cutting a new release, move the ! exception down to the new file.
+release/*.zip
+!release/Tactical-Soul-Framework-0.36.0.zip
+
+# Python bytecode and virtual environments.
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Agent working state (session data, not project source).
+.freebuff/
+
+# OS and editor leftovers.
+.DS_Store
+Thumbs.db
+*.orig
+*.rej

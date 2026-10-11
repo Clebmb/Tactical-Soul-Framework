@@ -1,0 +1,3 @@
+# Framework examples
+
+Each example has its own scope and requirements. Current modular entry point: [bridge-project](bridge-project/README.md), which reproduces the flat [bridge-route](bridge-route/README.md) build using terrain, route and original-art modules. Build/play accept its `project.json`; see [project composition](../docs/PROJECT-COMPOSITION.md). Older examples remain supported; read their manifest and relevant domain guide before modifying native content. Input replay descriptors are diagnostic fixtures, not standalone mod manifests. Do not package private ROMs or extracted commercial assets.

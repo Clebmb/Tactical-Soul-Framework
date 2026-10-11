@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "ability-workshop",
+  "description": "Native shared dispatcher: stationary regeneration plus MP-cost R heal. No equipment/soul/level replacement.",
+  "abilities": {
+    "features": [
+      {
+        "id": "still_regen",
+        "interval": 120,
+        "amount": 1
+      },
+      {
+        "id": "focus_heal",
+        "amount": 5,
+        "mana_cost": 3,
+        "cooldown": 180
+      }
+    ]
+  }
+}

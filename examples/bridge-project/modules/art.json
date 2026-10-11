@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "art",
+  "room_assets": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "assets/neon-bricks.json",
+      "palette_source": "assets/neon-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "6b65733cab8f7e79c77ba70b77ddd96b61e8bd8830416591e64af7ab62f5a23b",
+      "expected_palette_list_sha256": "acb714e0f50075963a7d0155dc05b795d64dac35092b237a2d3b73fe25cabf4e"
+    },
+    {
+      "room": {
+        "sector": 0,
+        "room": 31
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "assets/save-bricks.json",
+      "palette_source": "assets/save-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "b9a4898181b1633aafb648c5746d0f550dd475d7f9350545209886b1b7490f1b",
+      "expected_palette_list_sha256": "ac05188169f1fe7823bddfee426dbd9cc546a91eecf18175a27c6e72b764993d"
+    },
+    {
+      "room": {
+        "sector": 0,
+        "room": 6
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "assets/gallery-bricks.json",
+      "palette_source": "assets/gallery-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "6b65733cab8f7e79c77ba70b77ddd96b61e8bd8830416591e64af7ab62f5a23b",
+      "expected_palette_list_sha256": "acb714e0f50075963a7d0155dc05b795d64dac35092b237a2d3b73fe25cabf4e"
+    }
+  ]
+}

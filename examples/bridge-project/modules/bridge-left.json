@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "bridge-left",
+  "geometry_edits": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 5
+      },
+      "layer": 0,
+      "expected_layout_sha256": "6e2c412efa9cf9e196884c9cf757bfe91e743beeedb69e47735a9311a1324831",
+      "cells": [
+        {
+          "x": 6,
+          "y": 3,
+          "expect": 10,
+          "value": 0
+        },
+        {
+          "x": 7,
+          "y": 3,
+          "expect": 6,
+          "value": 0
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "expect": 6,
+          "value": 0
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "expect": 9,
+          "value": 0
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "expect": 13,
+          "value": 0
+        },
+        {
+          "x": 6,
+          "y": 4,
+          "expect": 20,
+          "value": 0
+        },
+        {
+          "x": 7,
+          "y": 4,
+          "expect": 1,
+          "value": 0
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "expect": 1,
+          "value": 0
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "expect": 21,
+          "value": 0
+        },
+        {
+          "x": 10,
+          "y": 4,
+          "expect": 9,
+          "value": 0
+        },
+        {
+          "x": 2,
+          "y": 5,
+          "expect": 9,
+          "value": 6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "expected_image_sha256": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5",
+  "room": {
+    "sector": 0,
+    "room": 5
+  },
+  "layer": 0,
+  "expected_layout_sha256": "6e2c412efa9cf9e196884c9cf757bfe91e743beeedb69e47735a9311a1324831",
+  "rectangles": [
+    {
+      "x": 2,
+      "y": 3,
+      "width": 12,
+      "height": 2,
+      "value": 0
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "width": 12,
+      "height": 1,
+      "value": 6
+    }
+  ]
+}

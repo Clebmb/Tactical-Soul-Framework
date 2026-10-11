@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "sky-art",
+  "description": "Original procedural UFO artwork replacing the shared decorative bats/clouds page and palette.",
+  "sprite_assets": [
+    {
+      "resource": "background-bats",
+      "scope": "all_registered_consumers",
+      "source": "assets/invaders.json",
+      "palette_source": "assets/palette.json",
+      "expected_page_sha256": "6f854783fd52be168b512c169451fa8b38ab96cbd8f3d788df7091706a8d3f3c",
+      "expected_palette_sha256": "a7cc42d2dd4da92f764c24b7bd57d97718ada87709706cdfc33d4c3d8297df54",
+      "provenance": "Original procedural UFO artwork and palette by this MIT-licensed example's make_art.py; no extracted game artwork."
+    }
+  ]
+}

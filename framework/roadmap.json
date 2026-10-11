@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "goal": "Documented, reproducible AoS total-conversion framework; GUI application deferred",
+  "estimate_method": "Weighted engineering judgment, not time remaining or test coverage. Earned points are partial domain maturity assessments. Update with evidence; do not award full points for one narrow example.",
+  "domains": [
+    {
+      "id": "build",
+      "weight": 8,
+      "earned_estimate": 6.3,
+      "title": "Verified inputs and reproducible build core",
+      "checklist": [
+        "Exact-host verification, immutable originals, conflicts and bounded allocation: foundation implemented",
+        "Deterministic module builds and compilation fingerprints: implemented for current modules",
+        "Project-wide dependency graph and budget planning: pending",
+        "Transactional checked application of supported composed projects: implemented; general dependency planning remains partial",
+        "Clean offline build/play across supported content: partial"
+      ]
+    },
+    {
+      "id": "records",
+      "weight": 10,
+      "earned_estimate": 4,
+      "title": "Equipment, enemies and game data",
+      "checklist": [
+        "Named equipment/enemy records and checked balance edits: implemented",
+        "Arbitrary equipment graphics, animation and effects: pending",
+        "Enemy sprite resource provisioning and custom AI: pending",
+        "Items, souls, shops, descriptions and drop systems: partial",
+        "Boss/event-safe actor authoring: pending"
+      ]
+    },
+    {
+      "id": "terrain",
+      "weight": 18,
+      "earned_estimate": 6.6,
+      "title": "Rooms, terrain and collision",
+      "checklist": [
+        "Base-state room catalog, geometry inspection and static type-2 previews: implemented",
+        "Checked cells, rectangle-paint planning and isolated authored metatile definitions: implemented within four registered main layers",
+        "Original room character/palette import: three registered rooms; room5 existing-asset terrain redesign native verified; general ownership/allocator pending",
+        "Additional rooms, formats, slopes, hazards and room resizing: pending",
+        "New-room creation and reusable level validation: pending",
+        "Per-room static support and loaded existing-metatile diagnostics across all base slots: implemented; candidates do not authorize writes"
+      ]
+    },
+    {
+      "id": "graphics",
+      "weight": 16,
+      "earned_estimate": 5.9,
+      "title": "Graphics, animation and resource ownership",
+      "checklist": [
+        "4bpp, palette codecs and native item-icon authoring: implemented",
+        "Room metatile composition and isolated tilesets: narrow implementation",
+        "Room character/palette import with isolated load lists: narrow implementation; general allocation pending",
+        "Registered sprite structures, raw/LZ 4bpp pages, palettes and all-frame static previews: implemented for common/Julius/background-bats plus two unidentified structs (21 and 35 frames); registry writer supports LZ relocation and raw in-place replacement (raw synthetically tested; bats is the only production resource); deterministic magenta tracers disprove hallway rendering of both unknown pages and of walker art page 0x08635990 in hallway scenes; walker art-content identity holds (table row 8, palette byte-match, page tiles, full-ROM negatives) but rendered-consumer proof was withdrawn after kinematics showed tracked bank-0 entries follow Soma and OAM-map reads failed render attribution; reusable snapshot-anchored attribution library with synthetic tests disproves hallway Soma-art for the page via the post-kill Soma-only scene; kill-then-respawn twin disproves hallway spawn-moment rendering with exact spawn-frame determinism; no walker writer",
+        "Original fixed bats/clouds artwork and palette: native VRAM/OAM pixels, final pause/reentry and separate composed save/death/fresh-continue verified",
+        "Sprite/OAM/frame/animation import and runtime lifecycle: pending",
+        "Player, weapon, enemy and UI asset pipelines: pending"
+      ]
+    },
+    {
+      "id": "audio",
+      "weight": 10,
+      "earned_estimate": 0.2,
+      "title": "Native sound and music",
+      "checklist": [
+        "PCM source preparation: implemented; playback unbound",
+        "Driver structures and playback ABI: pending",
+        "Original sample/effect native binding and audio capture: pending",
+        "Instrument, sequence, music and voice authoring: pending",
+        "Lifecycle/channel coexistence and save/transition checks: pending"
+      ]
+    },
+    {
+      "id": "mechanics",
+      "weight": 10,
+      "earned_estimate": 2,
+      "title": "Abilities, hooks and native lifecycle",
+      "checklist": [
+        "One shared after-update hook and registered ability SDK: implemented",
+        "Input edges, state guards and explicit transient RAM claims: implemented foundation",
+        "Native item/soul/EXP/stat grant APIs: pending",
+        "New ability, weapon and enemy behavior dispatch: partial/pending",
+        "Versioned persistent custom mechanics and safe lifecycle APIs: pending"
+      ]
+    },
+    {
+      "id": "campaign",
+      "weight": 16,
+      "earned_estimate": 0.8,
+      "title": "Campaign, events, maps and saves",
+      "checklist": [
+        "Existing paired doors and original map/save audits: narrow implementation",
+        "Static base-room graph and isolated connection proposals implemented; map compilation and event reachability pending",
+        "New game, save/warp points and progression/event compiler: pending",
+        "Three-room original-content mini-campaign with death/continue: pending",
+        "Custom save identity/schema migrations and full campaign regression: pending"
+      ]
+    },
+    {
+      "id": "authoring",
+      "weight": 6,
+      "earned_estimate": 2.9,
+      "title": "Agent authoring and future frontend contracts",
+      "checklist": [
+        "Documented APIs, resource inspection, previews and catalog: foundation implemented",
+        "Immutable editor documents with bounded undo/redo, fingerprints, authored-change diffs, manifest save/load, clean-rebuild application and document-driven room previews with determinism proofs: implemented (headless, no GUI); viewer frontend contracts pending",
+        "Ordered source projects, module/asset fingerprints, room batching and targeted ownership conflicts: implemented, including sprite asset modules with rebased sources and resource ownership; full typed dependency diagnostics pending",
+        "Reusable custom-content project templates: partial",
+        "Headless rectangle-paint plans and input replay contracts implemented narrowly; GUI deferred/out of scope"
+      ]
+    },
+    {
+      "id": "release",
+      "weight": 6,
+      "earned_estimate": 2.8,
+      "title": "Verification, documentation and distribution",
+      "checklist": [
+        "Synthetic tests and native evidence harness: implemented foundation",
+        "Agent guides, contracts, provenance and known limitations: implemented foundation",
+        "Source-only allowlist packaging and clean extraction checks: implemented",
+        "Broad hardware/campaign/resource regression: pending",
+        "Total-conversion reproducibility, provenance and acceptance certification: pending"
+      ]
+    }
+  ],
+  "estimated_complete_percent": 32,
+  "next_milestone": "Viewer frontend contracts with a first room-viewer wiring; other rooms/actors through the snapshot-anchored attribution library, then a writer only with a tracer-named consumer set. Subtype-to-row formula, loader identity and Arachne-room live proof follow. Player streaming, new animations and general OBJ allocation remain separate.",
+  "completion_gates": [
+    "Original-content three-room campaign passes new-game/traversal/return/death/save/fresh-continue",
+    "Custom graphics, animation, audio and mechanics load through verified native paths",
+    "Campaign identity, map/progression and save contracts documented and validated",
+    "Agent can rebuild clean source project with an exact private original",
+    "Release excludes commercial ROMs, extracted assets and private saves"
+  ]
+}

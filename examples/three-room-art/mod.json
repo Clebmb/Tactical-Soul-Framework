@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "id": "three-room-art",
+  "description": "Original-art hallway, gallery and save-room route with isolated resource loads.",
+  "geometry_edits": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "layer": 0,
+      "expected_layout_sha256": "e97dfecebd260237038bef074a750420a705c87a6d6bd27e90386a23d7397b23",
+      "cells": [
+        {
+          "x": 10,
+          "y": 5,
+          "expect": 53,
+          "value": 144
+        }
+      ],
+      "metatiles": [
+        {
+          "id": 144,
+          "minitiles": [
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280
+          ],
+          "collision": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "room": {
+        "sector": 0,
+        "room": 31
+      },
+      "layer": 0,
+      "expected_layout_sha256": "390782afd89685696d303afba4704351780936fa9f314166bc7e23bae66c70df",
+      "cells": [
+        {
+          "x": 5,
+          "y": 3,
+          "expect": 0,
+          "value": 255
+        }
+      ],
+      "metatiles": [
+        {
+          "id": 255,
+          "minitiles": [
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280
+          ],
+          "collision": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "room": {
+        "sector": 0,
+        "room": 6
+      },
+      "layer": 0,
+      "expected_layout_sha256": "75c60c2c59e3b9a94bb9260a5efc5a20138e326784b91e1c9fa3bf9dbb276d75",
+      "cells": [
+        {
+          "x": 10,
+          "y": 3,
+          "expect": 0,
+          "value": 144
+        }
+      ],
+      "metatiles": [
+        {
+          "id": 144,
+          "minitiles": [
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280
+          ],
+          "collision": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "room_edits": {
+    "connections": [
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 3
+          },
+          "door": 2,
+          "spawn": [
+            1040,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 6
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 6
+          },
+          "door": 1,
+          "spawn": [
+            528,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 31
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "room_assets": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "neon-bricks.json",
+      "palette_source": "neon-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "6b65733cab8f7e79c77ba70b77ddd96b61e8bd8830416591e64af7ab62f5a23b",
+      "expected_palette_list_sha256": "acb714e0f50075963a7d0155dc05b795d64dac35092b237a2d3b73fe25cabf4e"
+    },
+    {
+      "room": {
+        "sector": 0,
+        "room": 31
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "save-bricks.json",
+      "palette_source": "save-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "b9a4898181b1633aafb648c5746d0f550dd475d7f9350545209886b1b7490f1b",
+      "expected_palette_list_sha256": "ac05188169f1fe7823bddfee426dbd9cc546a91eecf18175a27c6e72b764993d"
+    },
+    {
+      "room": {
+        "sector": 0,
+        "room": 6
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "gallery-bricks.json",
+      "palette_source": "gallery-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "6b65733cab8f7e79c77ba70b77ddd96b61e8bd8830416591e64af7ab62f5a23b",
+      "expected_palette_list_sha256": "acb714e0f50075963a7d0155dc05b795d64dac35092b237a2d3b73fe25cabf4e"
+    }
+  ]
+}

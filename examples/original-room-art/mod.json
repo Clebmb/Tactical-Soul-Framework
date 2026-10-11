@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "original-room-art",
+  "description": "Original neon brick artwork and palette imported into isolated registered room slots; new solid metatile and save route.",
+  "geometry_edits": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "layer": 0,
+      "expected_layout_sha256": "e97dfecebd260237038bef074a750420a705c87a6d6bd27e90386a23d7397b23",
+      "cells": [
+        {
+          "x": 10,
+          "y": 5,
+          "expect": 53,
+          "value": 144
+        }
+      ],
+      "metatiles": [
+        {
+          "id": 144,
+          "minitiles": [
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280,
+            33280
+          ],
+          "collision": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "room_edits": {
+    "connections": [
+      {
+        "a": {
+          "room": {
+            "sector": 0,
+            "room": 3
+          },
+          "door": 2,
+          "spawn": [
+            1040,
+            0
+          ]
+        },
+        "b": {
+          "room": {
+            "sector": 0,
+            "room": 31
+          },
+          "door": 0,
+          "spawn": [
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  "room_assets": [
+    {
+      "room": {
+        "sector": 0,
+        "room": 3
+      },
+      "target_chunk": 24,
+      "palette_bank": 8,
+      "graphics_source": "neon-bricks.json",
+      "palette_source": "neon-palette.json",
+      "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+      "expected_graphics_list_sha256": "6b65733cab8f7e79c77ba70b77ddd96b61e8bd8830416591e64af7ab62f5a23b",
+      "expected_palette_list_sha256": "acb714e0f50075963a7d0155dc05b795d64dac35092b237a2d3b73fe25cabf4e"
+    }
+  ]
+}

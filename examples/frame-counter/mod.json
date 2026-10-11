@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "frame-counter",
+  "description": "Host-only native frame callback. Increments private RAM; no visible gameplay changes.",
+  "frame_hook": {
+    "file": "runtime.bin",
+    "linked_address": "0x08680000",
+    "source": "runtime.c",
+    "linker": "link.ld",
+    "fingerprint": "runtime.build.json"
+  }
+}

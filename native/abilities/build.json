@@ -1,0 +1,12 @@
+{
+  "file": "runtime.bin",
+  "source": "runtime.c",
+  "linker": "link.ld",
+  "fingerprint": "runtime.build.json",
+  "linked_address": "0x08680000",
+  "dependencies": [
+    "dominance.h",
+    "features.h",
+    "build.json"
+  ]
+}

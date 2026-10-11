@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "native-balance",
+  "description": "Host-only example: edits native enemy, weapon and soul records; no Mario ROM or custom runtime required. Record indices are literal, not user-facing item IDs.",
+  "table_edits": [
+    {
+      "table": "enemies",
+      "index": 0,
+      "fields": {
+        "hp": 18
+      }
+    },
+    {
+      "table": "weapons",
+      "index": 1,
+      "fields": {
+        "attack": 8
+      }
+    },
+    {
+      "table": "red_souls",
+      "index": 0,
+      "fields": {
+        "mana_cost": 3
+      }
+    }
+  ],
+  "patches": [],
+  "blobs": [],
+  "entity_lists": []
+}

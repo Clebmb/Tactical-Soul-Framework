@@ -1,0 +1,120 @@
+{
+  "id": "aos-usa-r0",
+  "title": "Castlevania: Aria of Sorrow USA revision 0",
+  "sha256": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5",
+  "size": 8388608,
+  "rom_base": "0x08000000",
+  "allocation_ranges": [
+    {
+      "start": "0x08680000",
+      "end": "0x08800000"
+    }
+  ],
+  "symbols": {
+    "area_table_literal": "0x08001990",
+    "enemy_table": "0x080E9644",
+    "frame_entry": "0x08000500",
+    "host_update_continuation_thumb": "0x08000509",
+    "native_damage_player_thumb": "0x08021655"
+  },
+  "provenance": "Exact hash and DSVEdit aos_constants.rb; runtime observations described in docs/ROM-AND-RAM.md. Allocation range is deliberately narrower than documented free space.",
+  "frame_hook": {
+    "entry": "0x08000500",
+    "wrapper": "0x08651200",
+    "callback_origin": "0x08680000",
+    "template_callback_thumb": "0x08660001",
+    "template_wrapper": "runtime/hook.bin",
+    "template_entry": "runtime/entry.bin"
+  },
+  "ability_runtime": {
+    "config_address": "0x0867F000",
+    "config_size": 40,
+    "ram_start": "0x0203D000",
+    "ram_end": "0x0203D400",
+    "abi_version": 1
+  },
+  "content_resources": {
+    "item-icons-0": {
+      "address": "0x81c5e04",
+      "size": 8192,
+      "format": "tiles4",
+      "header_address": "0x81c5e00",
+      "header_hex": "00041010",
+      "original_sha256": "ec86dad56e2b8038c39cd2e3f2a7dbc92a8790ce8a8a77e8c9aee41b3cd75d19",
+      "width": 128,
+      "height": 128,
+      "provenance": "DSVEdit aos_constants.rb ITEM_ICONS_GFX_POINTERS / ITEM_ICONS_PALETTE_POINTER; exact original headers and sizes; see docs/RESOURCE-AUTHORING.md"
+    },
+    "item-icons-1": {
+      "address": "0x81c7e08",
+      "size": 8192,
+      "format": "tiles4",
+      "header_address": "0x81c7e04",
+      "header_hex": "00041010",
+      "original_sha256": "f9ca5125e844d1d875eb0b5f63a0df6eeb5164b58338d7fb1f4630a9e58b3539",
+      "width": 128,
+      "height": 128,
+      "provenance": "DSVEdit aos_constants.rb ITEM_ICONS_GFX_POINTERS / ITEM_ICONS_PALETTE_POINTER; exact original headers and sizes; see docs/RESOURCE-AUTHORING.md"
+    },
+    "item-icons-2": {
+      "address": "0x81c9e0c",
+      "size": 8192,
+      "format": "tiles4",
+      "header_address": "0x81c9e08",
+      "header_hex": "00041010",
+      "original_sha256": "e5fc1ed99d2f948702b7888dee260520f745729a2968d9908df71d4cdf3e8aa2",
+      "width": 128,
+      "height": 128,
+      "provenance": "DSVEdit aos_constants.rb ITEM_ICONS_GFX_POINTERS / ITEM_ICONS_PALETTE_POINTER; exact original headers and sizes; see docs/RESOURCE-AUTHORING.md"
+    },
+    "item-icon-palettes": {
+      "address": "0x8209a00",
+      "size": 224,
+      "format": "palette_rgb8",
+      "header_address": "0x82099fc",
+      "header_hex": "00040700",
+      "original_sha256": "a5277415baf9e393d797e553ec8076bee09a71a0ca53b604d7e5bb31b41a9e9e",
+      "width": null,
+      "height": null,
+      "provenance": "DSVEdit aos_constants.rb ITEM_ICONS_GFX_POINTERS / ITEM_ICONS_PALETTE_POINTER; exact original headers and sizes; see docs/RESOURCE-AUTHORING.md"
+    }
+  },
+  "geometry_edit_rooms": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      31
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      5
+    ]
+  ],
+  "room_asset_slots": [
+    {
+      "sector": 0,
+      "room": 3,
+      "target_chunk": 24,
+      "palette_bank": 8
+    },
+    {
+      "sector": 0,
+      "room": 31,
+      "target_chunk": 24,
+      "palette_bank": 8
+    },
+    {
+      "sector": 0,
+      "room": 6,
+      "target_chunk": 24,
+      "palette_bank": 8
+    }
+  ]
+}

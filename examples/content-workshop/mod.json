@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "content-workshop",
+  "description": "Original diamond item icons and colors; guarded healing mechanics; chirp imported only, not connected to native sound playback.",
+  "abilities": {
+    "features": [
+      {
+        "id": "still_regen",
+        "interval": 120,
+        "amount": 1
+      },
+      {
+        "id": "focus_heal",
+        "amount": 5,
+        "mana_cost": 3,
+        "cooldown": 180
+      }
+    ]
+  },
+  "content": [
+    {
+      "id": "diamond-icons",
+      "format": "tiles4",
+      "source": "diamonds.json",
+      "provenance": "Original procedural diamond artwork created for Tactical Soul Framework, MIT.",
+      "replace": {
+        "address": "0x81c5e04",
+        "size": 8192,
+        "expected_sha256": "ec86dad56e2b8038c39cd2e3f2a7dbc92a8790ce8a8a77e8c9aee41b3cd75d19"
+      }
+    },
+    {
+      "id": "icon-colors",
+      "format": "palette_rgb8",
+      "source": "colors.json",
+      "provenance": "Original procedural RGB palette, MIT.",
+      "replace": {
+        "address": "0x8209a00",
+        "size": 224,
+        "expected_sha256": "a5277415baf9e393d797e553ec8076bee09a71a0ca53b604d7e5bb31b41a9e9e"
+      }
+    },
+    {
+      "id": "chirp",
+      "format": "pcm_s8",
+      "source": "chirp.wav",
+      "provenance": "Original synthesized chirp, MIT; import fixture, playback unbound."
+    }
+  ]
+}

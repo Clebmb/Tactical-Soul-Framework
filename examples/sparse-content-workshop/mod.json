@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "id": "sparse-content-workshop",
+  "description": "Change two 8x8 tile fragments and one color in each shared icon palette bank; preserve other resource bytes.",
+  "resource_edits": [
+    {
+      "resource": "item-icons-0",
+      "expected_sha256": "ec86dad56e2b8038c39cd2e3f2a7dbc92a8790ce8a8a77e8c9aee41b3cd75d19",
+      "provenance": "Original circular tile fragments, MIT; tile indices can be shared by multiple icons.",
+      "tiles": [
+        {
+          "index": 0,
+          "pixels": [
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            0,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            0,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "pixels": [
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            0,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            0,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            2,
+            3,
+            1,
+            2,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "resource": "item-icon-palettes",
+      "expected_sha256": "a5277415baf9e393d797e553ec8076bee09a71a0ca53b604d7e5bb31b41a9e9e",
+      "provenance": "Original selective magenta recolors, MIT; shared palette affects multiple consumers.",
+      "colors": [
+        {
+          "index": 1,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        },
+        {
+          "index": 17,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        },
+        {
+          "index": 33,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        },
+        {
+          "index": 49,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        },
+        {
+          "index": 65,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        },
+        {
+          "index": 81,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        },
+        {
+          "index": 97,
+          "rgb": [
+            248,
+            40,
+            224
+          ]
+        }
+      ]
+    }
+  ]
+}

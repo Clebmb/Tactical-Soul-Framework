@@ -1,0 +1,3346 @@
+{
+  "project": "Tactical Soul Framework",
+  "independent_build_and_native_tests": true,
+  "gui_launch_smoke_passed": true,
+  "documentation": [
+    "AGENTS.md",
+    "BUILD.md",
+    "README.md",
+    "docs/ABILITIES.md",
+    "docs/BACKGROUND-DISCOVERY.md",
+    "docs/BACKGROUND-RENDERING.md",
+    "docs/BYTE-INDEX-BACKGROUNDS.md",
+    "docs/COMPATIBILITY.md",
+    "docs/COMPLETION-ROADMAP.md",
+    "docs/CONNECTION-PLANNING.md",
+    "docs/CUSTOM-CONTENT.md",
+    "docs/CUSTOM-TERRAIN.md",
+    "docs/DATA-CONTRACTS.md",
+    "docs/DOMINANCE.md",
+    "docs/EDITOR-DOCUMENTS.md",
+    "docs/ENEMIES.md",
+    "docs/ENEMY-BINDING.md",
+    "docs/EQUIPMENT.md",
+    "docs/EXTENDING.md",
+    "docs/FILE-GUIDE.md",
+    "docs/FOLDER-SPLIT.md",
+    "docs/FRAMEWORK-ROADMAP.md",
+    "docs/GUI-EDITOR-ROADMAP.md",
+    "docs/HOW-IT-WAS-BUILT.md",
+    "docs/INPUT-REPLAYS.md",
+    "docs/KNOWN-LIMITS.md",
+    "docs/MELTY-STATUS.md",
+    "docs/MIXED-ROOM-RESOURCES.md",
+    "docs/MODS-YOU-CAN-MAKE-NOW.md",
+    "docs/MULTIPLAYER-FEASIBILITY.md",
+    "docs/NATIVE-CONNECTION-TESTING.md",
+    "docs/NATIVE-INTEGRATION.md",
+    "docs/PROJECT-COMPOSITION.md",
+    "docs/REA-WORKFLOW.md",
+    "docs/RENAMING.md",
+    "docs/RESOURCE-AUTHORING.md",
+    "docs/ROM-AND-RAM.md",
+    "docs/ROOM-ASSETS.md",
+    "docs/ROOM-CATALOG.md",
+    "docs/ROOM-DESIGN.md",
+    "docs/ROOM-GEOMETRY.md",
+    "docs/ROOM-PREVIEWS.md",
+    "docs/ROOM-RESOURCE-AUDIT.md",
+    "docs/ROOM-STATES.md",
+    "docs/SPRITE-AUTHORING.md",
+    "docs/SPRITES.md",
+    "docs/START-HERE.md",
+    "docs/TACTICAL-SOUL.md",
+    "docs/TERRAIN-PAINTING.md",
+    "docs/TERRAIN-SUPPORT.md",
+    "docs/TESTING.md",
+    "docs/THREE-ROOM-ART.md",
+    "docs/TILEMAP-MEMORY.md",
+    "docs/TOOLS.md",
+    "docs/TOTAL-CONVERSIONS.md",
+    "docs/TWO-ROOM-ART.md",
+    "docs/VERIFICATION.md",
+    "docs/WORLD-GRAPH.md",
+    "examples/README.md",
+    "examples/ability-workshop/README.md",
+    "examples/bridge-project/README.md",
+    "examples/bridge-route/README.md",
+    "examples/content-workshop/README.md",
+    "examples/custom-terrain-workshop/README.md",
+    "examples/enemy-workshop/README.md",
+    "examples/equipment-workshop/README.md",
+    "examples/geometry-workshop/README.md",
+    "examples/input-routes/README.md",
+    "examples/named-content-workshop/README.md",
+    "examples/original-room-art/README.md",
+    "examples/sky-invaders/README.md",
+    "examples/sparse-content-workshop/README.md",
+    "examples/three-room-art/README.md",
+    "examples/two-room-art/README.md",
+    "handoffprompt.md"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 100,
+      "sha256": "5b16ac540d6123951aa361a254f83ca9bace1a5ebdda81e407c24798334a9bf5"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 26015,
+      "sha256": "0ccb907de235cc9751eb7a4476e27ee753c6bf4aa9645e30c123f0b6f666015e"
+    },
+    {
+      "path": "aria/__init__.py",
+      "size": 130,
+      "sha256": "ab9b7a3d4b671f7e48bb354c96c9d26e28949149ed67b9187b8ace2b8835e920"
+    },
+    {
+      "path": "aria/__main__.py",
+      "size": 49,
+      "sha256": "8134dc71036ab6fef7cb605ec59b400b2864890fc00526f9763c447e2937e295"
+    },
+    {
+      "path": "aria/abilities.py",
+      "size": 4954,
+      "sha256": "6ad93f14ae70b0806dd1f3b7f42dbd3d557fc51be7b7993c2f90c1fb2281d3aa"
+    },
+    {
+      "path": "aria/backgrounds.py",
+      "size": 8232,
+      "sha256": "556a41984f74a78ecd2c6350d2d4097dea37308054b16a47567b0088355ce81e"
+    },
+    {
+      "path": "aria/cli.py",
+      "size": 37425,
+      "sha256": "37c377776f66ae6abd54e34b967c9d96b945c5eee844120b142e037dc9941b4d"
+    },
+    {
+      "path": "aria/compiler.py",
+      "size": 2467,
+      "sha256": "a15ede870d9822dcb29f00c78b6fb8ce7167beb530feb19539b39fad56160998"
+    },
+    {
+      "path": "aria/compression.py",
+      "size": 2428,
+      "sha256": "c4946f44d156c75ecf6e4f0e66fe3226261e9989f154aceab0ec3156043322fe"
+    },
+    {
+      "path": "aria/connection_plans.py",
+      "size": 2743,
+      "sha256": "3af3c536f6c2303492206600b817e179b5adc96d6fd4c085141125197183f32a"
+    },
+    {
+      "path": "aria/content.py",
+      "size": 5852,
+      "sha256": "5876dc91546b26d4d936a92ebfd71b0d2133a7b643cd706d5a9735acbd7130ed"
+    },
+    {
+      "path": "aria/core.py",
+      "size": 5130,
+      "sha256": "3b9bec671793610019375fb9aa09042de5a10edf7c43292bbe85b24628efdc1a"
+    },
+    {
+      "path": "aria/editor_docs.py",
+      "size": 12974,
+      "sha256": "41b4b66943e31a2231f8bda00849c3392d68eedf478d14e13ebf9534f13a8ab0"
+    },
+    {
+      "path": "aria/encounters.py",
+      "size": 4414,
+      "sha256": "1321ae7f34ddaa8ba080aec0fc0c9b27033432da295fceff3c1bcaac4cfb91e9"
+    },
+    {
+      "path": "aria/enemies.py",
+      "size": 6268,
+      "sha256": "b9163b1bb6ce234009e5b0f500a8e992bf6368313a6b7f0dd8d1a96af6d5c739"
+    },
+    {
+      "path": "aria/equipment.py",
+      "size": 6156,
+      "sha256": "54e3823682eb9e8e8dc9c613c75a75c582268c8ee3be8601ac33c8c0835c60ad"
+    },
+    {
+      "path": "aria/geometry.py",
+      "size": 9317,
+      "sha256": "34f3c211aee0041ba6a249835cbf814e516290777d9b6e1720759fc5a7514154"
+    },
+    {
+      "path": "aria/hooks.py",
+      "size": 1480,
+      "sha256": "98bc5ed08ab00d9f9017e71184e4703a780ca0bc5e866a1a3a5c4dcd3763078b"
+    },
+    {
+      "path": "aria/input_routes.py",
+      "size": 3863,
+      "sha256": "005db08ebb897cc2e25f23d8a045454124c52ed268abb90026ed8c38eba35944"
+    },
+    {
+      "path": "aria/level.py",
+      "size": 8335,
+      "sha256": "95b80e4518924d3f093c002c1ae7115d3fbd82e1ae01ffbba10cae8646023b47"
+    },
+    {
+      "path": "aria/projects.py",
+      "size": 9661,
+      "sha256": "47a02cf35d2596390a8a83ab1066d7e52f62feaffc23be956aef5f46e96c21d4"
+    },
+    {
+      "path": "aria/rendering.py",
+      "size": 9219,
+      "sha256": "d92966ea69074f488df652320c5d09bc083a24383b28f6c81bea19d152c28a19"
+    },
+    {
+      "path": "aria/resources.py",
+      "size": 7601,
+      "sha256": "6240ccf336443f041f448bf3e00a2102a55a363843fe94a54789b560a9822718"
+    },
+    {
+      "path": "aria/room_assets.py",
+      "size": 5257,
+      "sha256": "11bd053b269593abd639171ef73de6ef843ae2a31bf1cc437e111384706f7011"
+    },
+    {
+      "path": "aria/room_catalog.py",
+      "size": 5579,
+      "sha256": "26006eb6dc98fa239f1afeb607a8925e2d8728fe71b89e75f523ba0e185cd63d"
+    },
+    {
+      "path": "aria/room_resources.py",
+      "size": 8653,
+      "sha256": "210117c65902f435d6396c9ce126684d944150e6a4b1238d726895a9cb38165e"
+    },
+    {
+      "path": "aria/room_states.py",
+      "size": 4118,
+      "sha256": "049fcec88215238f1120d7bd8690642c88ff05c7cd87e62c77192da497683208"
+    },
+    {
+      "path": "aria/rooms.py",
+      "size": 5253,
+      "sha256": "263e4806814b2510087bdff65b03e0a95e050f9ffe56708191808998ac1c35db"
+    },
+    {
+      "path": "aria/sprite_assets.py",
+      "size": 7498,
+      "sha256": "6a67da03290d162883b7c274647dce9e17c53eb2ca91c6f30e0d568f9f45d575"
+    },
+    {
+      "path": "aria/sprite_attribution.py",
+      "size": 3732,
+      "sha256": "48ddcac3819e01e71cf2f18b417c04847fb7617b2a9a76c455d603f917d46f1d"
+    },
+    {
+      "path": "aria/sprite_rendering.py",
+      "size": 7754,
+      "sha256": "c43afee8aa7500c2e99bc5e3d4ef962d0bc62f02c10e13b2a5de3a8847481356"
+    },
+    {
+      "path": "aria/sprites.py",
+      "size": 5008,
+      "sha256": "7cc5e215e826be0392378c7e0d8f8c6f5ba5919137f7551b365a53fa92e65a40"
+    },
+    {
+      "path": "aria/tables.py",
+      "size": 1480,
+      "sha256": "0567acbc0bdc618436cf9c2eb02c6df3355ae42a06e448f737d665ccdc987615"
+    },
+    {
+      "path": "aria/terrain.py",
+      "size": 2014,
+      "sha256": "74901e4b6b47152cca6977546664b6c8ed8babbc513b2cc6a9da5b6cc49fcceb"
+    },
+    {
+      "path": "aria/terrain_plans.py",
+      "size": 3117,
+      "sha256": "7b8fb7ab5292913146ccf958bfa2fad0971e1ac289d4957ef22fe0006a5c1109"
+    },
+    {
+      "path": "aria/terrain_support.py",
+      "size": 4465,
+      "sha256": "45191108200b2247327cf6a71e2c993c1b4cd8c6ce71e5e96a490c27c6c186cc"
+    },
+    {
+      "path": "aria/text.py",
+      "size": 697,
+      "sha256": "44eaf603fd6e82a89ebabd9ca32395d3209ef45e7e945872e963378fc2302bbc"
+    },
+    {
+      "path": "aria/world_graph.py",
+      "size": 4431,
+      "sha256": "a993f6c6bfdb5f69e80904e6dc9f8a68543f0e739dcfafe7579a52d7e7419e8b"
+    },
+    {
+      "path": "BUILD.md",
+      "size": 2235,
+      "sha256": "91dca46d41e40f5c9d1e8b88bb419fb339b9c8758f79cc2ec3231252f08a6683"
+    },
+    {
+      "path": "docs/ABILITIES.md",
+      "size": 15725,
+      "sha256": "c9ca8beb6add83985a644f1ac3da427cc93d63dbb00f0dbd83f2bc7bef751b89"
+    },
+    {
+      "path": "docs/BACKGROUND-DISCOVERY.md",
+      "size": 4524,
+      "sha256": "3a93891fce679278c6f156033f970e407d817a125629fd0d32fcad49d61bb573"
+    },
+    {
+      "path": "docs/BACKGROUND-RENDERING.md",
+      "size": 4775,
+      "sha256": "c052295c1334cd0644e13bbda8379e4e437ea1c47335e0b4f767e070d287d5bd"
+    },
+    {
+      "path": "docs/BYTE-INDEX-BACKGROUNDS.md",
+      "size": 4562,
+      "sha256": "9d85e846ff15ce698d4f915488986b376b870ea41869e981934e0a83a50809df"
+    },
+    {
+      "path": "docs/COMPATIBILITY.md",
+      "size": 531,
+      "sha256": "0b6847839ea2d226f45b2629cf4d87f7decda7a641fa028e25ce14c5be1e5019"
+    },
+    {
+      "path": "docs/COMPLETION-ROADMAP.md",
+      "size": 22385,
+      "sha256": "b93c815b191b0f6ae1aec98f64920200f8d9d972fa33b2a330072f85348b96ae"
+    },
+    {
+      "path": "docs/CONNECTION-PLANNING.md",
+      "size": 6221,
+      "sha256": "afe4ce13dd4d922d792d00799611f467678cf7654814c6efbeea6b7c22d5ceae"
+    },
+    {
+      "path": "docs/CUSTOM-CONTENT.md",
+      "size": 11968,
+      "sha256": "f1796cc45b805c5e23b992c8ab45d1437b6dd1123b7d777fe9d0a4c21dac387f"
+    },
+    {
+      "path": "docs/CUSTOM-TERRAIN.md",
+      "size": 6782,
+      "sha256": "f192b39724c23e6b8c3b61a46db9f0865dd431f77124b824766c37d565971605"
+    },
+    {
+      "path": "docs/DATA-CONTRACTS.md",
+      "size": 8225,
+      "sha256": "afc2b5462939d5dc2a918ee34aa511cdab642c62a77349f8e9ea952fdae164dd"
+    },
+    {
+      "path": "docs/DOMINANCE.md",
+      "size": 233,
+      "sha256": "9fdb376bfa9f8279b0809593881b6d0515bffa88754ab28f7feaa6da04bb091b"
+    },
+    {
+      "path": "docs/EDITOR-DOCUMENTS.md",
+      "size": 4314,
+      "sha256": "b506c519c13018f3af14f3f183ef086cd282ca631c613719b498872d5100ca8b"
+    },
+    {
+      "path": "docs/ENEMIES.md",
+      "size": 13707,
+      "sha256": "dba1f3df9c6fb40cbd0d59ae28cdda4cd632dc331264a129184ef882c28f5fff"
+    },
+    {
+      "path": "docs/ENEMY-BINDING.md",
+      "size": 15901,
+      "sha256": "11f0545d51ba903fe9b034c783182ab97f8f85ba4d3f4c0cd63875b8735b3445"
+    },
+    {
+      "path": "docs/EQUIPMENT.md",
+      "size": 10083,
+      "sha256": "3bfcc48f3044203bbf6b868c7cff7f39c86f76b502e3ee2cbce6bc1e691caa08"
+    },
+    {
+      "path": "docs/EXTENDING.md",
+      "size": 5244,
+      "sha256": "fd40f23794309795f667849d6631d11ebd449c76bd8ff3f89e909b3e97ddecb1"
+    },
+    {
+      "path": "docs/FILE-GUIDE.md",
+      "size": 23170,
+      "sha256": "e2923456d77929320ac943b444b1cc1ade94d3ff7aefb301eafd1134daa27cde"
+    },
+    {
+      "path": "docs/FOLDER-SPLIT.md",
+      "size": 1169,
+      "sha256": "bb39faf800e346d36939f490e08ddf4b4d92c86e35ddffb780aa85070df4de12"
+    },
+    {
+      "path": "docs/FRAMEWORK-ROADMAP.md",
+      "size": 10363,
+      "sha256": "e32ec2b78367ff3acc53de1ce0e2069b234540dc9105e89a66efcdc7a3924988"
+    },
+    {
+      "path": "docs/GUI-EDITOR-ROADMAP.md",
+      "size": 7294,
+      "sha256": "79a03f7735f94e19cf38eee6c3ea2e9b6991d4dc5895cd6b88b19cdff4165ddc"
+    },
+    {
+      "path": "docs/HOW-IT-WAS-BUILT.md",
+      "size": 12091,
+      "sha256": "331aa0d2a88fd005363987afa003474e295d3c381174de7dee17d70df64f5855"
+    },
+    {
+      "path": "docs/INPUT-REPLAYS.md",
+      "size": 8349,
+      "sha256": "1d37f63b2504d97a47133294f9553d475931b371b981cdf3238612f4450884e9"
+    },
+    {
+      "path": "docs/KNOWN-LIMITS.md",
+      "size": 12648,
+      "sha256": "21196ef2d25fa5d6fdffa4d9059935622f4cf3fba91f6047b6fd80dcea04aa3e"
+    },
+    {
+      "path": "docs/MELTY-STATUS.md",
+      "size": 1585,
+      "sha256": "6ba90f0532b5d05301cb38bcf19c4c1940ce16e66d426389a51803d66f6486a2"
+    },
+    {
+      "path": "docs/MIXED-ROOM-RESOURCES.md",
+      "size": 3479,
+      "sha256": "26bb48f772585fae7f09672e2b92e857b27ce9aa2b0e998385f2e71e90a5ce33"
+    },
+    {
+      "path": "docs/MODS-YOU-CAN-MAKE-NOW.md",
+      "size": 5806,
+      "sha256": "1ba966b2f7fae126fc29d0ad227a8c3a56d471d4c26a8f377e91f76cccaba09d"
+    },
+    {
+      "path": "docs/MULTIPLAYER-FEASIBILITY.md",
+      "size": 5252,
+      "sha256": "4985757581c38b097da5097300642ffa713ba06bfa08d374a2901774a6b6ed50"
+    },
+    {
+      "path": "docs/NATIVE-CONNECTION-TESTING.md",
+      "size": 5494,
+      "sha256": "bdf2a99ce637633144e4a144d3cae24f0e3dadaefdf025a5b9132098c75858c7"
+    },
+    {
+      "path": "docs/NATIVE-INTEGRATION.md",
+      "size": 5021,
+      "sha256": "3782c685d40eaa4c8c19ef3a0a06ea9f0dd5a8f8ef39e725d1e93a0289b0c64b"
+    },
+    {
+      "path": "docs/PROJECT-COMPOSITION.md",
+      "size": 9372,
+      "sha256": "e46ff0d2aa83f36f51b96273d4c67bd07f3d2ec1b36a93476579402a418fbc43"
+    },
+    {
+      "path": "docs/REA-WORKFLOW.md",
+      "size": 4252,
+      "sha256": "15ed2c1027d3f33c86d5efb125a89c00e78843a4b3eb7468a381cfe44f8f86ef"
+    },
+    {
+      "path": "docs/RENAMING.md",
+      "size": 1826,
+      "sha256": "a3c24c125954d86f6b271cf73cdb31fcd3befe4bba298ffd8a4cd75868b67873"
+    },
+    {
+      "path": "docs/RESOURCE-AUTHORING.md",
+      "size": 13202,
+      "sha256": "bc46dd4debc85accf1e2d0f84a6a06143b0c9e7136063ea9d322a0a61c02498b"
+    },
+    {
+      "path": "docs/ROM-AND-RAM.md",
+      "size": 5814,
+      "sha256": "77191dfa983c645b34753095c0e575cbaab5344814cabe43ad91759c27503f5c"
+    },
+    {
+      "path": "docs/ROOM-ASSETS.md",
+      "size": 10973,
+      "sha256": "b1fa0eacacbd219079313491ec93ee783245c9c6d28b3d3622e7f460cd0f2a1e"
+    },
+    {
+      "path": "docs/ROOM-CATALOG.md",
+      "size": 11483,
+      "sha256": "3ff91d0890161ca920d00271e95de01b11e5bfe74a038a8a47251e59bdce0088"
+    },
+    {
+      "path": "docs/ROOM-DESIGN.md",
+      "size": 8832,
+      "sha256": "2faee10058cb1f9a208cde47d276626294779e7c64ee3998a654b3aca8a23445"
+    },
+    {
+      "path": "docs/ROOM-GEOMETRY.md",
+      "size": 13574,
+      "sha256": "924fa23251a5924db69f37121ac51897d1bf329bc3a56956a9fef65e0e0aed4a"
+    },
+    {
+      "path": "docs/ROOM-PREVIEWS.md",
+      "size": 12185,
+      "sha256": "9f5ab8650ae97d18ba70d2f67aa6dce8654c1b40b3d7fd04ed439fcbfdeed4dd"
+    },
+    {
+      "path": "docs/ROOM-RESOURCE-AUDIT.md",
+      "size": 10412,
+      "sha256": "47ac90affd00eab0bb4241dfde5d1f8d009550c4f393d686680d0ec66b3c8cef"
+    },
+    {
+      "path": "docs/ROOM-STATES.md",
+      "size": 4185,
+      "sha256": "35366a8b1d61d4317586e446e32c9871f20281feef30a9a8d8112de250198e8d"
+    },
+    {
+      "path": "docs/SPRITE-AUTHORING.md",
+      "size": 10079,
+      "sha256": "77eebe6fb9189ad5aa88928ba3130e36b321d6d021b4614c7185abc8cfdc0c79"
+    },
+    {
+      "path": "docs/SPRITES.md",
+      "size": 9966,
+      "sha256": "fe80dd40de14034cf4eddf6e346c2b08c1c911658fac8fa863fcafa83fb465a9"
+    },
+    {
+      "path": "docs/START-HERE.md",
+      "size": 19131,
+      "sha256": "66a016028ef6ad9f46a62880716284b2eaa1ae588774b16ac21c017a6e8ac446"
+    },
+    {
+      "path": "docs/TACTICAL-SOUL.md",
+      "size": 6856,
+      "sha256": "7ef014830796e46af7e2afa089d12869d98ee4fcec1e79572bcf3e20b699f8cc"
+    },
+    {
+      "path": "docs/TERRAIN-PAINTING.md",
+      "size": 7376,
+      "sha256": "954a125eb10d655d8525e632f0302673d14286808884223bdff8e43e1e268e76"
+    },
+    {
+      "path": "docs/TERRAIN-SUPPORT.md",
+      "size": 5581,
+      "sha256": "e3df350982bb484d3e6e67b932280de30e5e2a7cb4227a3be7c6ef8b3225031b"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "size": 20239,
+      "sha256": "2d0d8528ef4a7be89c1cd5251155d19674ef1b5221f99cb2fd6d061da0ca4320"
+    },
+    {
+      "path": "docs/THREE-ROOM-ART.md",
+      "size": 5931,
+      "sha256": "faee0b4d6e74a2970d317f6a78df068e03512c7ff4685a7e4ee689ac7b21b80b"
+    },
+    {
+      "path": "docs/TILEMAP-MEMORY.md",
+      "size": 2249,
+      "sha256": "4b543dbfdbbcc6d2691c4dd1ce110d18bcd4c085364dbec7cb2f61a9cfebf538"
+    },
+    {
+      "path": "docs/TOOLS.md",
+      "size": 3997,
+      "sha256": "33001040537df5d383e447d7b0f67f5a6ba319c3d444c0de7a3833783e9c4211"
+    },
+    {
+      "path": "docs/TOTAL-CONVERSIONS.md",
+      "size": 13513,
+      "sha256": "5a330143b5ecde4ed00663a73456e12742fc07f181714bc7e55abf1bafd7a4bc"
+    },
+    {
+      "path": "docs/TWO-ROOM-ART.md",
+      "size": 4473,
+      "sha256": "aaadbbb5f9f5411566fc885fd3803f17bf505818418bd00c4a624df306fed281"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "size": 1826,
+      "sha256": "8b1855791394fa3a99435d6df7bb26c3cb05cef34f770d1d3d882b317e519d19"
+    },
+    {
+      "path": "docs/WORLD-GRAPH.md",
+      "size": 4503,
+      "sha256": "4b70e2dbdade6d05983f721bb2d9e570a40cd8acf3a110ba272ece6c987a13ae"
+    },
+    {
+      "path": "Dominance.cmd",
+      "size": 66,
+      "sha256": "fec724dfcd61402ce62e2583e41f0e03fa15c98cf8f3f29e7d36748a11e71e86"
+    },
+    {
+      "path": "examples/ability-workshop/mod.json",
+      "size": 450,
+      "sha256": "6e6d089a2528d353ed9b705ebbb7062a0021a701d2dafaba5b72d2cde1a0900a"
+    },
+    {
+      "path": "examples/ability-workshop/README.md",
+      "size": 858,
+      "sha256": "bdba7770fbc7ee63f76fc52c50fc2594cbfc55e2a653bcc89952c84e150a5b8a"
+    },
+    {
+      "path": "examples/bridge-project/modules/art.json",
+      "size": 1784,
+      "sha256": "33d6d46ef665a148a2258c71c8ce6c0ca70e957be812adea5c63d5896e5437af"
+    },
+    {
+      "path": "examples/bridge-project/modules/assets/gallery-bricks.json",
+      "size": 12329,
+      "sha256": "a15dd35edb831c6c8acffa3221a55831dc867947c526842f60ae84bdaa85093e"
+    },
+    {
+      "path": "examples/bridge-project/modules/assets/gallery-palette.json",
+      "size": 192,
+      "sha256": "b7e18549b25a32d179bb3b982f23cffb26ebed514c730c77e003aa3d9f82739e"
+    },
+    {
+      "path": "examples/bridge-project/modules/assets/neon-bricks.json",
+      "size": 12327,
+      "sha256": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51"
+    },
+    {
+      "path": "examples/bridge-project/modules/assets/neon-palette.json",
+      "size": 190,
+      "sha256": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+    },
+    {
+      "path": "examples/bridge-project/modules/assets/save-bricks.json",
+      "size": 12329,
+      "sha256": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce"
+    },
+    {
+      "path": "examples/bridge-project/modules/assets/save-palette.json",
+      "size": 192,
+      "sha256": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+    },
+    {
+      "path": "examples/bridge-project/modules/bridge-left.json",
+      "size": 1492,
+      "sha256": "c1ee6542ed56a9d5b129aed725667e63d43b987b00f61b29e33e4f9daf82ecf1"
+    },
+    {
+      "path": "examples/bridge-project/modules/bridge-right.json",
+      "size": 1494,
+      "sha256": "b2c67b7ca323dcc8ee86c627db4914cf92d8dd561f33567f892349c53e04df2f"
+    },
+    {
+      "path": "examples/bridge-project/modules/routes.json",
+      "size": 1786,
+      "sha256": "17d36c3ac4b7675a78540b1848f165e019e314cdcb8fb6db0cf4640c6db2622c"
+    },
+    {
+      "path": "examples/bridge-project/modules/showcase-terrain.json",
+      "size": 3291,
+      "sha256": "e66f02a117111a1412087f64993e132b097df94c9fd800af41b8effd59babdc5"
+    },
+    {
+      "path": "examples/bridge-project/project.json",
+      "size": 344,
+      "sha256": "ae6b786ec98c3d71099bf1e39c25ad2a6fb6f1126a12ad8fba844c3845c57b66"
+    },
+    {
+      "path": "examples/bridge-project/README.md",
+      "size": 1190,
+      "sha256": "033d61c0627f94c5b9ef075924f8ab0f07d9bd09e5180682c39c4eb15e496779"
+    },
+    {
+      "path": "examples/bridge-route/gallery-bricks.json",
+      "size": 12329,
+      "sha256": "a15dd35edb831c6c8acffa3221a55831dc867947c526842f60ae84bdaa85093e"
+    },
+    {
+      "path": "examples/bridge-route/gallery-palette.json",
+      "size": 192,
+      "sha256": "b7e18549b25a32d179bb3b982f23cffb26ebed514c730c77e003aa3d9f82739e"
+    },
+    {
+      "path": "examples/bridge-route/mod.json",
+      "size": 9471,
+      "sha256": "c29b123814c6e4966e54e658a60a84e1d6f0e5ffff67a8617f3b3267639edc99"
+    },
+    {
+      "path": "examples/bridge-route/neon-bricks.json",
+      "size": 12327,
+      "sha256": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51"
+    },
+    {
+      "path": "examples/bridge-route/neon-palette.json",
+      "size": 190,
+      "sha256": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+    },
+    {
+      "path": "examples/bridge-route/README.md",
+      "size": 1408,
+      "sha256": "53cbaa901d0163703825b8b593c622eced73565360c602d8e8fd6928ab867e87"
+    },
+    {
+      "path": "examples/bridge-route/save-bricks.json",
+      "size": 12329,
+      "sha256": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce"
+    },
+    {
+      "path": "examples/bridge-route/save-palette.json",
+      "size": 192,
+      "sha256": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+    },
+    {
+      "path": "examples/bridge-route/terrain-plan.json",
+      "size": 519,
+      "sha256": "f4e219ed0c7fbdcd528c8a2329d851836f6bf8728a94b14e2100944ec9aef2f6"
+    },
+    {
+      "path": "examples/content-workshop/chirp.wav",
+      "size": 2092,
+      "sha256": "a8f91083c600d79bb85637f17d6d907f843bae4d14120000c79dff6b12553215"
+    },
+    {
+      "path": "examples/content-workshop/colors.json",
+      "size": 1771,
+      "sha256": "79ee0ab25fd6e8e85dd784640f3f3f25977c57aed6cf295b80c07e0c1df1f13f"
+    },
+    {
+      "path": "examples/content-workshop/diamonds.json",
+      "size": 51453,
+      "sha256": "f84502e780868a086a287944a8a9d498bece5dc6289adb49402e7cb1b4fcecaa"
+    },
+    {
+      "path": "examples/content-workshop/mod.json",
+      "size": 1414,
+      "sha256": "b49acfd04e3a02936eaf5b6239d892aed91a4f60d3356f79d9ccfe4e244e2a0d"
+    },
+    {
+      "path": "examples/content-workshop/README.md",
+      "size": 731,
+      "sha256": "63b76d7ac351d53659a9fa8c09da4d9bb0e52985fd02c383ce87284690df7f32"
+    },
+    {
+      "path": "examples/custom-terrain-workshop/mod.json",
+      "size": 1776,
+      "sha256": "9404cf55476d12187f6b65aa1a70e272a9a17abaf1ba3f20de4c0ce2d3a30c61"
+    },
+    {
+      "path": "examples/custom-terrain-workshop/README.md",
+      "size": 889,
+      "sha256": "1cf4322fd2b740361fa99ea9c6e27fe0bd565e9c41b1b0342bef3aa3af361931"
+    },
+    {
+      "path": "examples/enemy-workshop/mod.json",
+      "size": 2057,
+      "sha256": "7984118628a05df1832153cb7d69b911361e126d912e4db8306030491a23a6f0"
+    },
+    {
+      "path": "examples/enemy-workshop/README.md",
+      "size": 989,
+      "sha256": "acf089a9fb62358bba946521b9687eff3d14f0e811ab2ac81a4a50cba018bc6c"
+    },
+    {
+      "path": "examples/equipment-workshop/mod.json",
+      "size": 1151,
+      "sha256": "36358f1fe71755dbf4c8c460c745cfa57af616345f48cc8e052e706334d37b10"
+    },
+    {
+      "path": "examples/equipment-workshop/README.md",
+      "size": 1000,
+      "sha256": "48e26dccb212a568415f8033066be0d2b3539371c2cc13b36fe23b1038719148"
+    },
+    {
+      "path": "examples/focus-heal/mod.json",
+      "size": 225,
+      "sha256": "54b604c84af1b0c9a646d136c28c8acc5dea8f4a6e02b82077b79d1e25b70949"
+    },
+    {
+      "path": "examples/frame-counter/link.ld",
+      "size": 173,
+      "sha256": "c95dc985326d9b8833c57b4aa341a651121803cf13fa2d3fb3f20f9065c1e913"
+    },
+    {
+      "path": "examples/frame-counter/mod.json",
+      "size": 345,
+      "sha256": "dfa6314b3f7730f895c5d49372ff8d99d6db3e33480943d7aac1df303bd877f3"
+    },
+    {
+      "path": "examples/frame-counter/runtime.bin",
+      "size": 18,
+      "sha256": "af688898aac45173875231b2abca8d5f2cf1252cb585dc6ef7a521126ecee8f3"
+    },
+    {
+      "path": "examples/frame-counter/runtime.build.json",
+      "size": 255,
+      "sha256": "c39a0848e3df0dad23cf5a39a7c625318fa69a12f33f68adc220dd3395dcb03c"
+    },
+    {
+      "path": "examples/frame-counter/runtime.c",
+      "size": 261,
+      "sha256": "012b84df7121de421e20a91e548f06021037f2689aa165e3f2c601d074f47974"
+    },
+    {
+      "path": "examples/geometry-workshop/mod.json",
+      "size": 1060,
+      "sha256": "943ec8cddbd570924bba73905f18d60770bbefcf6609d1dc7ac7841fb1d543a0"
+    },
+    {
+      "path": "examples/geometry-workshop/README.md",
+      "size": 1047,
+      "sha256": "9ea80df0caa8c33766bf1af14cd279fb8d76b709eb582db9b2f227bcf2d167a3"
+    },
+    {
+      "path": "examples/input-routes/README.md",
+      "size": 516,
+      "sha256": "bfcda517a90c99dd230eacd4f789c4df93c691c37e3be77c1b381d033a01c9f0"
+    },
+    {
+      "path": "examples/input-routes/room5-left-jump.json",
+      "size": 631,
+      "sha256": "b574e69ccfb6f861e8358fbd043a9cf9c76f0a109c7fc3e2b259fc4076480c10"
+    },
+    {
+      "path": "examples/named-content-workshop/mod.json",
+      "size": 983,
+      "sha256": "5205712bcf95b2605d1e4b8394242182541c5a1bc2641b97c18adce70f7a13e9"
+    },
+    {
+      "path": "examples/named-content-workshop/page-0.json",
+      "size": 49193,
+      "sha256": "6016f15a5801c70e1c722bfca75ef9ec86d45d32e9bee8615000ea67819f70aa"
+    },
+    {
+      "path": "examples/named-content-workshop/page-1.json",
+      "size": 49193,
+      "sha256": "c57c28de25cd703e1b4bc20a616abf8b671b9f1294fc9b1de8c8d805e230f613"
+    },
+    {
+      "path": "examples/named-content-workshop/page-2.json",
+      "size": 60121,
+      "sha256": "9cf3210a1a839aae64db5c18ccd6abd20077642dcd4146db4d9479da5681b3c5"
+    },
+    {
+      "path": "examples/named-content-workshop/palette.json",
+      "size": 1813,
+      "sha256": "bb286fa157ec4260c85a73c1314243039164528cc70c6724a852e593d51c4d73"
+    },
+    {
+      "path": "examples/named-content-workshop/README.md",
+      "size": 1032,
+      "sha256": "80c04d6d340a79ab202b3054c0f6c42b297778b9097886a32f6f2652fd054afa"
+    },
+    {
+      "path": "examples/native-balance/mod.json",
+      "size": 648,
+      "sha256": "c15b37f799e55894d10be13db75661ce26ec43dd5cf7ce882d283032019238b4"
+    },
+    {
+      "path": "examples/original-room-art/mod.json",
+      "size": 2353,
+      "sha256": "ab984cb5949bf45159cc9b197209f5fe2b9f1ed02605dda42548a248672b9e7c"
+    },
+    {
+      "path": "examples/original-room-art/neon-bricks.json",
+      "size": 12327,
+      "sha256": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51"
+    },
+    {
+      "path": "examples/original-room-art/neon-palette.json",
+      "size": 190,
+      "sha256": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+    },
+    {
+      "path": "examples/original-room-art/README.md",
+      "size": 988,
+      "sha256": "5e25905333abe5db21de4fde6440d5860098f251ad17fdc3a4dc5d974940069d"
+    },
+    {
+      "path": "examples/README.md",
+      "size": 614,
+      "sha256": "4fbed6fa8b4918dbca9ca82ec1e3237202dd1356a9f384b99024a50f3a3d47fc"
+    },
+    {
+      "path": "examples/room-workshop/mod.json",
+      "size": 1227,
+      "sha256": "d2093a70478c9f14e4c68b520cdf4c3d7f90684da44b78bb576c007e64b8f4de"
+    },
+    {
+      "path": "examples/sky-invaders/make_art.py",
+      "size": 1671,
+      "sha256": "2f72ff6fb09ed56990bf30c93c1fd05e38937c43ccaf2aca40c2ce54ce38b6d7"
+    },
+    {
+      "path": "examples/sky-invaders/mod.json",
+      "size": 723,
+      "sha256": "341d94327a24a490495f8468c2175ad6be9681e2204426832a8afdedd265d714"
+    },
+    {
+      "path": "examples/sky-invaders/modules/art.json",
+      "size": 700,
+      "sha256": "6e4b0d187ac509a49ac5a1e42434b3e6558a47d09bde97acf5a8a36b694a3475"
+    },
+    {
+      "path": "examples/sky-invaders/modules/assets/invaders.json",
+      "size": 8230,
+      "sha256": "9d2efeb2b2e9f87b16208e1a51ab3888e3268d2151bc7db12e6f3c4b4a498cb7"
+    },
+    {
+      "path": "examples/sky-invaders/modules/assets/palette.json",
+      "size": 569,
+      "sha256": "3209e7d5b5d5d1db2c8608f93f579ece7da4ae9eb47f455c10b195c1fb9e3178"
+    },
+    {
+      "path": "examples/sky-invaders/project.json",
+      "size": 234,
+      "sha256": "3974cbff160e9d30da0c367fc434746a525edcfb97bde680411db0276445020e"
+    },
+    {
+      "path": "examples/sky-invaders/README.md",
+      "size": 1807,
+      "sha256": "03e7ec41d1870f2ebc24cfb1c493226120d45a41cfc702402cda8c234690ead2"
+    },
+    {
+      "path": "examples/sparse-content-workshop/mod.json",
+      "size": 3921,
+      "sha256": "7a31c2da28a99a60b6a1b1f8d7ec194aef48d8d9fe998da4480cf08b0d7085ec"
+    },
+    {
+      "path": "examples/sparse-content-workshop/README.md",
+      "size": 958,
+      "sha256": "deb58e5044bbd2d9ab677ef634e7b7086442a5789509bf9d1a29d777391d5969"
+    },
+    {
+      "path": "examples/still-regen/mod.json",
+      "size": 227,
+      "sha256": "9cfd19a12e2ec6da65ea410129519f949367fdbd377d47db47b2b3c2051ac977"
+    },
+    {
+      "path": "examples/three-room-art/gallery-bricks.json",
+      "size": 12329,
+      "sha256": "a15dd35edb831c6c8acffa3221a55831dc867947c526842f60ae84bdaa85093e"
+    },
+    {
+      "path": "examples/three-room-art/gallery-palette.json",
+      "size": 192,
+      "sha256": "b7e18549b25a32d179bb3b982f23cffb26ebed514c730c77e003aa3d9f82739e"
+    },
+    {
+      "path": "examples/three-room-art/mod.json",
+      "size": 5982,
+      "sha256": "50c7c0ee0a8fa970a2370e784bfe70df9e9335b25df0cabdee7dc70a019b4f0f"
+    },
+    {
+      "path": "examples/three-room-art/neighbor-repair-plan.json",
+      "size": 475,
+      "sha256": "c80c4198b349cd13ff1f6d2d3838a2fb561db1e45aa3bc1ecc494a3baa3b0ce5"
+    },
+    {
+      "path": "examples/three-room-art/neon-bricks.json",
+      "size": 12327,
+      "sha256": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51"
+    },
+    {
+      "path": "examples/three-room-art/neon-palette.json",
+      "size": 190,
+      "sha256": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+    },
+    {
+      "path": "examples/three-room-art/README.md",
+      "size": 470,
+      "sha256": "686392db0829e648b48a6d03ccf57b172b35e4df74e1c7052557b51b5db039c0"
+    },
+    {
+      "path": "examples/three-room-art/save-bricks.json",
+      "size": 12329,
+      "sha256": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce"
+    },
+    {
+      "path": "examples/three-room-art/save-palette.json",
+      "size": 192,
+      "sha256": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+    },
+    {
+      "path": "examples/two-room-art/mod.json",
+      "size": 3981,
+      "sha256": "954f4cab163de2428d9e973a907d94d3b93c161e454563972b40ffdacce61667"
+    },
+    {
+      "path": "examples/two-room-art/neon-bricks.json",
+      "size": 12327,
+      "sha256": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51"
+    },
+    {
+      "path": "examples/two-room-art/neon-palette.json",
+      "size": 190,
+      "sha256": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+    },
+    {
+      "path": "examples/two-room-art/README.md",
+      "size": 431,
+      "sha256": "d865f2fc02aedd7da3ec930c5a04dc912d9a42462c249b21514a834e3b9c64ae"
+    },
+    {
+      "path": "examples/two-room-art/save-bricks.json",
+      "size": 12329,
+      "sha256": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce"
+    },
+    {
+      "path": "examples/two-room-art/save-palette.json",
+      "size": 192,
+      "sha256": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+    },
+    {
+      "path": "framework/aos-usa-r0.json",
+      "size": 3667,
+      "sha256": "9d71a346380fd96ce4c2b81971168c2b9903158e231b7b06897b441dfce9c4eb"
+    },
+    {
+      "path": "framework/capabilities.json",
+      "size": 6832,
+      "sha256": "c4721c96194b449cbf31a80c6afb9e0583b2de199a1743f3974a20ac682d506a"
+    },
+    {
+      "path": "framework/enemies.json",
+      "size": 1419,
+      "sha256": "d3f2333f2be7ff75ca874b17c396905815fabafeff58bb91775496995e07ded1"
+    },
+    {
+      "path": "framework/equipment.json",
+      "size": 1323,
+      "sha256": "fa2a3db2b12b72a4c029a6f127174cbaa4a0c71992d750f3e6243f6ab92b0b31"
+    },
+    {
+      "path": "framework/roadmap.json",
+      "size": 8333,
+      "sha256": "24cdddff0d6340cc55fbe078d416f4ad129ec69260d63fe92a8b3da1612dcc45"
+    },
+    {
+      "path": "framework/tables.json",
+      "size": 6967,
+      "sha256": "7b605466f42492e2eaee44570f30646af4b6cdbd688b4f865dbeb6feb1531a9f"
+    },
+    {
+      "path": "Framework.cmd",
+      "size": 66,
+      "sha256": "fec724dfcd61402ce62e2583e41f0e03fa15c98cf8f3f29e7d36748a11e71e86"
+    },
+    {
+      "path": "handoffprompt.md",
+      "size": 23551,
+      "sha256": "fb834e4e8b191ff581cab984cc0219d44f0461d4ab7da5a2d4aad581e80ad53f"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1280,
+      "sha256": "ca9d1318b8853294fd42aaf2603d418b72e017777305a643bdbf6b151b2ccf99"
+    },
+    {
+      "path": "native/abilities/build.json",
+      "size": 238,
+      "sha256": "54d639d02e3d37c067e13f5942c2c2a7d20951d6afef33a6bbdc4fe74303ece3"
+    },
+    {
+      "path": "native/abilities/dominance.h",
+      "size": 2592,
+      "sha256": "76bbf45c9a052cc1c050a41a3963f064c4b1b03e4ddb2011ecdf9e9992564b38"
+    },
+    {
+      "path": "native/abilities/features.h",
+      "size": 790,
+      "sha256": "8d437680c682e02bdb132b88e5468a24fa5c155b5869c31a3509ff9c302bab9a"
+    },
+    {
+      "path": "native/abilities/link.ld",
+      "size": 404,
+      "sha256": "edd591910fbbf60f838f41bc75707ec67c6354783ce89914de71c931e379c2bb"
+    },
+    {
+      "path": "native/abilities/runtime.bin",
+      "size": 772,
+      "sha256": "21624652aadd8247fd7798c6fe372d1873779df6e6374fded627a5bdf5788484"
+    },
+    {
+      "path": "native/abilities/runtime.build.json",
+      "size": 511,
+      "sha256": "4e44481c14c3b3950a05f1c91105f8345d1a8559699eb88fcac4030ccdc93bda"
+    },
+    {
+      "path": "native/abilities/runtime.c",
+      "size": 1915,
+      "sha256": "70b5c96a88697bf098d36d72701e65218af7bb5d2d375321ee19d5b541fe9c3c"
+    },
+    {
+      "path": "README.md",
+      "size": 22895,
+      "sha256": "130ff3fec5ac67a52e72cf9012651413069998a92ec6be0d09e1e119453bec7f"
+    },
+    {
+      "path": "scripts/aria_tool.py",
+      "size": 220,
+      "sha256": "4415d24bf7da104d6a3b4782b5feb1f7ca76eccac08463bea11e1f2fa4f03b02"
+    },
+    {
+      "path": "scripts/attribute_spawn_events.py",
+      "size": 4564,
+      "sha256": "43481f04bccb6459a9b19c0f0f0b65f59b4ad87992346ca207b2e97d7d6e762d"
+    },
+    {
+      "path": "scripts/dump_walker_source.py",
+      "size": 2584,
+      "sha256": "b71acb60e4641933021b3d92af25be55217d006284f7f9c829778e89800c4c60"
+    },
+    {
+      "path": "scripts/emulator.py",
+      "size": 7188,
+      "sha256": "a6e4a6dc3e59976ff39a6bf35b30f09583271ba141ffcad6fddd50286cb8ead2"
+    },
+    {
+      "path": "scripts/import_indexed_png.py",
+      "size": 1477,
+      "sha256": "e5511ffb97381f03280cfd1c93fa287b232e2aeba2a2ed2d707e24a2d1f59c63"
+    },
+    {
+      "path": "scripts/package_framework.py",
+      "size": 3150,
+      "sha256": "fe9f606de7a2dd902b4d3433b094de7b12611ab24d4a940fd53983b3dbaca2a5"
+    },
+    {
+      "path": "scripts/preview_content.py",
+      "size": 1466,
+      "sha256": "9e56677d6798009cf03937f0aabf3b37d4d33296569755b4a3aa808c4b9712a7"
+    },
+    {
+      "path": "scripts/probe_actor_binding.py",
+      "size": 7012,
+      "sha256": "52e62050376c60325bb877f482ed5283a1c0d7d81d28988efe3511be64f0c031"
+    },
+    {
+      "path": "scripts/probe_skeleton.py",
+      "size": 7220,
+      "sha256": "9eb80ca12c20e24ad5ebb757c00a6676c843dd87d30ef00770ce5f8ee43b1456"
+    },
+    {
+      "path": "scripts/trace_sprite_consumers.py",
+      "size": 5403,
+      "sha256": "84d498773aa542fa1bae5ded07b2ed2e26a44be4bff7b2e3596b1752986c556d"
+    },
+    {
+      "path": "scripts/update_handoff.py",
+      "size": 1642,
+      "sha256": "104f1f2acf033cf3a1a5bbe16bfc96381a758e4c432f38927582028453fd53ed"
+    },
+    {
+      "path": "scripts/update_inventory.py",
+      "size": 3535,
+      "sha256": "b8ca177d6f0941dec59030aa63ba8472f3e560deb4835304a6382320ca7e6cc6"
+    },
+    {
+      "path": "scripts/verify_abilities.py",
+      "size": 6712,
+      "sha256": "6aecd7622711603933c65d4bc3ef0cdb89bf32792c97d44aa225a2d063746674"
+    },
+    {
+      "path": "scripts/verify_background_rendering.py",
+      "size": 3247,
+      "sha256": "ffcfe07c14f9a21d60cb4c6cff16614a910b6057b15db12110484695e484b935"
+    },
+    {
+      "path": "scripts/verify_backgrounds.py",
+      "size": 2001,
+      "sha256": "74d0cb06fbaf1e0c84d3e15663951bfe3634520106a6337a9f6e5fdc1cfe0aff"
+    },
+    {
+      "path": "scripts/verify_bridge_route.py",
+      "size": 4542,
+      "sha256": "58f93057a301b46b69e3e0004d2666150418a13045c72c1473316a625941fe9a"
+    },
+    {
+      "path": "scripts/verify_connection_plans.py",
+      "size": 1470,
+      "sha256": "fa2dee8879d2760f95b05023ca37a9b037d5848baeab80dd7dc56fdc4c5eca8c"
+    },
+    {
+      "path": "scripts/verify_connection_traversal.py",
+      "size": 5808,
+      "sha256": "7504b54c062916a682361defa7be3985175b716e21bbd4ffb8fcf62122dc217f"
+    },
+    {
+      "path": "scripts/verify_content.py",
+      "size": 2521,
+      "sha256": "c0f244eee1feeddebe93c77f3063b0f0284373dd6cfd7b162c6e9a4c260334dd"
+    },
+    {
+      "path": "scripts/verify_enemies.py",
+      "size": 4872,
+      "sha256": "4319032ad53a2361ce06e918a3ebdc24b9d5dd501317afcb2f8dddbeb13e483e"
+    },
+    {
+      "path": "scripts/verify_equipment.py",
+      "size": 5828,
+      "sha256": "3b9991804b52f2fcd39869fd456cd2251af657db55fa4f939ea469b8953e8b6a"
+    },
+    {
+      "path": "scripts/verify_framework.py",
+      "size": 2808,
+      "sha256": "8ea241e8844e6b75937fba43e508b72f1e1220965e38a888e735a4d2b9cf898b"
+    },
+    {
+      "path": "scripts/verify_geometry.py",
+      "size": 13729,
+      "sha256": "d72df55a1260dbf6e47119fe2a84e9d81ef276dcd0d2b2056a4c55f541cd45eb"
+    },
+    {
+      "path": "scripts/verify_projects.py",
+      "size": 2472,
+      "sha256": "ac3e619788a35217d8e23f52eb3e7d37fc59784c7968a302c7f98ea630326da7"
+    },
+    {
+      "path": "scripts/verify_rendering.py",
+      "size": 4228,
+      "sha256": "ff9dbad0622534e161c222d27946adadaf60aeb85adf522dbef3635544ee58c2"
+    },
+    {
+      "path": "scripts/verify_resources.py",
+      "size": 3493,
+      "sha256": "2b0e649509ee50f1c7502980e81c97c3e80db82c13a38893c4556c57abd56a25"
+    },
+    {
+      "path": "scripts/verify_room5_search.py",
+      "size": 4026,
+      "sha256": "a13259b0be2a907547ffacd33abf83adf688e628bb58dfdb5502eee509ade703"
+    },
+    {
+      "path": "scripts/verify_room_catalog.py",
+      "size": 3751,
+      "sha256": "5f02b65a8c0bf803fca149d96b64776713fa5d69532913fdf2f8d8b37752c76c"
+    },
+    {
+      "path": "scripts/verify_room_resources.py",
+      "size": 2262,
+      "sha256": "628464701933070dc0eb439a5d80d148f89d7a2c5bd96c7775864fa70d8f987d"
+    },
+    {
+      "path": "scripts/verify_room_states.py",
+      "size": 1793,
+      "sha256": "1b753476194de341709d433200e6946854ded37b08679e322089eac9e62ca468"
+    },
+    {
+      "path": "scripts/verify_rooms.py",
+      "size": 2297,
+      "sha256": "be07204af4e785918fa4c615116b416318120b2317696c3e2f59364cc3bc2fbc"
+    },
+    {
+      "path": "scripts/verify_sprite_assets.py",
+      "size": 10013,
+      "sha256": "5cd1b98d7737ebf02ae3dbc812c275d5796a390da9d750d8d7d01d3afefae51d"
+    },
+    {
+      "path": "scripts/verify_sprites.py",
+      "size": 3424,
+      "sha256": "a3176b9f8d25751dfd30d8fe23333a75688c11491f15d9960b419894fb734140"
+    },
+    {
+      "path": "scripts/verify_terrain_support.py",
+      "size": 1727,
+      "sha256": "0ca26cb23da99d13598e31424ecdc18144dd4d310d71d7e6de652ae658008fce"
+    },
+    {
+      "path": "scripts/verify_world_graph.py",
+      "size": 1854,
+      "sha256": "e2fd88f2ca066e37e02cf4fb175fa431dd38f10c185fdd773d28b178769d9f50"
+    },
+    {
+      "path": "src/hook-template.asm",
+      "size": 488,
+      "sha256": "7f4ee6dcbf09268c7568be26173974d1e006a14d995668d1d2c25c5da3d97bac"
+    },
+    {
+      "path": "TacticalSoul.cmd",
+      "size": 273,
+      "sha256": "e3d38b62cbb7728bab6f65367cf8576f079a357b955930784533eb75fc65dc28"
+    },
+    {
+      "path": "tests/test_abilities.py",
+      "size": 3948,
+      "sha256": "f2ca4aeeaf8b58e074dda5d97796f1de53f3ea8be328146bee82f942e56c1dbf"
+    },
+    {
+      "path": "tests/test_actor_table.py",
+      "size": 3926,
+      "sha256": "19e59789ad634a259447b7882eac544c852c38bbdd458708c860d8dd2bbc6e29"
+    },
+    {
+      "path": "tests/test_backgrounds.py",
+      "size": 5478,
+      "sha256": "1b49b99fac7e5a706bb0802e2a5dace4aa5bddabedf461c297c02875f4b024dd"
+    },
+    {
+      "path": "tests/test_connection_plans.py",
+      "size": 2367,
+      "sha256": "05844ef4e1ce3ed5375d059bfdf347a5c000bd6d10ae3babba5c345013f63609"
+    },
+    {
+      "path": "tests/test_content.py",
+      "size": 3538,
+      "sha256": "7cf4e9089975058656b9e904ea35c48b9c313ce0fefff42ce079053bfd93df94"
+    },
+    {
+      "path": "tests/test_editor_docs.py",
+      "size": 11095,
+      "sha256": "a2b43c70795ce722735e6c981458eca8dbe97425843549883c6679d4f07f06fa"
+    },
+    {
+      "path": "tests/test_enemies.py",
+      "size": 6284,
+      "sha256": "b2d6d26fcbb927ad8c643b654b984f71e6d4f82e4c4aca377d1e5cc096fcb2b0"
+    },
+    {
+      "path": "tests/test_equipment.py",
+      "size": 4074,
+      "sha256": "9129c513421055a7a2905ae97407d1099954f21bd64cbeb3b69882e7303dc5cd"
+    },
+    {
+      "path": "tests/test_framework.py",
+      "size": 2349,
+      "sha256": "01478a2ec058fc303e91386d7a8b8002334eeb561299a0946d0577f81d67582a"
+    },
+    {
+      "path": "tests/test_geometry.py",
+      "size": 4884,
+      "sha256": "f5c171321362a6b9af4e0df920acc7d55538bbfa0bb13125e1d7e7ec56dd61ec"
+    },
+    {
+      "path": "tests/test_input_routes.py",
+      "size": 2288,
+      "sha256": "e4f41ea196bcadc039632f7a6eee64ed9f60debca45ecb6419d2b78ae05a8cf3"
+    },
+    {
+      "path": "tests/test_level.py",
+      "size": 2385,
+      "sha256": "19632d65b603e94ae30f86124a8e2b805b87b6fe2a94e39872a632a573130881"
+    },
+    {
+      "path": "tests/test_projects.py",
+      "size": 8808,
+      "sha256": "124939915dd37111f7cfc38191cb69249de2daf8df67118e3dab1a68da1c0266"
+    },
+    {
+      "path": "tests/test_rendering.py",
+      "size": 5657,
+      "sha256": "2773d8bd29466e270ba66cd45e17044010b064a48882db6425c9264942dd50b0"
+    },
+    {
+      "path": "tests/test_resources.py",
+      "size": 5939,
+      "sha256": "6d1c108d6f3271bf32adcbdb7ffce97344618d21bd1f70fc91d9dcf0e04036dc"
+    },
+    {
+      "path": "tests/test_room_assets.py",
+      "size": 7193,
+      "sha256": "805402ddeef54596163990bbb83414f5f2ddd975f9b2624fdb47b44575c172de"
+    },
+    {
+      "path": "tests/test_room_catalog.py",
+      "size": 6582,
+      "sha256": "3fe6c4453c5047644ed7ea0a41ff3b8ad9df3a0696eba0701f7c592007919760"
+    },
+    {
+      "path": "tests/test_room_resources.py",
+      "size": 6002,
+      "sha256": "4a95814c707f2bf033cee6a73aa711e3b98fdc83e7fae1d8f6ff79a256fdbf6d"
+    },
+    {
+      "path": "tests/test_room_states.py",
+      "size": 2140,
+      "sha256": "ad53e796753df374d8d3da362b61140ad28f055b265d26585aac5d6b9606c16a"
+    },
+    {
+      "path": "tests/test_sprite_assets.py",
+      "size": 14163,
+      "sha256": "630b28776e67d61d3d1d35de7a23195524762849c29439fd9d6d727e724e4818"
+    },
+    {
+      "path": "tests/test_sprite_attribution.py",
+      "size": 1773,
+      "sha256": "d126b5fcd624850720dae3cdbbe5f2688647d5e864ce261b2297dbc8ea07ea89"
+    },
+    {
+      "path": "tests/test_sprite_rendering.py",
+      "size": 8837,
+      "sha256": "d6e3f7eab329ca6b7130f88022bb5dd2dfe0b169484db556d26207ce6d5c92f8"
+    },
+    {
+      "path": "tests/test_sprites.py",
+      "size": 3346,
+      "sha256": "53d6229f4ed5ed6567c9f4e014c00513d05515fbb36dec02f015ae97484e3615"
+    },
+    {
+      "path": "tests/test_terrain.py",
+      "size": 3704,
+      "sha256": "d72c015742987e6098753eca1cbedf42b2c56f6c47eead75d7812af41796b775"
+    },
+    {
+      "path": "tests/test_terrain_plans.py",
+      "size": 2059,
+      "sha256": "094c5f982d49e7bb2c8ba9b4225a772889cd1f382f650dca6a220e5d2bfdea77"
+    },
+    {
+      "path": "tests/test_terrain_support.py",
+      "size": 2618,
+      "sha256": "6031a5177bcfa8ec05488fa09e4b44a62ae3b777ab34161a7071de08350f227a"
+    },
+    {
+      "path": "tests/test_world_graph.py",
+      "size": 3561,
+      "sha256": "e78d67d8db66308415d4f4aea4b019f1e7be3e0dc173b131245772ff93dd16a9"
+    }
+  ],
+  "private_input_hashes": {
+    "CastlevaniaAoS.gba": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5"
+  },
+  "tool_hashes": {
+    "runtime/emulator/mGBA.exe": "5a3c98c2984dd04bd0d7c9378cdfae937ae0d73a196c880bb2eecf3b254af247",
+    "tools/libretro/mgba_libretro.dll": "c6532fff25fac9b0471c7e0e1e5eaa4ea221503cf9577cf1435b4acc2a0f149a",
+    "runtime/python/python.exe": "467014615a5255aca450ae88100dd2caf887da87657f00e3c2171ec44a685aec",
+    "tools/zig/zig-x86_64-windows-0.15.2/zig.exe": "d408dd38eed3e5204af841bcebf70502a4dbbb8399a3a3262be55059370bc018"
+  },
+  "room_workshop_verified": true,
+  "equipment_workshop": {
+    "unit_tests_passed": 30,
+    "native_report": "local/equipment-verification.json",
+    "output_sha256": "5df461f575240174a11f7fbd951f4653f461949266f6c8d914df4cc5e42c8573",
+    "scope": "existing equipment only; explicit inventory/route fixtures for accessory/save checks",
+    "native_checks_passed": 7
+  },
+  "enemy_workshop": {
+    "unit_tests_passed": 50,
+    "native_checks_passed": 8,
+    "native_report": "local/enemy-verification.json",
+    "output_sha256": "9227988af2b7e8475951d0e69d217582875fa28874cb7a71a94dc29311ad2512",
+    "scope": "named native balance/drops and same-room encounter edits; no arbitrary AI or new graphics allocator",
+    "fixtures": [],
+    "previous_native_regressions_passed": [
+      "rooms",
+      "equipment",
+      "framework"
+    ]
+  },
+  "ability_workshop": {
+    "unit_tests_passed": 63,
+    "native_checks_passed": 13,
+    "native_report": "local/ability-verification.json",
+    "output_sha256": "84bf29b19d7838101edfff83fe2f3f887db50d49395c09aae5abe5b760ffe2ff",
+    "runtime_bytes": 772,
+    "isolated_runtime_copy_build_verified": true,
+    "scope": "registered native modules, JSON config, guarded input edges and transient RAM; no custom SRAM or native grant ABI"
+  },
+  "content_workshop": {
+    "unit_tests_passed": 73,
+    "native_checks_passed": 4,
+    "native_report": "local/content-verification.json",
+    "output_sha256": "fc426aa22278dd36c2e5d4bd3f70e100f1990e4672abee36d5697b5566bf28b0",
+    "vram_address": "0x6013800",
+    "authoring_roundtrip_verified": true,
+    "previous_native_regressions_passed": [
+      "abilities",
+      "framework"
+    ],
+    "scope": "native icon-page replacement and asset codecs/bindings; PCM import only, no native sound playback"
+  },
+  "resource_authoring": {
+    "unit_tests_passed": 89,
+    "native_checks_passed": 4,
+    "native_report": "local/resource-verification.json",
+    "builds": [
+      {
+        "mod": "named-content-workshop",
+        "observed_pages": [
+          0,
+          1,
+          2
+        ],
+        "sha256": "5e1f8ce65d8d6023b58682b96c48df0cf4440eac8931c5217750e7ee1f5f6e0e"
+      },
+      {
+        "mod": "sparse-content-workshop",
+        "bytes_claimed": 78,
+        "sha256": "569c044ff0375cd289d92959890bb9e0433c66ca0a2309d3ffaff537b7511631"
+      }
+    ],
+    "all_three_pages_observed": true,
+    "private_export_roundtrip_verified": true,
+    "export_diff_preview_build_verified": true,
+    "previous_native_regressions_passed": [
+      "content",
+      "abilities",
+      "framework"
+    ],
+    "scope": "named in-place icon resource edits; no general VRAM/animation/room-geometry/audio allocator"
+  },
+  "unit_tests": 141,
+  "geometry_workshop": {
+    "passed": [
+      "type-2 layer metadata/layout/compressed resources reconstruct exactly",
+      "literal recompression decodes to identical visual/collision data",
+      "one selected cell changes; original shared layout/resources and castle map preserved",
+      "native movement crosses baseline and is blocked by new stone step",
+      "native A jump crosses new step",
+      "natural traversal reaches paired native save room",
+      "fresh native continue returns through paired door and retains collision edit",
+      "original ROM unchanged"
+    ],
+    "baseline_x": 329,
+    "blocked_x": 311,
+    "jump_x": 458,
+    "output_sha256": "4768b6f5f4ecd0c23a0df2bebfb35c11f6f96d549d2bcd25519fb4559badc8a4",
+    "fixtures": [
+      "identical camera-relative player X and zero velocity beside the step for initial comparisons; settled native Y retained; return collision tested by natural walking",
+      "existing paired-door save-route example; no terrain/collision RAM writes"
+    ],
+    "limitations": [
+      "existing metatile reuse only; no new graphics or collision definitions",
+      "first-hallway main layer only for writes; no room resizing",
+      "death/hardware/all campaign interactions not certified",
+      "shared resources preserved; no general VRAM allocator or map compiler"
+    ]
+  },
+  "current_native_regressions": [
+    "original_room_art_lifecycle"
+  ],
+  "inventory_note": "Source inventory excludes its own hash, private assets/evidence files, builds, dev tools and runtime bulk files. Embedded bounded verification summaries reflect available local evidence, not newly executed tests. Historical milestone fields retain their original scope.",
+  "previous_release_native_regressions": [
+    "rooms",
+    "resources",
+    "content",
+    "abilities",
+    "framework"
+  ],
+  "framework_version": "0.36.0-foundation",
+  "rendering": {
+    "passed": [
+      "native graphics chunk loads match preview resource mapping",
+      "native RGB555 palette banks match preview mapping",
+      "opaque actor-free wall pixels match native viewport at 5-bit color depth",
+      "baseline and geometry-edited previews verified",
+      "original unchanged"
+    ],
+    "results": [
+      {
+        "modded": false,
+        "exact_chunks": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "exact_palette_banks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "opaque_wall_pixels_compared": 7217,
+        "matching_pixels": 7217,
+        "camera": [
+          0,
+          48
+        ],
+        "rgba_sha256": "f7096195c7145bc9b33283021f63f5a7319a39570067cdb8ae9da3d4fd755b42"
+      },
+      {
+        "modded": true,
+        "exact_chunks": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "exact_palette_banks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "opaque_wall_pixels_compared": 7217,
+        "matching_pixels": 7217,
+        "camera": [
+          0,
+          48
+        ],
+        "rgba_sha256": "8456964d5c71afb46c305ba3911d0237c841fca849e38c5f7d8d79ccc9de5594"
+      }
+    ],
+    "fixtures": [
+      "controller-only entrance traversal; no RAM writes"
+    ],
+    "limitations": [
+      "static selected-layer preview only",
+      "opaque wall sample only; no whole-screen actor/effect equivalence",
+      "no inherited resources, 8bpp, animation or layer composition"
+    ]
+  },
+  "current_readonly_audits": [
+    "room_resources"
+  ],
+  "room_catalog": {
+    "passed": [
+      "all normal sector slots paged once with unique stable IDs",
+      "public room lookup agrees at every discovered slot including final sector",
+      "12 selected layers render through catalog checks",
+      "mod changes selected geometry without changing room identity",
+      "catalog does not mutate ROM/ledger/allocations; original unchanged"
+    ],
+    "room_slots": 343,
+    "pages": 11,
+    "room_status_counts": {
+      "available": 343
+    },
+    "geometry_status_counts": {
+      "available": 925,
+      "empty": 104
+    },
+    "render_samples": [
+      {
+        "id": "aos-usa-r0:s00:r000:base",
+        "layers_rendered": 3
+      },
+      {
+        "id": "aos-usa-r0:s00:r003:base",
+        "layers_rendered": 3
+      },
+      {
+        "id": "aos-usa-r0:s00:r006:base",
+        "layers_rendered": 3
+      },
+      {
+        "id": "aos-usa-r0:s00:r031:base",
+        "layers_rendered": 3
+      }
+    ],
+    "background_source_rasters": [
+      {
+        "id": "aos-usa-r0:s04:r000:base",
+        "layer": 1,
+        "rgba_sha256": "bb6391f2a63b8aea7e46634e330feea74d2dd5369cec1a9ec09ea8b20f82e259"
+      },
+      {
+        "id": "aos-usa-r0:s04:r010:base",
+        "layer": 1,
+        "rgba_sha256": "bb6391f2a63b8aea7e46634e330feea74d2dd5369cec1a9ec09ea8b20f82e259"
+      },
+      {
+        "id": "aos-usa-r0:s05:r014:base",
+        "layer": 1,
+        "rgba_sha256": "3a867db2c53a6eae7b7287826f6190e736b84ebaab852898a1a55f99e4f284c8"
+      },
+      {
+        "id": "aos-usa-r0:s06:r004:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r005:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r010:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r012:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r013:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r014:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r021:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r022:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s06:r025:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s07:r037:base",
+        "layer": 1,
+        "rgba_sha256": "1ce74530d17ed41debc5f27d2693e828a4fef15b7101e12ef80810d908e5a52e"
+      },
+      {
+        "id": "aos-usa-r0:s11:r000:base",
+        "layer": 1,
+        "rgba_sha256": "3e3ac44c065c8c345ab5998809c70aed8a1f5c6031cbc528e800de4cb070f2bc"
+      },
+      {
+        "id": "aos-usa-r0:s11:r007:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s11:r011:base",
+        "layer": 1,
+        "rgba_sha256": "5153393e9f26ab5545e8958c3e2c3b508d1438f9022bb782031c4aedbe42d85c"
+      },
+      {
+        "id": "aos-usa-r0:s11:r016:base",
+        "layer": 1,
+        "rgba_sha256": "3e3ac44c065c8c345ab5998809c70aed8a1f5c6031cbc528e800de4cb070f2bc"
+      },
+      {
+        "id": "aos-usa-r0:s11:r020:base",
+        "layer": 1,
+        "rgba_sha256": "e24d4decd86a339baad641bd8af168f14b3ebeed468e69f18773a420a0e0ab7a"
+      },
+      {
+        "id": "aos-usa-r0:s11:r032:base",
+        "layer": 1,
+        "rgba_sha256": "3a867db2c53a6eae7b7287826f6190e736b84ebaab852898a1a55f99e4f284c8"
+      },
+      {
+        "id": "aos-usa-r0:s11:r033:base",
+        "layer": 1,
+        "rgba_sha256": "3e3ac44c065c8c345ab5998809c70aed8a1f5c6031cbc528e800de4cb070f2bc"
+      },
+      {
+        "id": "aos-usa-r0:s11:r034:base",
+        "layer": 1,
+        "rgba_sha256": "3e3ac44c065c8c345ab5998809c70aed8a1f5c6031cbc528e800de4cb070f2bc"
+      },
+      {
+        "id": "aos-usa-r0:s11:r035:base",
+        "layer": 1,
+        "rgba_sha256": "3e3ac44c065c8c345ab5998809c70aed8a1f5c6031cbc528e800de4cb070f2bc"
+      },
+      {
+        "id": "aos-usa-r0:s11:r038:base",
+        "layer": 1,
+        "rgba_sha256": "ece775f8c0aabefc09b638fd9c8ac8a4eb63347bc69043aaf9130c950c308614"
+      },
+      {
+        "id": "aos-usa-r0:s11:r039:base",
+        "layer": 1,
+        "rgba_sha256": "3e3ac44c065c8c345ab5998809c70aed8a1f5c6031cbc528e800de4cb070f2bc"
+      }
+    ],
+    "background_viewport_pixels_verified": false,
+    "host_sha256": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5",
+    "limitations": [
+      "decode audit is not native campaign certification",
+      "base states only; alternate/event states not enumerated",
+      "4 type-2 sample rooms and all 24 byte-index source rasters; full-room composition not certified",
+      "background viewport pixels remain unverified",
+      "diagnostic failures are data, not automatic fixes"
+    ]
+  },
+  "estimated_framework_complete_percent": 24,
+  "custom_terrain": {
+    "passed": [
+      "type-2 layer metadata/layout/compressed resources reconstruct exactly",
+      "literal recompression decodes to identical visual/collision data",
+      "one selected cell changes; original shared layout/resources and castle map preserved",
+      "native movement crosses baseline and is blocked by new stone step",
+      "native A jump crosses new step",
+      "natural traversal reaches paired native save room",
+      "fresh native continue returns through paired door and retains collision edit",
+      "original ROM unchanged",
+      "isolated appended visual/collision definitions render natively with exact sampled pixels"
+    ],
+    "baseline_x": 329,
+    "blocked_x": 311,
+    "jump_x": 458,
+    "output_sha256": "76ed49e31890762356c2c18f0aeafdcb59acc414abbef48be31d6c8a690aea82",
+    "fixtures": [
+      "identical camera-relative player X and zero velocity beside the step for initial comparisons; settled native Y retained; return collision tested by natural walking",
+      "existing paired-door save-route example; no terrain/collision RAM writes"
+    ],
+    "limitations": [
+      "new arrangements of existing characters only; collision bytes 0/3 only; no imported graphics or VRAM allocation",
+      "first-hallway main layer only for writes; no room resizing",
+      "death/hardware/all campaign interactions not certified",
+      "shared resources preserved; no general VRAM allocator or map compiler"
+    ],
+    "custom_metatiles_added": 1,
+    "native_new_metatile_pixels_compared": 384
+  },
+  "original_room_art": {
+    "passed": [
+      "type-2 layer metadata/layout/compressed resources reconstruct exactly",
+      "literal recompression decodes to identical visual/collision data",
+      "one selected cell changes; original shared layout/resources and castle map preserved",
+      "native movement crosses baseline and is blocked by new stone step",
+      "native A jump crosses new step",
+      "natural traversal reaches paired native save room",
+      "fresh native continue returns through paired door and retains collision edit",
+      "original ROM unchanged",
+      "isolated appended visual/collision definitions render natively with exact sampled pixels",
+      "original imported characters and palette load again after fresh continue and return",
+      "pause/resume restores imported characters/palette",
+      "native death/game-over followed by fresh continue from post-death SRAM retains save and imported art on return"
+    ],
+    "baseline_x": 329,
+    "blocked_x": 311,
+    "jump_x": 458,
+    "output_sha256": "660a7a6892d43ec8dc56a03bf4ae09f7ddb136e02d245bbf4cdf37fc979570ca",
+    "fixtures": [
+      "identical camera-relative player X and zero velocity beside the step for initial comparisons; settled native Y retained; return collision tested by natural walking",
+      "existing paired-door save-route example; no terrain/collision RAM writes",
+      "HP set to zero to trigger native death; no graphics/palette/terrain RAM writes; fresh continue uses SRAM copied after game-over"
+    ],
+    "limitations": [
+      "one registered 2KB character chunk and one palette bank; no general VRAM allocator or animation",
+      "first-hallway main layer only for writes; no room resizing",
+      "one forced-HP death fixture; same-session game-over-menu continue, other events, hardware and full campaign unverified",
+      "shared resources preserved; no general VRAM allocator or map compiler"
+    ],
+    "custom_metatiles_added": 1,
+    "native_new_metatile_pixels_compared": 384,
+    "room_assets": [
+      {
+        "room": {
+          "sector": 0,
+          "room": 3
+        },
+        "graphics_wrapper_address": 141033536,
+        "palette_address": 141035588,
+        "graphics_list_address": 141035624,
+        "palette_list_address": 141035656,
+        "graphics_sha256": "96668346320e034e1f75fbbb88c3a86a1b8a0fe891e2bdbdd12089cc0a370ad5",
+        "palette_sha256": "b0e793245784107dcf019eada8de0b90d95b943875fb09bb28277741ae408aa5",
+        "source_sha256": {
+          "graphics": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51",
+          "palette": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2152
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      }
+    ]
+  },
+  "room_resources": {
+    "passed": [
+      "all 343 base-state room static resource audits terminate",
+      "audit does not mutate original/ledger/allocations",
+      "imported-art dependency points to new graphics/palette loads",
+      "shared-list consumer scan completes"
+    ],
+    "room_count": 343,
+    "layer_status_counts": {
+      "inspected": 925,
+      "empty": 104
+    },
+    "rooms_with_load_diagnostics": 6,
+    "rooms_with_static_overlaps": 0,
+    "rooms_with_unavailable_referenced_metatiles": 34,
+    "limitations": [
+      "static dependency observations only; no dynamic/global ownership",
+      "unsupported layer formats not assigned brush availability",
+      "no new write registrations"
+    ]
+  },
+  "backgrounds": {
+    "passed": [
+      "11 raw type-1 and 13 compressed type-3 layers inspect",
+      "source visual/layout bytes rebuild exactly",
+      "ROM, mutation ledger and allocations unchanged"
+    ],
+    "image_sha256": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5",
+    "layer_count": 24,
+    "limitations": [
+      "read-only structural evidence",
+      "no native pixels or affine viewport verification",
+      "no new write targets; collision pointer opaque"
+    ]
+  },
+  "background_rendering": {
+    "passed": [
+      "20 character chunks match native VRAM",
+      "5 declared palette banks match native palette memory",
+      "1024 expanded byte tilemap entries match native BG2",
+      "original unchanged"
+    ],
+    "fixture": {
+      "sector": 4,
+      "room": 0,
+      "layer": 1,
+      "patched_new_game_start": true,
+      "controller_boot": true,
+      "runtime_memory_writes": false
+    },
+    "native_affine_registers_hex": "6600000000000001303d00001af6ffff",
+    "source_rgba_sha256": "bb6391f2a63b8aea7e46634e330feea74d2dd5369cec1a9ec09ea8b20f82e259",
+    "viewport_pixels_verified": false,
+    "limitations": [
+      "static source raster only",
+      "captured affine registers do not reproduce native viewport; possible scanline effect remains unverified",
+      "one type-3 room only; no type-1 native fixture",
+      "no editing or lifecycle certification"
+    ]
+  },
+  "room_states": {
+    "passed": [
+      "343 base-slot chains terminate",
+      "all original next-state pointers are zero",
+      "original/ledger/allocations unchanged"
+    ],
+    "counts": {
+      "base_slots": 343,
+      "state_observations": 343,
+      "nonzero_next_links": 0
+    },
+    "load_status_counts": {
+      "graphics:resolved": 342,
+      "palettes:resolved": 337,
+      "palettes:unavailable": 5,
+      "graphics:inherited_or_empty": 1,
+      "palettes:inherited_or_empty": 1
+    },
+    "findings": [
+      {
+        "sector": 5,
+        "room": 4,
+        "ordinal": 0,
+        "kind": "palettes",
+        "status": "unavailable",
+        "message": "Invalid background palette range/header"
+      },
+      {
+        "sector": 5,
+        "room": 8,
+        "ordinal": 0,
+        "kind": "palettes",
+        "status": "unavailable",
+        "message": "Invalid background palette range/header"
+      },
+      {
+        "sector": 5,
+        "room": 9,
+        "ordinal": 0,
+        "kind": "palettes",
+        "status": "unavailable",
+        "message": "Invalid background palette range/header"
+      },
+      {
+        "sector": 5,
+        "room": 10,
+        "ordinal": 0,
+        "kind": "palettes",
+        "status": "unavailable",
+        "message": "Invalid background palette range/header"
+      },
+      {
+        "sector": 5,
+        "room": 13,
+        "ordinal": 0,
+        "kind": "palettes",
+        "status": "unavailable",
+        "message": "Invalid background palette range/header"
+      },
+      {
+        "sector": 11,
+        "room": 40,
+        "ordinal": 0,
+        "kind": "graphics",
+        "status": "inherited_or_empty",
+        "prior_state_required": true
+      },
+      {
+        "sector": 11,
+        "room": 40,
+        "ordinal": 0,
+        "kind": "palettes",
+        "status": "inherited_or_empty",
+        "prior_state_required": true
+      }
+    ],
+    "limitations": [
+      "alternate chains exercised synthetically only",
+      "event flag selection and native state transitions unverified",
+      "empty loads not assigned guessed prior resources"
+    ]
+  },
+  "two_room_art": {
+    "passed": [
+      "type-2 layer metadata/layout/compressed resources reconstruct exactly",
+      "literal recompression decodes to identical visual/collision data",
+      "one selected cell changes; original shared layout/resources and castle map preserved",
+      "native movement crosses baseline and is blocked by new stone step",
+      "native A jump crosses new step",
+      "natural traversal reaches paired native save room",
+      "fresh native continue returns through paired door and retains collision edit",
+      "original ROM unchanged",
+      "isolated appended visual/collision definitions render natively with exact sampled pixels",
+      "original imported characters and palette load again after fresh continue and return",
+      "pause/resume restores imported characters/palette",
+      "native death/game-over followed by fresh continue from post-death SRAM retains save and imported art on return",
+      "contrasting save-room graphics/palette and native mural pixels match at reported stages"
+    ],
+    "baseline_x": 329,
+    "blocked_x": 311,
+    "jump_x": 458,
+    "output_sha256": "762ba033bac901b96cd4bbdeaf068ced0aab451bbc99bcb3a5b37ccc023e341c",
+    "fixtures": [
+      "identical camera-relative player X and zero velocity beside the step for initial comparisons; settled native Y retained; return collision tested by natural walking",
+      "existing paired-door save-route example; no terrain/collision RAM writes",
+      "HP set to zero to trigger native death; no graphics/palette/terrain RAM writes; fresh continue uses SRAM copied after game-over"
+    ],
+    "limitations": [
+      "two registered room-local 2KB character loads and palette banks; no general VRAM allocator or animation",
+      "registered hallway and save-room main layers only; dimensions preserved",
+      "one forced-HP death fixture; same-session game-over-menu continue, other events, hardware and full campaign unverified",
+      "shared resources preserved; no general VRAM allocator or map compiler"
+    ],
+    "custom_metatiles_added": 1,
+    "native_new_metatile_pixels_compared": 384,
+    "room_assets": [
+      {
+        "room": {
+          "sector": 0,
+          "room": 3
+        },
+        "graphics_wrapper_address": 141033536,
+        "palette_address": 141035588,
+        "graphics_list_address": 141035624,
+        "palette_list_address": 141035656,
+        "graphics_sha256": "96668346320e034e1f75fbbb88c3a86a1b8a0fe891e2bdbdd12089cc0a370ad5",
+        "palette_sha256": "b0e793245784107dcf019eada8de0b90d95b943875fb09bb28277741ae408aa5",
+        "source_sha256": {
+          "graphics": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51",
+          "palette": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2152
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      },
+      {
+        "room": {
+          "sector": 0,
+          "room": 31
+        },
+        "graphics_wrapper_address": 141035688,
+        "palette_address": 141037740,
+        "graphics_list_address": 141037776,
+        "palette_list_address": 141037800,
+        "graphics_sha256": "449e5a47114381b4aae49ea3ab1168ebec68655f1248804af81f3eb3a3186480",
+        "palette_sha256": "b92940aedcc6599812567cf81696e2ff63ea42cd640db4b53431d2c082354949",
+        "source_sha256": {
+          "graphics": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce",
+          "palette": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2136
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      }
+    ],
+    "save_room_art_checks": [
+      {
+        "stage": "first-entry",
+        "matching_mural_pixels": 400
+      },
+      {
+        "stage": "fresh-continue",
+        "matching_mural_pixels": 400
+      },
+      {
+        "stage": "post-death-continue",
+        "matching_mural_pixels": 400
+      }
+    ]
+  },
+  "three_room_art": {
+    "passed": [
+      "type-2 layer metadata/layout/compressed resources reconstruct exactly",
+      "literal recompression decodes to identical visual/collision data",
+      "one selected cell changes; original shared layout/resources and castle map preserved",
+      "native movement crosses baseline and is blocked by new stone step",
+      "native A jump crosses new step",
+      "natural traversal reaches paired native save room",
+      "fresh native continue returns through paired door and retains collision edit",
+      "original ROM unchanged",
+      "isolated appended visual/collision definitions render natively with exact sampled pixels",
+      "original imported characters and palette load again after fresh continue and return",
+      "pause/resume restores imported characters/palette",
+      "native death/game-over followed by fresh continue from post-death SRAM retains save and imported art on return",
+      "contrasting save-room graphics/palette and native mural pixels match at reported stages"
+    ],
+    "baseline_x": 329,
+    "blocked_x": 311,
+    "jump_x": 458,
+    "output_sha256": "10e002682d906fb4f25c090aa1988d2fdea368c7aa3f5092213cbd7b8c5fba3f",
+    "fixtures": [
+      "identical camera-relative player X and zero velocity beside the step for initial comparisons; settled native Y retained; return collision tested by natural walking",
+      "existing paired-door save-route example; no terrain/collision RAM writes",
+      "HP set to zero to trigger native death; no graphics/palette/terrain RAM writes; fresh continue uses SRAM copied after game-over"
+    ],
+    "limitations": [
+      "three registered room-local character loads/palette banks; no general VRAM allocator",
+      "registered hallway/gallery/save main layers only; unchanged dimensions; not a repaired campaign graph",
+      "one forced-HP death fixture; same-session game-over-menu continue, other events, hardware and full campaign unverified",
+      "shared resources preserved; no general VRAM allocator or map compiler"
+    ],
+    "custom_metatiles_added": 1,
+    "native_new_metatile_pixels_compared": 384,
+    "room_assets": [
+      {
+        "room": {
+          "sector": 0,
+          "room": 3
+        },
+        "graphics_wrapper_address": 141033568,
+        "palette_address": 141035620,
+        "graphics_list_address": 141035656,
+        "palette_list_address": 141035688,
+        "graphics_sha256": "96668346320e034e1f75fbbb88c3a86a1b8a0fe891e2bdbdd12089cc0a370ad5",
+        "palette_sha256": "b0e793245784107dcf019eada8de0b90d95b943875fb09bb28277741ae408aa5",
+        "source_sha256": {
+          "graphics": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51",
+          "palette": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2152
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      },
+      {
+        "room": {
+          "sector": 0,
+          "room": 31
+        },
+        "graphics_wrapper_address": 141035720,
+        "palette_address": 141037772,
+        "graphics_list_address": 141037808,
+        "palette_list_address": 141037832,
+        "graphics_sha256": "449e5a47114381b4aae49ea3ab1168ebec68655f1248804af81f3eb3a3186480",
+        "palette_sha256": "b92940aedcc6599812567cf81696e2ff63ea42cd640db4b53431d2c082354949",
+        "source_sha256": {
+          "graphics": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce",
+          "palette": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2136
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      },
+      {
+        "room": {
+          "sector": 0,
+          "room": 6
+        },
+        "graphics_wrapper_address": 141037856,
+        "palette_address": 141039908,
+        "graphics_list_address": 141039944,
+        "palette_list_address": 141039976,
+        "graphics_sha256": "9e20d9e08b5d8757f1865699902529c1e47728b3db3c835bd092ac1e2cecf0e0",
+        "palette_sha256": "d91d567c6cb263bd025b1ea52ee6727505aa734a155ae5faa524a5fbf2d5d624",
+        "source_sha256": {
+          "graphics": "a15dd35edb831c6c8acffa3221a55831dc867947c526842f60ae84bdaa85093e",
+          "palette": "b7e18549b25a32d179bb3b982f23cffb26ebed514c730c77e003aa3d9f82739e"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2152
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      }
+    ],
+    "save_room_art_checks": [
+      {
+        "stage": "first-entry",
+        "matching_mural_pixels": 400
+      },
+      {
+        "stage": "fresh-continue",
+        "matching_mural_pixels": 400
+      },
+      {
+        "stage": "post-death-continue",
+        "matching_mural_pixels": 400
+      }
+    ],
+    "gallery_art_checks": {
+      "outbound": 400,
+      "fresh-continue-return": 400,
+      "post-death-return": 400
+    },
+    "gallery_unmatched_capture_attempts": {
+      "outbound": 1,
+      "fresh-continue-return": 3,
+      "post-death-return": 3
+    }
+  },
+  "world_graph": {
+    "passed": [
+      "343 rooms and 725 original doors resolve",
+      "graph inspection leaves original/patched images and ledger unchanged",
+      "three-room route reports four changed endpoints and four displaced incoming links",
+      "original unchanged"
+    ],
+    "original_summary": {
+      "rooms": 343,
+      "doors": 725,
+      "unresolved_destinations": 0,
+      "edges_without_observed_direct_return": 3
+    },
+    "modified_summary": {
+      "rooms": 343,
+      "doors": 725,
+      "unresolved_destinations": 0,
+      "edges_without_observed_direct_return": 7
+    },
+    "displaced_incoming_edges": [
+      "aos-usa-r0:s00:r005:base:door:000",
+      "aos-usa-r0:s00:r005:base:door:001",
+      "aos-usa-r0:s00:r009:base:door:001",
+      "aos-usa-r0:s00:r025:base:door:001"
+    ],
+    "limitations": [
+      "static base-slot observations only",
+      "missing direct return is not a softlock proof",
+      "no graph repair, event/progression or native landing verification"
+    ]
+  },
+  "connection_plans": {
+    "status": "static_proposal_not_gameplay_verified",
+    "input_sha256": "10e002682d906fb4f25c090aa1988d2fdea368c7aa3f5092213cbd7b8c5fba3f",
+    "proposed_image_sha256": "a08505a0d2d355e20d37d8da88f92929938724c4d8c9103fd1c7c375cb299907",
+    "before_summary": {
+      "rooms": 343,
+      "doors": 725,
+      "unresolved_destinations": 0,
+      "edges_without_observed_direct_return": 7
+    },
+    "after_summary": {
+      "rooms": 343,
+      "doors": 725,
+      "unresolved_destinations": 0,
+      "edges_without_observed_direct_return": 3
+    },
+    "restored_observed_return_edges": [
+      "aos-usa-r0:s00:r005:base:door:000",
+      "aos-usa-r0:s00:r005:base:door:001",
+      "aos-usa-r0:s00:r009:base:door:001",
+      "aos-usa-r0:s00:r025:base:door:001"
+    ],
+    "passed": [
+      "deterministic proposal",
+      "four restored observed returns",
+      "source image and allocation state unchanged",
+      "original host unchanged"
+    ],
+    "limitations": [
+      "native landing and progression unverified",
+      "proposal emits no playable ROM"
+    ]
+  },
+  "connection_traversal": {
+    "status": "controlled_native_traversal_passed",
+    "proposal_sha256": "a08505a0d2d355e20d37d8da88f92929938724c4d8c9103fd1c7c375cb299907",
+    "fixture_sha256": "3bbd301e90c11b6c911bf2db52fb4fc338c294f13ac707fe1e0bcd1f62f53ee7",
+    "samples": [
+      {
+        "stage": "entry",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 36,
+        "world_y": 415,
+        "hp": 278
+      },
+      {
+        "stage": "upper-platform-fixture",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 480,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "five-to-nine",
+        "room": "0x850f4f4",
+        "state": 4,
+        "substate": 1,
+        "world_x": 6,
+        "world_y": 1439,
+        "hp": 278
+      },
+      {
+        "stage": "five-to-nine-move-away",
+        "room": "0x850f4f4",
+        "state": 4,
+        "substate": 1,
+        "world_x": 16,
+        "world_y": 1439,
+        "hp": 278
+      },
+      {
+        "stage": "nine-to-five",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 505,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "nine-to-five-move-away",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 495,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "left-endpoint-fixture",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 32,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "five-to-25",
+        "room": "0x850feec",
+        "state": 4,
+        "substate": 1,
+        "world_x": 232,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "five-to-25-move-away",
+        "room": "0x850feec",
+        "state": 4,
+        "substate": 1,
+        "world_x": 221,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "25-to-five",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 6,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "25-to-five-move-away",
+        "room": "0x850f294",
+        "state": 4,
+        "substate": 1,
+        "world_x": 17,
+        "world_y": 159,
+        "hp": 278
+      }
+    ],
+    "passed": [
+      "four native endpoint crossings",
+      "settled in-bounds landings",
+      "movement away from every destination",
+      "exact proposed endpoint bytes",
+      "original host unchanged"
+    ],
+    "fixtures": [
+      "checked harness hallway exit enters room5 lower door; independent room5 left/right endpoint positions with zero velocity after native loading; no collision RAM writes"
+    ],
+    "limitations": [
+      "room5 internal stairs not traversed end-to-end; independent endpoint fixtures",
+      "not full campaign reachability, progression or save lifecycle certification",
+      "fixture changes hallway and room5 lower-left entry pair; four proposed endpoints checked byte-exact"
+    ]
+  },
+  "room5_search": {
+    "status": "bounded_search_completed",
+    "fixture_sha256": "3bbd301e90c11b6c911bf2db52fb4fc338c294f13ac707fe1e0bcd1f62f53ee7",
+    "start": {
+      "room_address": 139522708,
+      "state": 4,
+      "substate": 1,
+      "world_x": 32,
+      "world_y": 159,
+      "hp": 278
+    },
+    "goal_reached": false,
+    "best_trial": "room5-walk-48",
+    "best_endpoint": {
+      "room_address": 139522708,
+      "state": 4,
+      "substate": 1,
+      "world_x": 193,
+      "world_y": 255,
+      "hp": 278
+    },
+    "checkpoint_checks": [
+      "repeat trace, complete EWRAM and framebuffer identical",
+      "foreign owner, wrong ROM and truncated payload rejected without EWRAM change"
+    ],
+    "fixtures": [
+      "separate hallway entry harness",
+      "one room5 left-endpoint position and zero velocity bootstrap",
+      "no RAM edits inside search branches; no ability grants"
+    ],
+    "limitations": [
+      "28 single-jump timings only, not all possible inputs",
+      "goal checks final segment only, not continuous room traversal",
+      "no proof of impossibility or softlock",
+      "no repaired campaign lifecycle certification"
+    ]
+  },
+  "bridge_route": {
+    "status": "input_only_bridge_traversal_passed",
+    "output_sha256": "bbe3d4b0cc80eee76bec1c77322050caf4547b9641c4e450457bbf22fe7fe840",
+    "fixture_sha256": "59e32a6cf4a241f057454d7267994361d915a4ca09688e921fc3afbd19862e1e",
+    "changed_cells": [
+      54,
+      55,
+      56,
+      57,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93
+    ],
+    "graph_summary": {
+      "rooms": 343,
+      "doors": 725,
+      "unresolved_destinations": 0,
+      "edges_without_observed_direct_return": 3
+    },
+    "samples": [
+      {
+        "stage": "entry",
+        "room_address": 139522708,
+        "state": 4,
+        "substate": 1,
+        "world_x": 12,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "east-to-nine",
+        "room_address": 139523316,
+        "state": 4,
+        "substate": 1,
+        "world_x": 7,
+        "world_y": 1439,
+        "hp": 278
+      },
+      {
+        "stage": "west-through-five-to-25",
+        "room_address": 139525868,
+        "state": 4,
+        "substate": 1,
+        "world_x": 234,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "east-through-five-to-nine",
+        "room_address": 139523316,
+        "state": 4,
+        "substate": 1,
+        "world_x": 7,
+        "world_y": 1439,
+        "hp": 278
+      }
+    ],
+    "passed": [
+      "22 isolated room5 edits",
+      "shared visual/collision resources and source layout unchanged",
+      "castle map unchanged",
+      "four proposed endpoint records byte-exact",
+      "input-only complete room5 crossing in both directions",
+      "original unchanged"
+    ],
+    "fixtures": [
+      "checked hallway entry redirects to room5 upper bridge using its lower-left door record and upper spawn; separate private harness",
+      "no position, velocity, ability, HP or collision RAM writes"
+    ],
+    "limitations": [
+      "harness entry differs from playable campaign route",
+      "neighbor network campaign/event access and full world not certified",
+      "main-route lifecycle tested separately; no neighbor-branch save statue"
+    ]
+  },
+  "bridge_lifecycle": {
+    "passed": [
+      "type-2 layer metadata/layout/compressed resources reconstruct exactly",
+      "literal recompression decodes to identical visual/collision data",
+      "one selected cell changes; original shared layout/resources and castle map preserved",
+      "native movement crosses baseline and is blocked by new stone step",
+      "native A jump crosses new step",
+      "natural traversal reaches paired native save room",
+      "fresh native continue returns through paired door and retains collision edit",
+      "original ROM unchanged",
+      "isolated appended visual/collision definitions render natively with exact sampled pixels",
+      "original imported characters and palette load again after fresh continue and return",
+      "pause/resume restores imported characters/palette",
+      "native death/game-over followed by fresh continue from post-death SRAM retains save and imported art on return",
+      "contrasting save-room graphics/palette and native mural pixels match at reported stages",
+      "separate bridge-route build retains three-room main-route lifecycle"
+    ],
+    "baseline_x": 329,
+    "blocked_x": 311,
+    "jump_x": 458,
+    "output_sha256": "bbe3d4b0cc80eee76bec1c77322050caf4547b9641c4e450457bbf22fe7fe840",
+    "fixtures": [
+      "identical camera-relative player X and zero velocity beside the step for initial comparisons; settled native Y retained; return collision tested by natural walking",
+      "existing paired-door save-route example; no terrain/collision RAM writes",
+      "HP set to zero to trigger native death; no graphics/palette/terrain RAM writes; fresh continue uses SRAM copied after game-over"
+    ],
+    "limitations": [
+      "three registered room-local character loads/palette banks; no general VRAM allocator",
+      "four registered terrain rooms; neighbor bridge traversed separately; campaign event access unverified",
+      "one forced-HP death fixture; same-session game-over-menu continue, other events, hardware and full campaign unverified",
+      "shared resources preserved; no general VRAM allocator or map compiler"
+    ],
+    "custom_metatiles_added": 1,
+    "native_new_metatile_pixels_compared": 384,
+    "room_assets": [
+      {
+        "room": {
+          "sector": 0,
+          "room": 3
+        },
+        "graphics_wrapper_address": 141033744,
+        "palette_address": 141035796,
+        "graphics_list_address": 141035832,
+        "palette_list_address": 141035864,
+        "graphics_sha256": "96668346320e034e1f75fbbb88c3a86a1b8a0fe891e2bdbdd12089cc0a370ad5",
+        "palette_sha256": "b0e793245784107dcf019eada8de0b90d95b943875fb09bb28277741ae408aa5",
+        "source_sha256": {
+          "graphics": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51",
+          "palette": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2152
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      },
+      {
+        "room": {
+          "sector": 0,
+          "room": 31
+        },
+        "graphics_wrapper_address": 141035896,
+        "palette_address": 141037948,
+        "graphics_list_address": 141037984,
+        "palette_list_address": 141038008,
+        "graphics_sha256": "449e5a47114381b4aae49ea3ab1168ebec68655f1248804af81f3eb3a3186480",
+        "palette_sha256": "b92940aedcc6599812567cf81696e2ff63ea42cd640db4b53431d2c082354949",
+        "source_sha256": {
+          "graphics": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce",
+          "palette": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2136
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      },
+      {
+        "room": {
+          "sector": 0,
+          "room": 6
+        },
+        "graphics_wrapper_address": 141038032,
+        "palette_address": 141040084,
+        "graphics_list_address": 141040120,
+        "palette_list_address": 141040152,
+        "graphics_sha256": "9e20d9e08b5d8757f1865699902529c1e47728b3db3c835bd092ac1e2cecf0e0",
+        "palette_sha256": "d91d567c6cb263bd025b1ea52ee6727505aa734a155ae5faa524a5fbf2d5d624",
+        "source_sha256": {
+          "graphics": "a15dd35edb831c6c8acffa3221a55831dc867947c526842f60ae84bdaa85093e",
+          "palette": "b7e18549b25a32d179bb3b982f23cffb26ebed514c730c77e003aa3d9f82739e"
+        },
+        "provenance": "Original procedural neon brick pixels/palette authored for Tactical Soul Framework, MIT.",
+        "budget": {
+          "new_character_bytes": 2048,
+          "new_palette_bytes": 32,
+          "character_range": [
+            49152,
+            51200
+          ],
+          "palette_bank": 8,
+          "excluded_tilemaps": [
+            {
+              "layer": 0,
+              "start": 59392,
+              "end": 61440
+            },
+            {
+              "layer": 1,
+              "start": 61440,
+              "end": 63488
+            },
+            {
+              "layer": 2,
+              "start": 63488,
+              "end": 65536
+            }
+          ],
+          "rom_payload_bytes": 2152
+        },
+        "shared_original_resources_preserved": true,
+        "scope": "registered static room load; not global VRAM ownership"
+      }
+    ],
+    "save_room_art_checks": [
+      {
+        "stage": "first-entry",
+        "matching_mural_pixels": 400
+      },
+      {
+        "stage": "fresh-continue",
+        "matching_mural_pixels": 400
+      },
+      {
+        "stage": "post-death-continue",
+        "matching_mural_pixels": 400
+      }
+    ],
+    "gallery_art_checks": {
+      "outbound": 400,
+      "fresh-continue-return": 400,
+      "post-death-return": 400
+    },
+    "gallery_unmatched_capture_attempts": {
+      "outbound": 1,
+      "fresh-continue-return": 3,
+      "post-death-return": 3
+    }
+  },
+  "terrain_support": {
+    "status": "static_support_survey_passed",
+    "image_sha256": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5",
+    "rooms": 343,
+    "summary": {
+      "registered": 4,
+      "static_candidate": 311,
+      "blocked": 28
+    },
+    "registered_rooms": [
+      {
+        "sector": 0,
+        "room": 3
+      },
+      {
+        "sector": 0,
+        "room": 5
+      },
+      {
+        "sector": 0,
+        "room": 6
+      },
+      {
+        "sector": 0,
+        "room": 31
+      }
+    ],
+    "passed": [
+      "all 343 unique base slots assessed",
+      "four existing registrations unchanged",
+      "original/image/ledger/profile/allocator unchanged"
+    ],
+    "limitations": [
+      "candidate is not edit authorization or native verification",
+      "main-layer and current base-state static loads only",
+      "no new registrations performed"
+    ]
+  },
+  "projects": {
+    "status": "project_composition_verified",
+    "output_sha256": "bbe3d4b0cc80eee76bec1c77322050caf4547b9641c4e450457bbf22fe7fe840",
+    "modules": 5,
+    "geometry_batches": 4,
+    "sprite_project_sha256": "3b17a2fd90da7c332d0181c66da55583432d56b1a3013af3378ae9ed4b02f1bd",
+    "passed": [
+      "modular and flat images, ledgers, allocations and cursors identical",
+      "two room5 terrain modules combined into one checked batch",
+      "source/module/asset fingerprints recorded",
+      "composed sky-invaders project reproduces the flat sprite reskin bytes exactly",
+      "original unchanged"
+    ],
+    "limitations": [
+      "no new native behavior; identical final images reuse prior bridge/sprite evidence",
+      "project supports declared data/terrain/room-art/sprite modules; hooks/content/raw patch modules excluded",
+      "module order is declarative merge order, not sequential patch semantics"
+    ]
+  },
+  "sprites": {
+    "status": "static_sprite_preview_verified",
+    "host_sha256": "910f88d3701e6c9f99c0d63660c14c61d8b79b0c17bfd7b35a15185be36430a5",
+    "frame_count": 272,
+    "sprites": [
+      {
+        "sprite": "common",
+        "frame_count": 126,
+        "animation_count": 23,
+        "resources": {
+          "pages": [
+            {
+              "wrapper_address": 136058356,
+              "data_address": 136058360,
+              "encoding": "raw",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 16,
+              "width": 128,
+              "height": 128,
+              "byte_count": 8192,
+              "data_sha256": "43f0a68b9e80a7e1ecf0e241ee4ff275934930d1e6a2cd9b3922735ad416ec11"
+            }
+          ],
+          "palette": {
+            "wrapper_address": 136354300,
+            "bank": 3,
+            "bank_count": 7,
+            "data_address": 136354400,
+            "data_sha256": "84981ccf2259091220956c998ae741c452b5edf3523597b96b8891a60e77b1b1"
+          }
+        },
+        "contact_sheet": {
+          "columns": 12,
+          "cell_width": 36,
+          "cell_height": 52
+        }
+      },
+      {
+        "sprite": "julius",
+        "frame_count": 75,
+        "animation_count": 31,
+        "resources": {
+          "pages": [
+            {
+              "wrapper_address": 136266404,
+              "data_address": 136266408,
+              "encoding": "raw",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 8,
+              "width": 128,
+              "height": 64,
+              "byte_count": 4096,
+              "data_sha256": "55977eef21e9a33a2d8f779d4221f0fa7dea759fd16efb58608e57812dbfe32f"
+            },
+            {
+              "wrapper_address": 136270504,
+              "data_address": 136270508,
+              "encoding": "raw",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 8,
+              "width": 128,
+              "height": 64,
+              "byte_count": 4096,
+              "data_sha256": "0f1503edf3efea6d2ce63110bde524032c7799204e737d6e1f766305452cade1"
+            },
+            {
+              "wrapper_address": 136274604,
+              "data_address": 136274608,
+              "encoding": "raw",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 8,
+              "width": 128,
+              "height": 64,
+              "byte_count": 4096,
+              "data_sha256": "2dca1008084b24730d3ce21bfc0de213067c3a8498c321e297cdb51d2c371f38"
+            },
+            {
+              "wrapper_address": 136278704,
+              "data_address": 136278708,
+              "encoding": "raw",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 8,
+              "width": 128,
+              "height": 64,
+              "byte_count": 4096,
+              "data_sha256": "bf1b85b23091d401b1803e8e39ebb7bd506dbf3097a459fc004ff8ae75710f9a"
+            }
+          ],
+          "palette": {
+            "wrapper_address": 136364072,
+            "bank": 0,
+            "bank_count": 1,
+            "data_address": 136364076,
+            "data_sha256": "c8b4b9264f75be9b801a47c68c2f08abf2460d8ae0d62a598a53e65263e5e6f8"
+          }
+        },
+        "contact_sheet": {
+          "columns": 12,
+          "cell_width": 75,
+          "cell_height": 53
+        }
+      },
+      {
+        "sprite": "background-bats",
+        "frame_count": 15,
+        "animation_count": 4,
+        "resources": {
+          "pages": [
+            {
+              "wrapper_address": 136101468,
+              "data_address": 140492576,
+              "encoding": "aria-lz10",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 4,
+              "width": 128,
+              "height": 32,
+              "byte_count": 2048,
+              "data_sha256": "6f854783fd52be168b512c169451fa8b38ab96cbd8f3d788df7091706a8d3f3c"
+            }
+          ],
+          "palette": {
+            "wrapper_address": 136355560,
+            "bank": 0,
+            "bank_count": 1,
+            "data_address": 136355564,
+            "data_sha256": "a7cc42d2dd4da92f764c24b7bd57d97718ada87709706cdfc33d4c3d8297df54"
+          }
+        },
+        "contact_sheet": {
+          "columns": 12,
+          "cell_width": 68,
+          "cell_height": 20
+        }
+      },
+      {
+        "sprite": "unknown-actor",
+        "frame_count": 21,
+        "animation_count": 9,
+        "resources": {
+          "pages": [
+            {
+              "wrapper_address": 136336120,
+              "data_address": 136336124,
+              "encoding": "raw",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 8,
+              "width": 128,
+              "height": 64,
+              "byte_count": 4096,
+              "data_sha256": "a9ac039760480118897915b64e8e429eeae626e9cf8124eaac18763bcef4c139"
+            }
+          ],
+          "palette": {
+            "wrapper_address": 136365392,
+            "bank": 0,
+            "bank_count": 1,
+            "data_address": 136365396,
+            "data_sha256": "b9ea4f9fe0aae061460895c0ee675da10e55deb76a67bdedcd13361078173e78"
+          }
+        },
+        "contact_sheet": {
+          "columns": 12,
+          "cell_width": 44,
+          "cell_height": 44
+        }
+      },
+      {
+        "sprite": "unknown-actor-2",
+        "frame_count": 35,
+        "animation_count": 10,
+        "resources": {
+          "pages": [
+            {
+              "wrapper_address": 136101764,
+              "data_address": 140553640,
+              "encoding": "aria-lz10",
+              "bpp": 4,
+              "reserved": 16,
+              "header_chunks": 8,
+              "width": 128,
+              "height": 64,
+              "byte_count": 4096,
+              "data_sha256": "87cab1a2e6bdc1ecb3ee5b5e6673b155bb53e7c1f0e2ea4c948befa92684c582"
+            }
+          ],
+          "palette": {
+            "wrapper_address": 136357384,
+            "bank": 0,
+            "bank_count": 1,
+            "data_address": 136357388,
+            "data_sha256": "e858d62ad55cf40824127ff3c5e25209d273851dfbf4451dd30272d685fc01b4"
+          }
+        },
+        "contact_sheet": {
+          "columns": 12,
+          "cell_width": 59,
+          "cell_height": 66
+        }
+      }
+    ],
+    "passed": [
+      "All registered source frames render within actual page payloads",
+      "Raw and Aria-LZ pages resolved",
+      "Deterministic Julius frame0 RGBA regression",
+      "Original image and ledger unchanged"
+    ],
+    "limitations": [
+      "Static source rendering only; no native OAM/pixel/lifecycle proof",
+      "No writes or dynamic Soma resource binding"
+    ]
+  },
+  "sprite_assets": {
+    "status": "native_sprite_assets_verified",
+    "output_sha256": "3b17a2fd90da7c332d0181c66da55583432d56b1a3013af3378ae9ed4b02f1bd",
+    "checks": [
+      {
+        "stage": "baseline-entry",
+        "vram_base": "0x6012200",
+        "obj_palette_banks": [
+          11
+        ],
+        "matching_opaque_pixels": 72,
+        "matched_parts": [
+          {
+            "oam_index": 22,
+            "source_part": [
+              16,
+              0,
+              8,
+              16
+            ],
+            "opaque_pixels": 47
+          },
+          {
+            "oam_index": 25,
+            "source_part": [
+              32,
+              0,
+              8,
+              8
+            ],
+            "opaque_pixels": 25
+          }
+        ],
+        "tiles_verified": 64
+      },
+      {
+        "stage": "custom-entry",
+        "vram_base": "0x6012200",
+        "obj_palette_banks": [
+          11
+        ],
+        "matching_opaque_pixels": 86,
+        "matched_parts": [
+          {
+            "oam_index": 22,
+            "source_part": [
+              16,
+              0,
+              8,
+              16
+            ],
+            "opaque_pixels": 56
+          },
+          {
+            "oam_index": 25,
+            "source_part": [
+              32,
+              0,
+              8,
+              8
+            ],
+            "opaque_pixels": 30
+          }
+        ],
+        "tiles_verified": 64
+      },
+      {
+        "stage": "custom-pause-resume",
+        "vram_base": "0x6012200",
+        "obj_palette_banks": [
+          11
+        ],
+        "matching_opaque_pixels": 60,
+        "matched_parts": [
+          {
+            "oam_index": 25,
+            "source_part": [
+              32,
+              0,
+              8,
+              8
+            ],
+            "opaque_pixels": 30
+          },
+          {
+            "oam_index": 27,
+            "source_part": [
+              32,
+              0,
+              8,
+              8
+            ],
+            "opaque_pixels": 30
+          }
+        ],
+        "tiles_verified": 64
+      },
+      {
+        "stage": "custom-room-reentry",
+        "vram_base": "0x6012200",
+        "obj_palette_banks": [
+          11
+        ],
+        "matching_opaque_pixels": 60,
+        "matched_parts": [
+          {
+            "oam_index": 34,
+            "source_part": [
+              48,
+              0,
+              8,
+              8
+            ],
+            "opaque_pixels": 30
+          },
+          {
+            "oam_index": 36,
+            "source_part": [
+              48,
+              0,
+              8,
+              8
+            ],
+            "opaque_pixels": 30
+          }
+        ],
+        "tiles_verified": 64
+      }
+    ],
+    "passed": [
+      "Input-only natural entry loads original artwork and palette through the native engine",
+      "All 64 source tiles match native OBJ VRAM at each checked stage",
+      "Ordinary OAM sprite parts match visible static source pixels",
+      "Final example pause/resume and room exit/reentry preserve imported artwork",
+      "Original ROM unchanged",
+      "Separate composed save-route harness preserves native art on save return, fresh continue and forced-HP death/fresh continue"
+    ],
+    "fixtures": [],
+    "limitations": [
+      "Shared bats/clouds page/palette replacement, not a per-room actor import",
+      "Blended cloud pixels excluded from opaque comparisons",
+      "Save/death checked in separate composed shortcut harness; other consumers, full campaign and hardware remain unverified",
+      "No new frames, AI, player streaming or VRAM ownership"
+    ],
+    "composed_lifecycle": {
+      "output_sha256": "3455f4137e516f0e3a3e2bcd01ebf18bddb59740b86a9ccf177d198096020541",
+      "checks": [
+        {
+          "stage": "composed-save-return",
+          "vram_base": "0x6010200",
+          "obj_palette_banks": [
+            10
+          ],
+          "matching_opaque_pixels": 56,
+          "matched_parts": [
+            {
+              "oam_index": 27,
+              "source_part": [
+                24,
+                0,
+                8,
+                16
+              ],
+              "opaque_pixels": 56
+            }
+          ],
+          "tiles_verified": 64
+        },
+        {
+          "stage": "composed-fresh-continue-return",
+          "vram_base": "0x6010200",
+          "obj_palette_banks": [
+            10
+          ],
+          "matching_opaque_pixels": 30,
+          "matched_parts": [
+            {
+              "oam_index": 37,
+              "source_part": [
+                32,
+                8,
+                8,
+                8
+              ],
+              "opaque_pixels": 30
+            }
+          ],
+          "tiles_verified": 64
+        },
+        {
+          "stage": "composed-post-death-continue-return",
+          "vram_base": "0x6010200",
+          "obj_palette_banks": [
+            10
+          ],
+          "matching_opaque_pixels": 30,
+          "matched_parts": [
+            {
+              "oam_index": 37,
+              "source_part": [
+                32,
+                8,
+                8,
+                8
+              ],
+              "opaque_pixels": 30
+            }
+          ],
+          "tiles_verified": 64
+        }
+      ],
+      "scope": "Separate composed room-workshop save shortcut, not the unchanged final-example campaign",
+      "fixtures": [
+        "SRAM copied between fresh emulator instances",
+        "HP set to zero to trigger native death; no graphics/OAM/palette writes"
+      ]
+    }
+  }
+}

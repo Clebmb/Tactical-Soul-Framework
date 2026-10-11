@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "kind": "tsf-project",
+  "id": "sky-invaders-project",
+  "description": "Composable single-module project reproducing the flat Sky Invaders sprite reskin bytes.",
+  "modules": [
+    "modules/art.json"
+  ]
+}

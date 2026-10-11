@@ -1,0 +1,346 @@
+{
+  "profile": "aos-usa-r0",
+  "source": "DSVEdit/constants/aos_constants.rb; offsets and sizes are layout facts. Names are framework identifiers, not DSVEdit APIs.",
+  "tables": {
+    "enemies": {
+      "address": "0x080E9644",
+      "stride": 36,
+      "count": 113,
+      "fields": {
+        "create_code": {
+          "offset": 0,
+          "size": 4
+        },
+        "update_code": {
+          "offset": 4,
+          "size": 4
+        },
+        "item_1": {
+          "offset": 8,
+          "size": 2
+        },
+        "item_2": {
+          "offset": 10,
+          "size": 2
+        },
+        "hp": {
+          "offset": 12,
+          "size": 2
+        },
+        "mp": {
+          "offset": 14,
+          "size": 2
+        },
+        "experience": {
+          "offset": 16,
+          "size": 2
+        },
+        "soul_rarity": {
+          "offset": 18,
+          "size": 1
+        },
+        "attack": {
+          "offset": 19,
+          "size": 1
+        },
+        "defense": {
+          "offset": 20,
+          "size": 1
+        },
+        "item_1_rarity": {
+          "offset": 21,
+          "size": 1
+        },
+        "item_2_rarity": {
+          "offset": 22,
+          "size": 1
+        },
+        "soul_type": {
+          "offset": 23,
+          "size": 1
+        },
+        "soul": {
+          "offset": 24,
+          "size": 1
+        },
+        "weaknesses": {
+          "offset": 26,
+          "size": 2
+        },
+        "resistances": {
+          "offset": 28,
+          "size": 2
+        }
+      }
+    },
+    "consumables": {
+      "address": "0x08505B3C",
+      "stride": 16,
+      "count": 32,
+      "fields": {
+        "item_id": {
+          "offset": 0,
+          "size": 2
+        },
+        "icon": {
+          "offset": 2,
+          "size": 2
+        },
+        "price": {
+          "offset": 4,
+          "size": 4
+        },
+        "type": {
+          "offset": 8,
+          "size": 1
+        },
+        "var_a": {
+          "offset": 10,
+          "size": 2
+        }
+      }
+    },
+    "weapons": {
+      "address": "0x08505D3C",
+      "stride": 28,
+      "count": 59,
+      "fields": {
+        "item_id": {
+          "offset": 0,
+          "size": 2
+        },
+        "icon": {
+          "offset": 2,
+          "size": 2
+        },
+        "price": {
+          "offset": 4,
+          "size": 4
+        },
+        "attack_type": {
+          "offset": 8,
+          "size": 1
+        },
+        "attack": {
+          "offset": 10,
+          "size": 1
+        },
+        "defense": {
+          "offset": 11,
+          "size": 1
+        },
+        "strength": {
+          "offset": 12,
+          "size": 1
+        },
+        "constitution": {
+          "offset": 13,
+          "size": 1
+        },
+        "intelligence": {
+          "offset": 14,
+          "size": 1
+        },
+        "luck": {
+          "offset": 15,
+          "size": 1
+        },
+        "effects": {
+          "offset": 16,
+          "size": 2
+        },
+        "gfx_index": {
+          "offset": 18,
+          "size": 1
+        },
+        "sprite_index": {
+          "offset": 19,
+          "size": 1
+        },
+        "weapon_animation": {
+          "offset": 20,
+          "size": 1
+        },
+        "palette": {
+          "offset": 21,
+          "size": 1
+        },
+        "swing_animation": {
+          "offset": 22,
+          "size": 1
+        },
+        "iframes": {
+          "offset": 23,
+          "size": 1
+        },
+        "swing_sound": {
+          "offset": 24,
+          "size": 2
+        }
+      }
+    },
+    "armor": {
+      "address": "0x085063B0",
+      "stride": 20,
+      "count": 45,
+      "fields": {
+        "item_id": {
+          "offset": 0,
+          "size": 2
+        },
+        "icon": {
+          "offset": 2,
+          "size": 2
+        },
+        "price": {
+          "offset": 4,
+          "size": 4
+        },
+        "type": {
+          "offset": 8,
+          "size": 1
+        },
+        "attack": {
+          "offset": 10,
+          "size": 1
+        },
+        "defense": {
+          "offset": 11,
+          "size": 1
+        },
+        "strength": {
+          "offset": 12,
+          "size": 1
+        },
+        "constitution": {
+          "offset": 13,
+          "size": 1
+        },
+        "intelligence": {
+          "offset": 14,
+          "size": 1
+        },
+        "luck": {
+          "offset": 15,
+          "size": 1
+        },
+        "resistances": {
+          "offset": 16,
+          "size": 2
+        }
+      }
+    },
+    "red_souls": {
+      "address": "0x080E1598",
+      "stride": 16,
+      "count": 56,
+      "fields": {
+        "code": {
+          "offset": 0,
+          "size": 4
+        },
+        "use_animation": {
+          "offset": 4,
+          "size": 2
+        },
+        "mana_cost": {
+          "offset": 6,
+          "size": 2
+        },
+        "max_at_once": {
+          "offset": 8,
+          "size": 1
+        },
+        "damage_multiplier": {
+          "offset": 10,
+          "size": 2
+        },
+        "effects": {
+          "offset": 12,
+          "size": 2
+        },
+        "var_a": {
+          "offset": 14,
+          "size": 2
+        }
+      }
+    },
+    "blue_souls": {
+      "address": "0x080E192C",
+      "stride": 12,
+      "count": 25,
+      "fields": {
+        "code": {
+          "offset": 0,
+          "size": 4
+        },
+        "mana_cost": {
+          "offset": 4,
+          "size": 1
+        },
+        "hold_or_press": {
+          "offset": 5,
+          "size": 1
+        },
+        "player_effect": {
+          "offset": 8,
+          "size": 4
+        }
+      }
+    },
+    "yellow_souls": {
+      "address": "0x080E1B08",
+      "stride": 12,
+      "count": 36,
+      "fields": {
+        "code": {
+          "offset": 0,
+          "size": 4
+        },
+        "stat_to_raise": {
+          "offset": 6,
+          "size": 2
+        },
+        "player_effect": {
+          "offset": 8,
+          "size": 4
+        }
+      }
+    },
+    "julius_skills": {
+      "address": "0x080E1ED8",
+      "stride": 16,
+      "count": 4,
+      "fields": {
+        "code": {
+          "offset": 0,
+          "size": 4
+        },
+        "use_animation": {
+          "offset": 4,
+          "size": 2
+        },
+        "mana_cost": {
+          "offset": 6,
+          "size": 2
+        },
+        "max_at_once": {
+          "offset": 8,
+          "size": 1
+        },
+        "damage_multiplier": {
+          "offset": 10,
+          "size": 2
+        },
+        "effects": {
+          "offset": 12,
+          "size": 2
+        },
+        "var_a": {
+          "offset": 14,
+          "size": 2
+        }
+      }
+    }
+  }
+}

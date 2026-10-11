@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "room5-left-jump-diagnostic",
+  "segments": [
+    {
+      "label": "approach",
+      "frames": 48,
+      "keys": [
+        7
+      ]
+    },
+    {
+      "label": "jump",
+      "frames": 30,
+      "keys": [
+        7,
+        8
+      ]
+    },
+    {
+      "label": "coast",
+      "frames": 40,
+      "keys": [
+        7
+      ],
+      "expect": {
+        "room_address": 139522708,
+        "state": 4,
+        "substate": 1,
+        "world_x": [
+          180,
+          205
+        ],
+        "hp": [
+          1,
+          9999
+        ]
+      }
+    }
+  ]
+}
