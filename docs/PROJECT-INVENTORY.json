@@ -60,6 +60,7 @@
     "docs/TOTAL-CONVERSIONS.md",
     "docs/TWO-ROOM-ART.md",
     "docs/VERIFICATION.md",
+    "docs/VIEWER.md",
     "docs/WORLD-GRAPH.md",
     "examples/README.md",
     "examples/ability-workshop/README.md",
@@ -82,13 +83,13 @@
   "files": [
     {
       "path": ".gitignore",
-      "size": 100,
-      "sha256": "5b16ac540d6123951aa361a254f83ca9bace1a5ebdda81e407c24798334a9bf5"
+      "size": 775,
+      "sha256": "a25c25380e6027934dcdeb5c52135c0d14a754b7ff88b901bdfb3dcde8c992d5"
     },
     {
       "path": "AGENTS.md",
-      "size": 26015,
-      "sha256": "0ccb907de235cc9751eb7a4476e27ee753c6bf4aa9645e30c123f0b6f666015e"
+      "size": 26475,
+      "sha256": "78b2787aadcf0fcc23df56811418f2273b121f5114cc69ffdc6a1898d8c226db"
     },
     {
       "path": "aria/__init__.py",
@@ -266,6 +267,11 @@
       "sha256": "44eaf603fd6e82a89ebabd9ca32395d3209ef45e7e945872e963378fc2302bbc"
     },
     {
+      "path": "aria/viewer.py",
+      "size": 8337,
+      "sha256": "632c734c72bb2dd9b81672e5c800381d5ef56c3bbab61ea9863e7a541f74c2ef"
+    },
+    {
       "path": "aria/world_graph.py",
       "size": 4431,
       "sha256": "a993f6c6bfdb5f69e80904e6dc9f8a68543f0e739dcfafe7579a52d7e7419e8b"
@@ -302,8 +308,8 @@
     },
     {
       "path": "docs/COMPLETION-ROADMAP.md",
-      "size": 22385,
-      "sha256": "b93c815b191b0f6ae1aec98f64920200f8d9d972fa33b2a330072f85348b96ae"
+      "size": 23004,
+      "sha256": "6cca4e3a54842a8dd74017f16207803686b59665976c1d2bc68a576b8f0a9969"
     },
     {
       "path": "docs/CONNECTION-PLANNING.md",
@@ -544,6 +550,11 @@
       "path": "docs/VERIFICATION.md",
       "size": 1826,
       "sha256": "8b1855791394fa3a99435d6df7bb26c3cb05cef34f770d1d3d882b317e519d19"
+    },
+    {
+      "path": "docs/VIEWER.md",
+      "size": 2348,
+      "sha256": "a82a154aa0fbc5e992a791c7597adb16c7ffc524e9469136ad3537f438d98c4e"
     },
     {
       "path": "docs/WORLD-GRAPH.md",
@@ -977,8 +988,8 @@
     },
     {
       "path": "framework/capabilities.json",
-      "size": 6832,
-      "sha256": "c4721c96194b449cbf31a80c6afb9e0583b2de199a1743f3974a20ac682d506a"
+      "size": 6888,
+      "sha256": "b0828d07d3eb675fed5acdee9417cdaacbf0ff66ebf58dea24ec1dbe5d8eccb4"
     },
     {
       "path": "framework/enemies.json",
@@ -992,8 +1003,8 @@
     },
     {
       "path": "framework/roadmap.json",
-      "size": 8333,
-      "sha256": "24cdddff0d6340cc55fbe078d416f4ad129ec69260d63fe92a8b3da1612dcc45"
+      "size": 8458,
+      "sha256": "0b54acaa84b3a7040d92d4b9c1bf3d9ce22664c9dc096e8dca6f597dab32f588"
     },
     {
       "path": "framework/tables.json",
@@ -1007,8 +1018,8 @@
     },
     {
       "path": "handoffprompt.md",
-      "size": 23551,
-      "sha256": "fb834e4e8b191ff581cab984cc0219d44f0461d4ab7da5a2d4aad581e80ad53f"
+      "size": 24334,
+      "sha256": "e2fa86488998e5547f45acbcb837c6950e62fa11c51209c084ffb19e916f7e65"
     },
     {
       "path": "LICENSE",
@@ -1052,8 +1063,8 @@
     },
     {
       "path": "README.md",
-      "size": 22895,
-      "sha256": "130ff3fec5ac67a52e72cf9012651413069998a92ec6be0d09e1e119453bec7f"
+      "size": 24673,
+      "sha256": "c86d82217c7ee552b3d513a7a945672b42383a6230b984b6831f7cf1f997613f"
     },
     {
       "path": "scripts/aria_tool.py",
@@ -1083,7 +1094,7 @@
     {
       "path": "scripts/package_framework.py",
       "size": 3150,
-      "sha256": "fe9f606de7a2dd902b4d3433b094de7b12611ab24d4a940fd53983b3dbaca2a5"
+      "sha256": "4365dace45eb4ded27ff57a93c90e5bde5435012ae52952e27a89eb3ec94693e"
     },
     {
       "path": "scripts/preview_content.py",
@@ -1371,6 +1382,11 @@
       "sha256": "6031a5177bcfa8ec05488fa09e4b44a62ae3b777ab34161a7071de08350f227a"
     },
     {
+      "path": "tests/test_viewer.py",
+      "size": 3548,
+      "sha256": "1502c975d8174b108a4dc2e9fe8b89e56db1e30720305e43c1a7efc76c9ad977"
+    },
+    {
       "path": "tests/test_world_graph.py",
       "size": 3561,
       "sha256": "e78d67d8db66308415d4f4aea4b019f1e7be3e0dc173b131245772ff93dd16a9"
@@ -1496,7 +1512,7 @@
     "abilities",
     "framework"
   ],
-  "framework_version": "0.36.0-foundation",
+  "framework_version": "0.37.0-foundation",
   "rendering": {
     "passed": [
       "native graphics chunk loads match preview resource mapping",

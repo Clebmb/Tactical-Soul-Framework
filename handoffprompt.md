@@ -16,17 +16,17 @@ You are Muse Spark 1.3 taking over a real, existing Aria of Sorrow ROM-modding f
 ## Latest status — refresh at the end of each turn
 
 <!-- STATUS START -->
-Updated (UTC): 2026-10-11T10:30:00+00:00
+Updated (UTC): 2026-10-11T11:30:00+00:00
 
-Current framework: **0.36.0-foundation**. Estimated completion: **32%** (31.5/100 weighted maturity points). Public git live: **https://github.com/Clebmb/Tactical-Soul-Framework** (commit 58e7a7b, 265 files, zero private files).
+Current framework: **0.37.0-foundation**. Estimated completion: **32%** (31.7/100 weighted maturity points). Public git live: **https://github.com/Clebmb/Tactical-Soul-Framework**.
 
-**Completed this turn:** Two things. (1) v0.36 `preview_document` renders a room layer from a document's manifest state: two clean builds, two renders, identical pixels required — the headless equivalent of `preview-room --mod` for documents, with renderer-contract validation. 2 new tests (12 total in `tests/test_editor_docs.py`); contracts in `docs/EDITOR-DOCUMENTS.md`. (2) README overhaul per user request: status block near the top (version, completion %, what can be built today), removed the "(D)"/"E:" milestone labels and AI-prompting language, humanized the intro. Standing note added: refresh the README status block after every generation. No native work; sprite evidence unchanged.
+**Completed this turn:** v0.37 viewer contracts (`aria/viewer.py`, `docs/VIEWER.md`): pure viewport math plus room view models (visible cells, entity/door markers, cropped layer pixels, audit notes) and document views proven over two clean builds — including a real-manifest document view of the geometry workshop on the hallway. 5 new tests (3 pure-math always-run, 2 host-gated native). README status refreshed per standing rule. No version-bump-exempt work; sprite evidence unchanged.
 
-**Verification actually run:** 260 unit tests pass with private host (258 existing + 2 new; exit 0). roadmap.json re-parsed after edit (a key typo was caught and fixed before packaging). Original ROM unchanged.
+**Verification actually run:** 265 unit tests pass with private host (260 existing + 5 new; exit 0, includes 2 native viewer tests). Original ROM unchanged.
 
-**Next concrete work:** Viewer frontend contracts with a first room-viewer wiring; other rooms/actors through the attribution library (writer only with a tracer-named consumer set).
+**Next concrete work:** Deeper native authoring coverage (campaign/event compiler slices, audio binding, grant APIs); other rooms/actors through the attribution library (writer only with a tracer-named consumer set).
 
-**Remaining limits / unfinished work:** 32% (31.5/100 weighted). Viewer contracts pending; sprite rendered-consumer proof withdrawn; REA GBA unsupported; GUI deferred.
+**Remaining limits / unfinished work:** 32% (31.7/100 weighted). Widget frontend implementation pending (deferred); sprite rendered-consumer proof withdrawn; REA GBA unsupported; GUI deferred.
 
 **Git publication (user request, no version bump):** hardened `.gitignore` (ROMs/saves, build/, local/, tools/, bundled runtimes, all but latest release zip, venvs, `.freebuff/`, OS leftovers); `assets/tsf_banner.png` moved from root and shown at README top; README gained a self-sourced-files table (`CastlevaniaAoS.gba` + hash, libretro DLL, Zig, Pillow Python, runtimes from release zip) and a "What's to come" section; pruned 35 old release zips leaving 0.36.0 (latest by mtime); `git init`, committed 265 files, pushed `main` to public Clebmb/Tactical-Soul-Framework. Verified via dry-run and `git ls-files`: no .gba/.sav, no local/build/tools/runtime-binaries in git. Kept tracked deliberately: handoffprompt.md/AGENTS.md (release process and contributor instructions depend on them), chirp.wav and runtime.bin files (original MIT content/code), latest release zip (runnable distribution with runtimes).
 

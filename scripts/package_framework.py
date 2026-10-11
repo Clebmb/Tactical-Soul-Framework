@@ -9,7 +9,7 @@ for folder in ("aria","native","framework","examples","tests","docs","src","runt
 for name in ("mGBA.exe","LICENSE.txt","portable.ini","README.html","CHANGES.txt"):
     files.append(ROOT/"runtime/emulator"/name)
 files.extend(p for p in (ROOT/"runtime/emulator/licenses").rglob("*") if p.is_file())
-archive=RELEASE/"Tactical-Soul-Framework-0.36.0.zip"
+archive=RELEASE/"Tactical-Soul-Framework-0.37.0.zip"
 handoff=(ROOT/'handoffprompt.md').read_text(encoding='utf-8')
 version=json.loads((ROOT/'framework/capabilities.json').read_text())['version']
 status=handoff.split('<!-- STATUS START -->',1)[1].split('<!-- STATUS END -->',1)[0]

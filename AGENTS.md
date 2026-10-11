@@ -174,6 +174,15 @@ See [Sprite inspection](docs/SPRITES.md) for `aria/sprites.py`, registered commo
 
 ## v0.25 original native sprite artwork
 
+## v0.37 viewer contracts with room-viewer wiring
+
+`aria/viewer.py` is the headless data backend for a future viewer:
+viewport math, room view models with markers and cropped pixels, plus
+document views proven over two clean builds (real-manifest hallway
+proof). See [viewer contracts](docs/VIEWER.md). Authoring 2.9→3.1.
+265 tests pass. Completion: 32% (31.7/100). Next: deeper native
+authoring (campaign/event slices, audio binding, grant APIs).
+
 ## v0.36 document-driven room previews
 
 `preview_document` renders a room layer from a document's manifest state

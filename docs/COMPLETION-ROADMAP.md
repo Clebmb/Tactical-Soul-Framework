@@ -120,6 +120,18 @@ Registered common, Julius and background-bats frame/hitbox/animation inspection 
 Registered raw/LZ 4bpp page/palette resolution and static sprite-frame rendering now cover all 216 common/Julius/background-bat frames. Pixel tests cover packed 8x8 source addressing, parts/flips/transparency and bounds; private contact sheets were visually reviewed. 222 tests pass. Graphics maturity rises from 3.9 to 4.4; total is 29.1/100, still rounded to 29%. Native sprite pixel comparisons, writes, ownership and animation lifecycle remain pending. See [sprite guide](SPRITES.md).
 
 
+### v0.37: viewer contracts with room-viewer wiring
+
+`aria/viewer.py` defines the headless data backend a future graphical
+viewer would render: viewport math, room view models (visible cells,
+entity/door markers, cropped layer pixels, audit notes) and document
+views proven over two clean builds. Covered natively on the hallway,
+including a real-manifest document view of the geometry workshop. See
+[viewer contracts](VIEWER.md). Authoring maturity rises from 2.9 to 3.1;
+total is 31.7/100, still rounded to 32%. Next: deeper native authoring
+coverage (campaign/event slices, audio binding, grant APIs).
+
+
 ### v0.36: document-driven room previews
 
 `preview_document` renders a room layer from a document's manifest state:

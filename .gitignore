@@ -17,7 +17,7 @@ runtime/emulator/
 # Release archives: only the latest stays in git; older ones are pruned.
 # When cutting a new release, move the ! exception down to the new file.
 release/*.zip
-!release/Tactical-Soul-Framework-0.36.0.zip
+!release/Tactical-Soul-Framework-0.37.0.zip
 
 # Python bytecode and virtual environments.
 __pycache__/

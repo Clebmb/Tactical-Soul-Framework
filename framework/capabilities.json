@@ -1,5 +1,5 @@
 {
-  "version": "0.36.0-foundation",
+  "version": "0.37.0-foundation",
   "target": "aos-usa-r0",
   "implemented": [
     "exact_rom_verification",
@@ -104,7 +104,8 @@
     "immutable_editor_documents_with_undo_redo",
     "editor_authored_change_diffs_and_manifest_io",
     "editor_document_clean_rebuild_application",
-    "editor_document_preview_wiring"
+    "editor_document_preview_wiring",
+    "viewer_room_view_model_and_document_wiring"
   ],
   "extension_points_not_implemented": [
     "general_level_geometry_and_collision_editor",
@@ -126,7 +127,7 @@
     "custom_ability_sram_persistence",
     "native_audio_sample_instrument_sequence_bindings",
     "general_sprite_animation_resource_allocator",
-    "editor_viewer_frontend_contracts",
+    "viewer_widget_frontend_implementation",
     "dynamic_native_content_registry",
     "automatic_item_to_icon_tile_mapping",
     "general_native_asset_dependency_graph",

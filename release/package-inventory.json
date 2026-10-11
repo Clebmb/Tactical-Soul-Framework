@@ -1,11 +1,11 @@
 {
-  "fileName": "Tactical-Soul-Framework-0.36.0.zip",
-  "size": 31011453,
-  "sha256": "af17998fb3e094e5438142c26298695816c84948750ca6433ab2297265d5b2d9",
+  "fileName": "Tactical-Soul-Framework-0.37.0.zip",
+  "size": 31018337,
+  "sha256": "5cb8bc748f051999399b75399e3aa9629bce529d64d65fd17dd48d9f0c7be025",
   "entries": [
     {
       "path": "TacticalSoul/AGENTS.md",
-      "size": 26015
+      "size": 26475
     },
     {
       "path": "TacticalSoul/aria/__init__.py",
@@ -148,6 +148,10 @@
       "size": 697
     },
     {
+      "path": "TacticalSoul/aria/viewer.py",
+      "size": 8337
+    },
+    {
       "path": "TacticalSoul/aria/world_graph.py",
       "size": 4431
     },
@@ -177,7 +181,7 @@
     },
     {
       "path": "TacticalSoul/docs/COMPLETION-ROADMAP.md",
-      "size": 22385
+      "size": 23004
     },
     {
       "path": "TacticalSoul/docs/CONNECTION-PLANNING.md",
@@ -277,7 +281,7 @@
     },
     {
       "path": "TacticalSoul/docs/PROJECT-INVENTORY.json",
-      "size": 112955
+      "size": 113443
     },
     {
       "path": "TacticalSoul/docs/REA-WORKFLOW.md",
@@ -374,6 +378,10 @@
     {
       "path": "TacticalSoul/docs/VERIFICATION.md",
       "size": 1826
+    },
+    {
+      "path": "TacticalSoul/docs/VIEWER.md",
+      "size": 2348
     },
     {
       "path": "TacticalSoul/docs/WORLD-GRAPH.md",
@@ -721,7 +729,7 @@
     },
     {
       "path": "TacticalSoul/framework/capabilities.json",
-      "size": 6832
+      "size": 6888
     },
     {
       "path": "TacticalSoul/framework/enemies.json",
@@ -733,7 +741,7 @@
     },
     {
       "path": "TacticalSoul/framework/roadmap.json",
-      "size": 8333
+      "size": 8458
     },
     {
       "path": "TacticalSoul/framework/tables.json",
@@ -745,7 +753,7 @@
     },
     {
       "path": "TacticalSoul/handoffprompt.md",
-      "size": 23551
+      "size": 24334
     },
     {
       "path": "TacticalSoul/LICENSE",
@@ -781,7 +789,7 @@
     },
     {
       "path": "TacticalSoul/README.md",
-      "size": 22895
+      "size": 24673
     },
     {
       "path": "TacticalSoul/runtime/emulator/CHANGES.txt",
@@ -1258,6 +1266,10 @@
     {
       "path": "TacticalSoul/tests/test_terrain_support.py",
       "size": 2618
+    },
+    {
+      "path": "TacticalSoul/tests/test_viewer.py",
+      "size": 3548
     },
     {
       "path": "TacticalSoul/tests/test_world_graph.py",

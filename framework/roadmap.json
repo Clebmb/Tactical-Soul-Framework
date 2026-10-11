@@ -100,11 +100,11 @@
     {
       "id": "authoring",
       "weight": 6,
-      "earned_estimate": 2.9,
+      "earned_estimate": 3.1,
       "title": "Agent authoring and future frontend contracts",
       "checklist": [
         "Documented APIs, resource inspection, previews and catalog: foundation implemented",
-        "Immutable editor documents with bounded undo/redo, fingerprints, authored-change diffs, manifest save/load, clean-rebuild application and document-driven room previews with determinism proofs: implemented (headless, no GUI); viewer frontend contracts pending",
+        "Immutable editor documents with bounded undo/redo, fingerprints, authored-change diffs, manifest save/load, clean-rebuild application, document-driven room previews and a headless room-viewer view model with real-manifest native proof: implemented (no GUI); widget frontend implementation pending",
         "Ordered source projects, module/asset fingerprints, room batching and targeted ownership conflicts: implemented, including sprite asset modules with rebased sources and resource ownership; full typed dependency diagnostics pending",
         "Reusable custom-content project templates: partial",
         "Headless rectangle-paint plans and input replay contracts implemented narrowly; GUI deferred/out of scope"
@@ -125,7 +125,7 @@
     }
   ],
   "estimated_complete_percent": 32,
-  "next_milestone": "Viewer frontend contracts with a first room-viewer wiring; other rooms/actors through the snapshot-anchored attribution library, then a writer only with a tracer-named consumer set. Subtype-to-row formula, loader identity and Arachne-room live proof follow. Player streaming, new animations and general OBJ allocation remain separate.",
+  "next_milestone": "Deeper native authoring coverage (campaign/event compiler slices, audio binding, grant APIs); other rooms/actors through the attribution library; other rooms/actors through the snapshot-anchored attribution library, then a writer only with a tracer-named consumer set. Subtype-to-row formula, loader identity and Arachne-room live proof follow. Player streaming, new animations and general OBJ allocation remain separate.",
   "completion_gates": [
     "Original-content three-room campaign passes new-game/traversal/return/death/save/fresh-continue",
     "Custom graphics, animation, audio and mechanics load through verified native paths",
