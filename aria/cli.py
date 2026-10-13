@@ -10,8 +10,10 @@ from .hooks import install_frame_hook
 from .compiler import ensure_callback
 from .level import apply_level_edits,audit_room
 from .equipment import catalog,resolve,apply_equipment_edits
-from .enemies import catalog as enemy_catalog,resolve as resolve_enemy,apply_enemy_edits
+from .enemies import catalog as enemy_catalog,resolve as resolve_enemy,apply_enemy_edits,resolve_soul
 from .labels import apply_label_edits
+from .starts import install_new_game_start
+from .palette_tints import install_palette_tints
 from .encounters import audit_encounters
 from .abilities import install_abilities
 from .content import install_content
@@ -51,6 +53,10 @@ def apply_manifest(rom, path, compile_requested=False):
 def apply_manifest_data(rom,mod,folder,compile_requested=False):
     """Apply an ordinary manifest using an explicit confined payload folder."""
     allowed = {"schema_version", "id", "description", "table_edits", "patches", "blobs", "entity_lists", "door_lists", "frame_hook", "room_edits", "equipment_edits", "enemy_edits", "enemy_encounters", "abilities", "content", "resource_edits", "geometry_edits", "room_assets", "sprite_assets", "label_edits"}
+    allowed.add('new_game_start')
+    allowed.add('palette_tints')
+    allowed.add('soul_edits')
+    allowed.add('boot_melody')
     if set(mod)-allowed:
         raise PatchError("Unknown mod properties: "+", ".join(sorted(set(mod)-allowed)))
     if mod.get("schema_version") != 1 or not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,63}", mod.get("id", "")):
@@ -70,6 +76,9 @@ def apply_manifest_data(rom,mod,folder,compile_requested=False):
             raise PatchError("Frame hook requires exactly one of file/hex")
         payload=local_file(folder,hook["file"]).read_bytes() if "file" in hook else bytes.fromhex(hook["hex"])
         install_frame_hook(rom,payload,hook["linked_address"])
+    if 'boot_melody' in mod:
+        from .music import install_boot_melody
+        install_boot_melody(rom,mod['boot_melody'],folder)
     if "content" in mod:
         rom.content_report=install_content(rom,mod["content"],folder)
     if "resource_edits" in mod:
@@ -87,6 +96,9 @@ def apply_manifest_data(rom,mod,folder,compile_requested=False):
         rom.enemy_report=apply_enemy_edits(rom,mod["enemy_edits"])
     if "equipment_edits" in mod:
         rom.equipment_report=apply_equipment_edits(rom,mod["equipment_edits"])
+    if 'soul_edits' in mod:
+        from .souls import apply_soul_edits
+        rom.soul_report=apply_soul_edits(rom,mod['soul_edits'])
     if "label_edits" in mod:
         rom.label_report=apply_label_edits(rom,mod["label_edits"])
     for entry in mod.get("entity_lists", []):
@@ -103,6 +115,10 @@ def apply_manifest_data(rom,mod,folder,compile_requested=False):
         rom.room_asset_report=install_room_assets(rom,mod["room_assets"],folder)
     if "geometry_edits" in mod:
         rom.geometry_report=apply_geometry_edits(rom,mod["geometry_edits"])
+    if 'new_game_start' in mod:
+        rom.start_report=install_new_game_start(rom,mod['new_game_start'])
+    if 'palette_tints' in mod:
+        rom.palette_tint_report=install_palette_tints(rom,mod['palette_tints'])
     for i, patch in enumerate(mod.get("patches", [])):
         if ("hex" in patch) == ("pointer_to" in patch):
             raise PatchError("Each patch requires exactly one of hex/pointer_to")
@@ -175,6 +191,7 @@ def main(argv=None):
     enemies.add_argument("--enemy")
     enemies.add_argument("--index",type=lambda s:int(s,0))
     enemies.add_argument("--query")
+    enemies.add_argument("--soul")
     enemies.add_argument("--mod",type=Path)
     enemies.add_argument("--out",type=Path)
     encounters=sub.add_parser("encounters",help="Audit native enemy placements and resource evidence")
@@ -212,6 +229,17 @@ def main(argv=None):
     graph=sub.add_parser("world-graph",help="Static base-room door graph and mod routing delta")
     graph.add_argument("--host",type=Path,default=Path(os.environ.get("TSF_HOST_ROM",os.environ.get("ARIA_HOST_ROM",str(ROOT/"CastlevaniaAoS.gba")))))
     graph.add_argument("--mod",type=Path);graph.add_argument("--out",type=Path)
+    campaign=sub.add_parser("audit-campaign",help="Static reachability and return paths from a chosen base room")
+    campaign.add_argument("sector",type=lambda s:int(s,0));campaign.add_argument("index",type=lambda s:int(s,0))
+    campaign.add_argument("--require",nargs=2,type=lambda s:int(s,0),action="append",default=[],metavar=("SECTOR","ROOM"))
+    campaign.add_argument("--host",type=Path,default=ROOT/"CastlevaniaAoS.gba")
+    campaign.add_argument("--mod",type=Path);campaign.add_argument("--out",type=Path)
+    progression=sub.add_parser("plan-progression",help="Explore authored room grants and door flag requirements; no native writes")
+    progression.add_argument("--host",type=Path,default=ROOT/"CastlevaniaAoS.gba")
+    progression.add_argument("--mod",type=Path);progression.add_argument("--spec",type=Path,required=True)
+    progression.add_argument("--out",type=Path)
+    progression.add_argument("--max-states",type=int,default=20000)
+    progression.add_argument("--max-transitions",type=int,default=200000)
     states=sub.add_parser("room-states",help="Read-only bounded alternate-state chain and resource loads")
     states.add_argument("sector",type=lambda s:int(s,0));states.add_argument("index",type=lambda s:int(s,0))
     states.add_argument("--max-states",type=int,default=32)
@@ -313,6 +341,38 @@ def main(argv=None):
             if args.mod:apply_manifest(rom,args.mod)
             planner=plan_connections if args.command=="plan-connections" else plan_terrain
             result=planner(rom,json.loads(args.spec.read_text(encoding='utf-8')))
+            encoded=json.dumps(result,indent=2)
+            if args.out:
+                args.out.parent.mkdir(parents=True,exist_ok=True);args.out.write_text(encoded,encoding='utf-8');print(str(args.out.resolve()))
+            else:print(encoded)
+            return 0
+        if args.command=="plan-progression":
+            from .campaign_progression import plan_progression
+            from .world_graph import audit_world_graph
+            if args.out:
+                inputs=[args.host,args.spec]+([args.mod] if args.mod else [])
+                if args.out.suffix.lower()!='.json' or args.out.resolve() in [p.resolve() for p in inputs] or not args.out.resolve().is_relative_to((ROOT/'local').resolve()):
+                    raise PatchError('Private progression plans require a .json under local/ and must preserve inputs')
+            if args.mod:apply_manifest(rom,args.mod)
+            result=plan_progression(audit_world_graph(rom),json.loads(args.spec.read_text(encoding='utf-8')),
+                                    max_states=args.max_states,max_transitions=args.max_transitions)
+            encoded=json.dumps(result,indent=2)
+            if args.out:
+                args.out.parent.mkdir(parents=True,exist_ok=True);args.out.write_text(encoded,encoding='utf-8');print(str(args.out.resolve()))
+            else:print(encoded)
+            return 0
+        if args.command=="audit-campaign":
+            from .campaign_audit import audit_campaign
+            from .world_graph import audit_world_graph
+            from .room_catalog import room_id
+            if args.out:
+                inputs=[args.host]+([args.mod] if args.mod else [])
+                if args.out.suffix.lower()!='.json' or args.out.resolve() in [p.resolve() for p in inputs] or not args.out.resolve().is_relative_to((ROOT/'local').resolve()):
+                    raise PatchError('Private campaign audits require a .json under local/ and must preserve inputs')
+            if args.mod:apply_manifest(rom,args.mod)
+            profile=rom.profile['id']
+            result=audit_campaign(audit_world_graph(rom),room_id(profile,args.sector,args.index),
+                                  [room_id(profile,s,r) for s,r in args.require])
             encoded=json.dumps(result,indent=2)
             if args.out:
                 args.out.parent.mkdir(parents=True,exist_ok=True);args.out.write_text(encoded,encoding='utf-8');print(str(args.out.resolve()))
@@ -433,7 +493,10 @@ def main(argv=None):
             result=audit_encounters(rom,args.sector,args.index)
             print(json.dumps(result,indent=2));return int(bool(result['errors']))
         if args.command=="enemies":
-            if args.enemy is not None or args.index is not None:
+            if args.soul is not None:
+                if args.enemy is not None or args.index is not None or args.query:raise PatchError("Choose enemy lookup, query or soul")
+                result=resolve_soul(rom,args.soul)
+            elif args.enemy is not None or args.index is not None:
                 if args.query:raise PatchError("Choose enemy lookup or query")
                 result=resolve_enemy(rom,args.enemy,args.index)
             else:result=enemy_catalog(rom,args.query)

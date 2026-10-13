@@ -62,7 +62,7 @@ DSVEdit aos_constants.rb; field gameplay support is not exhaustively tested.
 | 0x0201327E / 0x02013280 | u16 max HP/MP |
 | 0x0201328C / 0x02013290 | u32 EXP/gold |
 | 0x02013398 / 0x0201339A | Configured attack/jump button masks |
-| 0x0201331C | Owned-red-soul data beginning; exact bit semantics need more work |
+| 0x0201331C | Owned-red-soul data beginning; first low nibble = Winged Skeleton (record1), with native acquisition/menu/use/save/continue proof (see NATIVE-EVENTS); other slots/semantics pending |
 | 0x02011F1C | Companion palette source buffer |
 | 0x020123E1 / 0x020123DC | Palette update byte / pending bank mask |
 | 0x0203D000 | Custom RAM reservation, isolated-example evidence |

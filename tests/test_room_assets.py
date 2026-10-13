@@ -39,6 +39,21 @@ class RoomAssetTests(unittest.TestCase):
         self.assertNotEqual(chunks[3],chunks[31]);self.assertNotEqual(banks[3],banks[31])
         self.assertEqual(self.r.original,before)
         self.assertEqual(self.r.read(originals[31]['collision_tileset_address'],originals[31]['collision_resource']['compressed_bytes']).hex(),originals[31]['collision_resource']['compressed_hex'])
+    def test_bridge_art_reskin_preserves_collision_and_loads(self):
+        from aria.cli import apply_manifest
+        from aria.rooms import room_address,metadata
+        from aria.rendering import read_graphics,read_palettes
+        from aria.geometry import inspect_geometry
+        before=inspect_geometry(self.r,0,5,full=True)
+        old_visual=bytes.fromhex(before['visual_resource']['data_hex']);old_collision=bytes.fromhex(before['collision_resource']['data_hex'])
+        apply_manifest(self.r,self.root/'examples/bridge-art/mod.json')
+        after=inspect_geometry(self.r,0,5,full=True)
+        new_visual=bytes.fromhex(after['visual_resource']['data_hex'])
+        self.assertEqual(bytes.fromhex(after['collision_resource']['data_hex']),old_collision)
+        self.assertNotEqual(new_visual[5*32:6*32],old_visual[5*32:6*32])
+        self.assertEqual(new_visual[:5*32],old_visual[:5*32]);self.assertEqual(new_visual[6*32:],old_visual[6*32:])
+        m=metadata(self.r,room_address(self.r,0,5));chunks,_=read_graphics(self.r,m[4]);banks,_=read_palettes(self.r,m[5])
+        self.assertIn(24,chunks);self.assertIn(8,banks)
     def test_unregistered_additional_room_still_rejected(self):
         row=copy.deepcopy(self.entry);row['room']['room']=7
         with self.assertRaisesRegex(PatchError,'not registered'):plan_room_assets(self.r,[row],self.folder)

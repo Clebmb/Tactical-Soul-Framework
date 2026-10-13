@@ -115,6 +115,12 @@
       "room": 6,
       "target_chunk": 24,
       "palette_bank": 8
+    },
+    {
+      "sector": 0,
+      "room": 5,
+      "target_chunk": 24,
+      "palette_bank": 8
     }
   ]
 }

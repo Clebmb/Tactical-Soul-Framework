@@ -149,3 +149,10 @@ ownership, animation timing and transitions are not certified by a static previe
 ## v0.25 native writer and evidence
 
 The separate [sprite authoring API](SPRITE-AUTHORING.md) now replaces the fixed bats/clouds page and optional palette. Ordinary native OAM pixels match these static previews in the checked stages. Native cloud blending and arbitrary actor/runtime effects remain outside this static renderer. Historical v0.24 statements above describe that milestone; the v0.25 guide defines the newer writer and native evidence scope.
+# Native palette tint example
+
+See [CUSTOM-ROOM.md](CUSTOM-ROOM.md) for the snapshot-verified save-statue,
+flame, save-particle and zombie source-palette tints. These shared palette
+bindings do not establish zombie graphics-page identity or authorize general
+sprite art replacement. The withdrawn hallway art-page render proof remains
+withdrawn.

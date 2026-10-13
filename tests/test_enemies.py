@@ -3,7 +3,7 @@ import json,unittest
 from pathlib import Path
 from aria.cli import load_image,apply_manifest
 from aria.core import PatchError
-from aria.enemies import catalog,resolve,resolve_drop,apply_enemy_edits,flags_view
+from aria.enemies import catalog,resolve,resolve_drop,apply_enemy_edits,flags_view,soul_catalog,resolve_soul
 from aria.encounters import audit_encounters
 from aria.level import apply_level_edits
 from aria.rooms import entities,room_address
@@ -28,6 +28,20 @@ class EnemyContracts(unittest.TestCase):
  def test_bad_selector(self):
   with self.assertRaises(PatchError):resolve(self.rom,'zomb')
   with self.assertRaises(PatchError):resolve(self.rom,'zombie',1)
+ def test_soul_catalog_groups_and_shared_soul(self):
+  groups=soul_catalog(self.rom);self.assertEqual(len(groups),111)
+  zombie=resolve_soul(self.rom,'2:12')
+  self.assertEqual([h['enemy'] for h in zombie['holders']],['zombie'])
+  self.assertEqual(zombie['holders'][0]['rarity'],180)
+  shared=resolve_soul(self.rom,'0:0')
+  self.assertEqual(shared['holder_count'],3)
+  self.assertTrue(all(h['rarity']==0 and h['protected_encounter'] for h in shared['holders']))
+  zeroes={h['enemy'] for g in groups for h in g['holders'] if h['rarity']==0}
+  self.assertEqual(zeroes,{'headhunter','death','legion','balore','belmont','graham','chaos'})
+ def test_soul_lookup_rejected(self):
+  for spec in ('2-12','2:12:3','x:12','2:-1',2):
+   with self.assertRaises(PatchError):resolve_soul(self.rom,spec)
+  with self.assertRaisesRegex(PatchError,'No enemy drops soul'):resolve_soul(self.rom,'3:99')
  def test_field_ranges(self):
   for fields,expect in [({'hp':0},{'hp':18}),({'hp':65536},{'hp':18}),({'attack':256},{'attack':9}),({'hp':True},{'hp':18})]:
    with self.assertRaises(PatchError):apply_enemy_edits(self.rom,[self.edit(fields=fields,expect=expect)])

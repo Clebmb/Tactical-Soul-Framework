@@ -162,12 +162,12 @@ See [Connection planning](CONNECTION-PLANNING.md) for the isolated existing-door
 
 ## v0.21 terrain discovery and living handoff
 
-[Terrain support discovery](TERRAIN-SUPPORT.md) adds paginated main-layer diagnostics and loaded brush IDs. The original 343-slot survey finds 4 registered, 311 static candidates and 28 blocked rooms; candidates are not write grants. [Muse Spark 1.3 handoff](../handoffprompt.md) is mandatory reading and must be updated at the end of every turn. Use `scripts/update_handoff.py` to refresh its latest-status section, then refresh inventory/package.
+[Terrain support discovery](TERRAIN-SUPPORT.md) adds paginated main-layer diagnostics and loaded brush IDs. The original 343-slot survey finds 4 registered, 311 static candidates and 28 blocked rooms; candidates are not write grants. [Muse Spark 1.3 handoff](../handoff.md) is mandatory reading and must be updated at the end of every turn. Use `scripts/update_handoff.py` to refresh its latest-status section, then refresh inventory/package.
 
 
 ## v0.22 project composition
 
-[Source project composition](PROJECT-COMPOSITION.md) adds ordered terrain/route/art/data modules, early ownership errors, asset fingerprints, transactional project staging and `plan-project`. Build/play accept project JSON directly. The modular bridge example reproduces the flat build exactly; existing single-file manifests remain supported. 202 tests pass with the private host. Current maturity estimate: 29% (28.6/100). Update `handoffprompt.md` every turn before final delivery.
+[Source project composition](PROJECT-COMPOSITION.md) adds ordered terrain/route/art/data modules, early ownership errors, asset fingerprints, transactional project staging and `plan-project`. Build/play accept project JSON directly. The modular bridge example reproduces the flat build exactly; existing single-file manifests remain supported. 202 tests pass with the private host. Current maturity estimate: 29% (28.6/100). Update `handoff.md` every turn before final delivery.
 
 
 ## v0.23 sprite structure backend

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "envelope-melody",
+  "description": "Original sine with authored soft attack and short release.",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 64,
+    "envelope": {
+      "attack": 8,
+      "decay": 240,
+      "sustain": 160,
+      "release": 160
+    },
+    "notes": [
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 96,
+        "gate_ticks": 48
+      }
+    ]
+  }
+}

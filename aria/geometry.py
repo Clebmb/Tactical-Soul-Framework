@@ -66,7 +66,7 @@ def apply_geometry_edits(rom,entries):
     supported={tuple(p) for p in rom.profile.get('geometry_edit_rooms',[])}
     for entry in entries:
         required={'room','layer','expected_layout_sha256','cells'}
-        if not isinstance(entry,dict) or not required<=set(entry) or set(entry)-required-{'metatiles'}:
+        if not isinstance(entry,dict) or not required<=set(entry) or set(entry)-required-{'metatiles','metatile_replacements'}:
             raise PatchError("Geometry edit requires room,layer,expected_layout_sha256,cells")
         ref=entry['room']
         if not isinstance(ref,dict) or set(ref)!={'sector','room'}:raise PatchError("Invalid geometry room reference")
@@ -76,15 +76,41 @@ def apply_geometry_edits(rom,entries):
         seen.add((s,i));bundle=inspect_geometry(rom,s,i,layer,full=True)
         if bundle['layout_sha256']!=entry['expected_layout_sha256']:raise PatchError("Geometry layout preimage mismatch")
         custom=None;count=bundle['metatiles_including_blank']
-        if 'metatiles' in entry:
-            visual,collision,descriptors=encode_definitions(entry['metatiles'],count)
+        replacements='metatile_replacements' in entry
+        if replacements and 'metatiles' in entry:
+            raise PatchError('Choose appended or replacement metatiles, not both')
+        definitions=entry.get('metatile_replacements',entry.get('metatiles'))
+        if replacements or 'metatiles' in entry:
+            if replacements:
+                if not isinstance(definitions,list) or not 1<=len(definitions)<=32:
+                    raise PatchError('Metatile replacements require 1..32 definitions')
+                if any(not isinstance(row,dict) for row in definitions):
+                    raise PatchError('Replacement definitions must be objects')
+                ids=[integer(row.get('id'),1,count-1) for row in definitions]
+                if len(set(ids))!=len(ids):raise PatchError('Duplicate replacement metatile')
+                visual=bytearray.fromhex(bundle['visual_resource']['data_hex'])
+                collision=bytearray.fromhex(bundle['collision_resource']['data_hex'])
+                descriptors=[]
+                for row,index in zip(definitions,ids):
+                    v,c,d=encode_definitions([row],index)
+                    visual[(index-1)*32:index*32]=v
+                    collision[(index-1)*16:index*16]=c
+                    descriptors.extend(d)
+                visual,collision=bytes(visual),bytes(collision)
+            else:
+                visual,collision,descriptors=encode_definitions(definitions,count)
+                # More than 256 type-2 definitions caused a black startup in
+                # native save-room testing. Keep writes below that boundary.
+                if count+len(definitions)>256:
+                    raise PatchError('Native type-2 writes are limited to 256 metatiles; use replacements')
             # Validate every authored character against actual room loads before
             # allocating anything. Imports are lazy to avoid a renderer cycle.
             from .rendering import read_graphics,read_palettes,minitile,graphics_chunk_modes
             values=metadata(rom,bundle['room_address'])
             chunks,records=read_graphics(rom,values[4]);palettes,_=read_palettes(rom,values[5])
             for value in set(descriptors):minitile(value,(bundle['bg_control']>>2)&3,chunks,palettes,graphics_chunk_modes(records))
-            custom=(visual,collision,len(entry['metatiles']));count+=custom[2]
+            custom=(visual,collision,len(definitions),replacements)
+            if not replacements:count+=custom[2]
         rows=entry['cells']
         if not isinstance(rows,list) or not rows:raise PatchError("Geometry cells must be nonempty")
         changed=set();cells=bundle['cells'][:]
@@ -98,7 +124,9 @@ def apply_geometry_edits(rom,entries):
             if old==value:raise PatchError("Geometry edit must change the cell")
             if (value&0x3FFF)>=count:raise PatchError("Geometry cell references missing metatile")
             cells[pos]=value
-        if custom and not any((cells[p]&0x3FFF)>=bundle['metatiles_including_blank'] for p in changed):
+        if custom and replacements and not set(ids)<=set(v&0x3FFF for v in cells):
+            raise PatchError('Replacement definitions must be used in the resulting layout')
+        if custom and not replacements and not any((cells[p]&0x3FFF)>=bundle['metatiles_including_blank'] for p in changed):
             raise PatchError('Custom definitions must be used by an edited cell')
         planned.append((bundle,cells,sorted(changed),custom))
     reports=[]
@@ -107,8 +135,12 @@ def apply_geometry_edits(rom,entries):
         layout=rom.allocate(label+'-layout',struct.pack('<'+'H'*len(cells),*cells))
         meta=bytearray.fromhex(bundle['layer_metadata_hex']);struct.pack_into('<I',meta,12,layout)
         if custom:
-            visual=rom.allocate(label+'-visual',extend_resource(bundle['visual_resource'],custom[0]))
-            collision=rom.allocate(label+'-collision',extend_resource(bundle['collision_resource'],custom[1]))
+            def stream(key,data):
+                if not custom[3]:return extend_resource(bundle[key],data)
+                resource=dict(bundle[key],data_hex=data.hex())
+                return rebuild_aria(resource,preserve=False)
+            visual=rom.allocate(label+'-visual',stream('visual_resource',custom[0]))
+            collision=rom.allocate(label+'-collision',stream('collision_resource',custom[1]))
             struct.pack_into('<II',meta,4,visual,collision)
         meta_address=rom.allocate(label+'-metadata',meta)
         listing=bytearray.fromhex(bundle['layer_list_hex']);struct.pack_into('<I',listing,bundle['layer']*12+8,meta_address)
@@ -118,5 +150,6 @@ def apply_geometry_edits(rom,entries):
         reports.append({'sector':bundle['sector'],'room':bundle['room'],'layer':bundle['layer'],'changed_cells':changed,
                         'layout_address':layout,'layer_metadata_address':meta_address,'layer_list_address':listing_address,
                         'shared_visual_and_collision_resources_preserved':True,'dimensions_preserved':True,
-                        'custom_metatiles_added':custom[2] if custom else 0})
+                        'custom_metatiles_added':custom[2] if custom and not custom[3] else 0,
+                        'custom_metatiles_replaced':custom[2] if custom and custom[3] else 0})
     return reports

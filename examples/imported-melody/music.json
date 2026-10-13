@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "original-music",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 64,
+    "notes": [
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 64,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 67,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 72,
+        "velocity": 80,
+        "ticks": 24
+      }
+    ],
+    "sample": {
+      "source": "triangle.wav",
+      "provenance": "Original framework-authored forty-sample triangle cycle; MIT.",
+      "loop_start": 0
+    }
+  }
+}

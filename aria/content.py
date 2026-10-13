@@ -1,5 +1,5 @@
 """Original indexed-asset codecs and checked ROM bindings; no external libraries."""
-import hashlib,json,re,struct,wave
+import hashlib,io,json,re,struct,wave
 from pathlib import Path
 from .core import PatchError,number
 
@@ -41,16 +41,30 @@ def lz77(data):
     for i in range(0,len(data),8):out.append(0);out+=data[i:i+8]
     out+=bytes(-len(out)%4);return bytes(out)
 
+def decode_pcm_wav(data):
+    """Bounded unsigned8 mono WAV to signed PCM with exact sample accounting."""
+    if not isinstance(data,bytes) or len(data)>131072:
+        raise PatchError('WAV source must be immutable bytes at most128KiB')
+    try:
+        with wave.open(io.BytesIO(data),'rb') as w:
+            if w.getnchannels()!=1 or w.getsampwidth()!=1 or w.getcomptype()!='NONE':
+                raise PatchError('PCM input must be uncompressed mono unsigned 8-bit WAV')
+            rate,count=w.getframerate(),w.getnframes()
+            if not 4000<=rate<=32768:raise PatchError('PCM rate outside4000..32768Hz')
+            if not 1<=count<=32768:raise PatchError('PCM requires1..32768 samples')
+            pcm=w.readframes(count)
+            if len(pcm)!=count:raise PatchError('Truncated PCM sample payload')
+    except (wave.Error,EOFError) as error:
+        raise PatchError('Invalid WAV source') from error
+    return {'pcm':bytes(v^128 for v in pcm),'sample_rate':rate,'samples':count,
+            'source_sha256':hashlib.sha256(data).hexdigest()}
+
 def encode(kind,path):
     if kind=='palette_rgb8':return palette(json.loads(path.read_text()))
     if kind=='tiles4':return tiles(json.loads(path.read_text()))
     if kind=='pcm_s8':
-        with wave.open(str(path),'rb') as w:
-            if w.getnchannels()!=1 or w.getsampwidth()!=1 or w.getcomptype()!='NONE':raise PatchError("PCM input must be uncompressed mono unsigned 8-bit WAV")
-            if not 4000<=w.getframerate()<=32768:raise PatchError("PCM rate outside 4000..32768 Hz")
-            data=w.readframes(w.getnframes())
-            if not data or len(data)>32768:raise PatchError("PCM requires 1..32768 samples")
-            return bytes(v^128 for v in data)
+        if path.stat().st_size>131072:raise PatchError('WAV source exceeds128KiB')
+        return decode_pcm_wav(path.read_bytes())['pcm']
     raise PatchError("Unknown content format: "+str(kind))
 
 def install_content(rom,spec,folder):

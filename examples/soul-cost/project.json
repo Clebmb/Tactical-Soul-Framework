@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "kind": "tsf-project",
+  "id": "soul-cost",
+  "modules": [
+    "modules/cost.json"
+  ]
+}

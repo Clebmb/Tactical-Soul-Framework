@@ -266,3 +266,40 @@ library and disproved hallway Soma-art for page `0x08635990`; v0.32
 disproves hallway spawn-moment rendering too, so the next candidate work
 is other rooms/actors. Player streaming, new animations and general OBJ
 allocation stay separate.
+
+## Kill-transient actor codes (v0.43)
+
+The soul spawn-scan (`scripts/scan_soul_spawn.py`, documented in
+[ENEMIES.md](ENEMIES.md)) contributes actor-family evidence as a
+side effect. Soma's slash effect is update code `0x80221cd`: it
+never appears in 60 no-attack calm samples and is ubiquitous while
+attack input runs, so future tracers must exclude it before naming a
+novel spawn. Zombie death carries same-page code `0x807b3e5`
+(zombie update is `0x807a9ed`): strictly kill-adjacent, transient,
+never calm — a death-state actor, not a pickup. Per-victim
+kill-locked transients that fit either a death burst or an
+instantly collected crystal stay unattributed: `0x806e525` at
+zombie kills only, `0x806c5ad`/`0x8045c9d` at skeleton kills only.
+No persistent crystal actor was observed at soul rarities 0, 1 or
+255. Collection, soul-inventory RAM and menu proof remain open, so
+no soul writer ships.
+
+## Kill-transient lifecycle verdict (v0.44)
+
+Fine-grained private probes closed the v0.43 undecided codes without
+new writers. Actor world-x reads as record word 8's low halfword
+over 256, calibrated on a zombie approaching 254→93 toward a still
+Soma; use this offset mapping for future slot-attribution work
+instead of guessing layouts. Post-kill 2-frame traces show the
+zombie death code `0x807b3e5` living ~15 frames, while `0x806e525`
+plays ~16 animation frames then freezes: animation word locked,
+slot held 282+ frames, Soma standing on its position the whole
+time. A magnetizing pickup must vanish under those conditions; it
+did not, and corpse-line walkovers clear nothing, so the
+kill-locked transients are burst-particle remnants (about four per
+kill, evicted on slot recycle), not soul crystals. The skeleton
+pair `0x806c5ad`/`0x8045c9d` keeps the same verdict class with
+per-victim codes. So the actor window observes kills faithfully
+(slash, hit, death, burst leak) and observes no soul drop at any
+tested rarity: the collection proof still needs soul-RAM or menu evidence, and room-crossing collection timing is untested because
+retreating exits the small probe room.

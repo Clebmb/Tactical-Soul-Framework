@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "soul-gate-abilities",
+  "description": "Fixed room14 ownership barrier composed with standard SDK healing; no unlock route supplied.",
+  "new_game_start": {
+    "sector": 0,
+    "room": 14,
+    "position": [
+      128,
+      160
+    ]
+  },
+  "abilities": {
+    "runtime": "runtime",
+    "features": [
+      {
+        "id": "still_regen"
+      },
+      {
+        "id": "focus_heal"
+      }
+    ]
+  }
+}

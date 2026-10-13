@@ -1,6 +1,7 @@
 """Small local libretro test driver. Never downloads or distributes game data."""
 import ctypes as C
 import hashlib
+import struct
 from dataclasses import dataclass
 from pathlib import Path
 from PIL import Image
@@ -21,6 +22,27 @@ class MemoryDescriptor(C.Structure):
 class MemoryMap(C.Structure):
     _fields_ = [('descriptors',C.POINTER(MemoryDescriptor)),('num_descriptors',C.c_uint)]
 
+class GameGeometry(C.Structure):
+    _fields_=[('base_width',C.c_uint),('base_height',C.c_uint),('max_width',C.c_uint),('max_height',C.c_uint),('aspect_ratio',C.c_float)]
+class GameTiming(C.Structure):
+    _fields_=[('fps',C.c_double),('sample_rate',C.c_double)]
+class GameAVInfo(C.Structure):
+    _fields_=[('geometry',GameGeometry),('timing',GameTiming)]
+
+class AudioCapture:
+    """Bounded interleaved signed-16 stereo collector; overflow is explicit."""
+    def __init__(self, max_frames):
+        if type(max_frames) is not int or not 1<=max_frames<=10000000:
+            raise ValueError('audio limit must be 1..10000000 stereo frames')
+        self.limit=max_frames*4;self.data=bytearray();self.overflow=False
+    def append(self, data):
+        if not isinstance(data,bytes) or len(data)%4:
+            raise ValueError('audio requires complete immutable stereo frames')
+        remaining=self.limit-len(self.data)
+        self.overflow |= len(data)>remaining
+        self.data.extend(data[:remaining])
+    def pcm(self):return bytes(self.data)
+
 @dataclass(frozen=True)
 class NativeCheckpoint:
     """Private in-memory core state; valid only in its capturing emulator."""
@@ -37,6 +59,7 @@ class Emulator:
         self.image = None
         self.pixel_format = 0
         self.maps=[]
+        self.audio_capture=None
         self.directory = str(ROOT / 'local').encode()
         (ROOT / 'local').mkdir(exist_ok=True)
         def env(cmd, ptr):
@@ -67,7 +90,17 @@ class Emulator:
                 self.image = Image.frombytes('RGB', (w,h), raw, 'raw', 'BGRX', pitch)
             else:
                 self.image = Image.frombytes('RGB', (w,h), raw, 'raw', 'BGR;16', pitch)
-        self.callbacks = [ENV(env), VIDEO(video), AUDIO(lambda a,b: None), BATCH(lambda p,n:n), POLL(lambda:None), INPUT(lambda p,d,i,k: int(k in self.keys))]
+        def sample(left,right):
+            if self.audio_capture is not None:self.audio_capture.append(struct.pack('<hh',left,right))
+        def batch(ptr,frames):
+            capture=self.audio_capture
+            if capture is not None:
+                remaining=(capture.limit-len(capture.data))//4
+                count=min(frames,remaining)
+                if count:capture.append(C.string_at(ptr,count*4))
+                if frames>remaining:capture.overflow=True
+            return frames
+        self.callbacks = [ENV(env), VIDEO(video), AUDIO(sample), BATCH(batch), POLL(lambda:None), INPUT(lambda p,d,i,k: int(k in self.keys))]
         for name, cb in zip(('environment','video_refresh','audio_sample','audio_sample_batch','input_poll','input_state'), self.callbacks):
             getattr(self.lib, 'retro_set_'+name)(cb)
         self.lib.retro_get_memory_data.restype = C.c_void_p
@@ -84,6 +117,20 @@ class Emulator:
         self.ram = self.lib.retro_get_memory_data(2)
         if not self.ram:
             raise RuntimeError('No system RAM exposed')
+    def start_audio_capture(self, max_frames=1000000):
+        if self._closed:raise RuntimeError('Emulator is closed')
+        if self.audio_capture is not None:raise RuntimeError('Audio capture already active')
+        self.audio_capture=AudioCapture(max_frames)
+        info=GameAVInfo()
+        self.lib.retro_get_system_av_info.argtypes=[C.POINTER(GameAVInfo)]
+        self.lib.retro_get_system_av_info(C.byref(info))
+        return {'sample_rate':info.timing.sample_rate,'fps':info.timing.fps}
+    def stop_audio_capture(self):
+        capture=self.audio_capture
+        if capture is None:raise RuntimeError('No active audio capture')
+        self.audio_capture=None
+        if capture.overflow:raise RuntimeError('Audio capture exceeded frame budget')
+        return capture.pcm()
     def read(self, address, size=4):
         return int.from_bytes(self.bytes(address,size),'little')
     def bytes(self,address,size):

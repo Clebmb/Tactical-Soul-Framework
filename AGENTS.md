@@ -150,16 +150,16 @@ See [Connection planning](docs/CONNECTION-PLANNING.md) for the isolated existing
 
 ## REA skill and MCP (explicit user request)
 
-For ROM/native-binary reverse engineering, use the installed reverse-engineer-anything skill and prefer connected REA MCP tools. Read [REA workflow](docs/REA-WORKFLOW.md) and the required REA section in handoffprompt.md. The skill exists on this host; REA MCP is not registered/exposed at the v0.25 handoff. Do not claim otherwise or invent REA evidence. Follow the skill's diagnostics and setup approval rules if connection repair is needed; continue independent source/local-native work. Ordinary Python repository edits do not require binary analysis tooling.
+For ROM/native-binary reverse engineering, use the installed reverse-engineer-anything skill and prefer connected REA MCP tools. Read [REA workflow](docs/REA-WORKFLOW.md) and the required REA section in handoff.md. The skill exists on this host; REA MCP is not registered/exposed at the v0.25 handoff. Do not claim otherwise or invent REA evidence. Follow the skill's diagnostics and setup approval rules if connection repair is needed; continue independent source/local-native work. Ordinary Python repository edits do not require binary analysis tooling.
 
 ## Living handoff requirements
 
-Read [handoffprompt.md](handoffprompt.md), addressed to Muse Spark 1.3. At the end of every generation/turn, update that exact file before final response; never skip it, including documentation/planning turns. Preserve standing instructions and replace latest status with actual changes, checks, blockers and next work. Refresh inventory/package after the final handoff edit. Every final response reports progress, next steps, roadmap percentage, current mod examples and that the handoff was updated. On `continue`, make concrete autonomous progress toward the full framework; do not merely repeat a narrow investigation.
+Read [handoff.md](handoff.md), addressed to Muse Spark 1.3. At the end of every generation/turn, update that exact file before final response; never skip it, including documentation/planning turns. Preserve standing instructions and replace latest status with actual changes, checks, blockers and next work. Refresh inventory/package after the final handoff edit. Every final response reports progress, next steps, roadmap percentage, current mod examples and that the handoff was updated. On `continue`, make concrete autonomous progress toward the full framework; do not merely repeat a narrow investigation.
 
 
 ## v0.22 project composition
 
-[Source project composition](docs/PROJECT-COMPOSITION.md) adds ordered terrain/route/art/data modules, early ownership errors, asset fingerprints, transactional project staging and `plan-project`. Build/play accept project JSON directly. The modular bridge example reproduces the flat build exactly; existing single-file manifests remain supported. 202 tests pass with the private host. Current maturity estimate: 29% (28.6/100). Update `handoffprompt.md` every turn before final delivery.
+[Source project composition](docs/PROJECT-COMPOSITION.md) adds ordered terrain/route/art/data modules, early ownership errors, asset fingerprints, transactional project staging and `plan-project`. Build/play accept project JSON directly. The modular bridge example reproduces the flat build exactly; existing single-file manifests remain supported. 202 tests pass with the private host. Current maturity estimate: 29% (28.6/100). Update `handoff.md` every turn before final delivery.
 
 
 ## v0.23 sprite structure backend
@@ -173,6 +173,145 @@ See [Sprite inspection](docs/SPRITES.md) for `aria/sprites.py`, registered commo
 
 
 ## v0.25 original native sprite artwork
+
+## v0.51 PSG synthesis and sampled envelopes
+
+Web research (Bregalad, GBATEK, pret `m4a.c`) corrects a renderer
+assumption: PSG pitch comes from the note key (C4 = 261.6 Hz),
+voice keys are percussion-only. `aria/audio.py` gains `DUTY_PATTERNS`,
+`psg_tone_freq` and `sampled_envelope` (approximations, endpoints
+pinned). The private renderer synthesizes square/wave/noise, applies
+sampled envelopes, and re-renders BGM songs (971 and 715 mixed
+notes with rhythm-skip accounting, up from 459/226 sampled-only).
+329 tests pass (verified stable across two consecutive full-suite
+runs during active co-editing). Audio 1.8→2.2.
+Completion: 35% (35.1/100). Next: ear check, song-event mapping.
+
+## v0.50 sequence event renderer and song renders
+
+`iter_events` schedules tracks (ticks, notes, tempo/VOL, pattern
+inline, GOTO unroll + `loop` marker, hardened out-of-image starts)
+and a private renderer mixes scheduled sampled notes at 13,379 Hz
+(linear resample, VOL/velocity gain, loop fill, mono; flat velocity,
+no ADSR, PSG skipped). Native: SFX song 0 (1 note) plus BGM songs
+0-1 (60 s/459 notes, 30 s/226 notes; non-silent, ear unconfirmed).
+307 tests pass. Audio 1.4→1.8. Completion: 35% (34.7/100). Next:
+ADSR/PSG trace, ear check, song-event mapping.
+
+## v0.49 freq-word rates and first renders
+
+Web research (Bregalad, GBATEK `MidiKey2Freq`) gives C4 rate =
+word / 1024: `0x00A44000` = 10,512 Hz, `0x00D10C00` = 13,379 Hz
+(exact standard rates). `sample_c4_rate`/`sample_c4_duration`
+ship with a pinning test; three private WAVs render at derived
+rates (5.57 s bed, looped hit with two loop passes, 13,379 Hz
+blip; full-scale, RMS 67-97). No ear confirmation yet. 302 tests
+pass. Audio 1.1→1.4. Completion: 34% (34.3/100). Next:
+resampling/ADSR trace, ear check, song-event mapping.
+
+## v0.48 WaveData sample census
+
+`decode_sample` validates all 360 distinct WaveData headers (16-byte
+type/status/freq/loop/size + 8-bit PCM; field order proven by
+next-header landing at data end + 1-4B gaps): 2,303,945 payload bytes.
+Status 0 = one-shot type-8 voices, 0x4000 = looped type-0 voices; two
+freq words, audio-shaped payloads (DC -0.8, 25% crossings). REA MCP
+bound per skill, rejects GBA ROMs (v0.26 finding stands); census is
+independent static work. 301 tests pass. Audio 0.8→1.1.
+Completion: 34% (34.0/100). Next: rate semantics, audible playback.
+
+## v0.47 full song tables and typed voice census
+
+All six song tables decode via `iter_songs` (400 songs, 578 tracks,
+0 failures); `0x0827CD40` reads as the looped-BGM bank. Web research
+(pret `m4a_internal.h`) corrects v0.46: uniform 12-byte `ToneData`,
+type 8 = no-resample sampled. `iter_voices` + generalized
+`decode_voice_entry` census five banks (535 sampled, 59 square, wave,
+rhythm, noise-alt; no key-splits; one 87-entry short bank).
+Voicegroup pointers recur in song headers (~408 refs, layout
+confirmation); the master table pointer has zero static code refs,
+so driver identity stays open. 298 tests pass. Audio 0.5→0.8.
+Completion: 34% (33.7/100). Next: PEND trace, playback binding.
+
+## v0.46 Sappy driver structures identified
+
+`aria/audio.py` is a pure read-only MusicPlayer2000 parser: song
+headers, track command streams (running status, PATT/PEND stack,
+GOTO loops) and sampled-voice entries. Master table `0x0827D058`
+fully decodes (162 songs, 153 FINE + 9 loop tracks, 0 failures);
+366-track corpus green. Top-level PEND is an assumed no-op
+separator (136 tracks; non-fatal by construction, trace unconfirmed).
+294 tests pass. Audio 0.2→0.5. Completion: 33% (33.4/100).
+Next: driver-trace PEND confirmation, playback/sample binding.
+
+## v0.45 second verified new-game start
+
+`aria/starts.py` is a verified registry: (0,31) plus new (0,14)
+at (128,160), found via a 28-room statue-signature scan.
+`scripts/verify_second_start.py` proves landing, statue save
+(SRAM change) and fresh continue. 283 tests pass. Campaign
+0.9→1.0. Completion: 33% (33.1/100). Next: campaign/event
+slices, audio binding or soul-RAM/menu proof.
+
+## v0.44 kill-transient lifecycle verdict
+
+Fine private traces prove the kill-locked codes are burst remnants,
+not crystals: ~16-frame anim then permanent freeze, 300 idle frames
+with Soma on-position, walkovers clear nothing. Actor world-x =
+record word 8 low halfword / 256 (calibrated). No code changes;
+docs/method only. Records 4.4→4.5. Completion: 33% (33.0/100).
+Next: soul-RAM/menu proof, campaign/event slices, or audio.
+
+## v0.43 soul reconnaissance (mapping + spawn-scan boundary)
+
+`soul_catalog` maps 111 distinct enemy souls ((0,0) shared by three
+bosses; rarity-zero holders all bosses) with `enemies --soul` lookup.
+`scripts/scan_soul_spawn.py` watchdogs actor spawns over zombie
+rarities 0/1/255 plus skeleton: slash/hit codes attributed,
+kill-locked transients per victim named, no persistent crystal at
+any rarity. Reassignment stays rejected; collection/RAM/menu are
+named blockers. 282 tests pass. Records 4.3→4.4. Completion: 33%
+(32.9/100). Next: campaign/event slices, audio binding or
+soul-collection proof.
+
+## v0.42 project modules for full entity/door lists
+
+`compose_project` accepts `entity_lists`/`door_lists` with
+whole-room ownership and staged-edit exclusion naming both owners.
+Host-proven: the full six-module custom-room project applies
+identical to flat (data/ledger/allocations). Hooks, abilities, raw
+patches and blobs stay single-manifest. 280 tests pass. Authoring
+3.3→3.4. Completion: 33% (32.8/100). Next: campaign/event slices,
+audio binding or soul grants.
+
+## v0.41 bridge-deck reskin (fourth art slot)
+
+`examples/bridge-art` imports original ironwood-and-bronze deck art
+for room5 (chunk 24 / bank 8) and redefines metatile 6 through
+`metatile_replacements` with byte-identical collision.
+`scripts/verify_bridge_art.py` proves exact native VRAM/palette loads,
+input-only bidirectional crossings and exact return reload. 277 tests
+pass. Graphics 6.0→6.2. Completion: 33% (32.7/100). Next:
+campaign/event slices, audio binding or soul grants.
+
+## v0.40 project modules for the newest sections
+
+`compose_project` accepts singleton `new_game_start`, per-target
+`palette_tints` and `metatile_replacements`, with named conflicts.
+Host-proven: four-module custom-room subset applies identical to flat
+(data/ledger/allocations). Full entity/door lists stay single-manifest
+by design. 276 tests pass. Authoring 3.1→3.3. Completion: 32%
+(32.5/100). Next: campaign/event slices, audio binding or soul grants.
+
+## v0.39 flesh sanctuary — verified two-room route
+
+`examples/custom_room` starts fresh in a flesh save room, crosses to a
+zombie corridor and back, with original art, blood-red palette tints and
+three spawners. New contracts: `new_game_start`, `metatile_replacements`
+(256-definition ceiling), `palette_tints`. Native route/save/continue
+proven; 272 tests pass. Campaign 0.8→0.9, terrain 6.6→6.7, graphics
+5.9→6.0. Completion: 32% (32.3/100). Next: campaign/event slices,
+audio binding or soul grant APIs.
 
 ## v0.38 custom item and enemy names
 

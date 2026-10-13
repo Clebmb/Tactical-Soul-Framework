@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "instrument-melody",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 64,
+    "repeats": 2,
+    "instruments": [
+      {
+        "source": "triangle.wav",
+        "provenance": "Original framework triangle cycle; MIT",
+        "loop_start": 0
+      },
+      {
+        "source": "square.wav",
+        "provenance": "Original framework square cycle; MIT",
+        "loop_start": 0
+      }
+    ],
+    "notes": [
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 48,
+        "gate_ticks": 24,
+        "instrument": 0
+      },
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 48,
+        "gate_ticks": 24,
+        "instrument": 1
+      },
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 48,
+        "gate_ticks": 24,
+        "instrument": 0
+      }
+    ]
+  }
+}

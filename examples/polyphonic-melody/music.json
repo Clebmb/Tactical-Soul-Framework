@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "original-harmony",
+  "description": "Original two-track sine harmony with bounded gates.",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 32,
+    "tracks": [
+      {
+        "notes": [
+          {
+            "key": 60,
+            "velocity": 80,
+            "ticks": 96,
+            "gate_ticks": 48
+          }
+        ]
+      },
+      {
+        "notes": [
+          {
+            "key": 67,
+            "velocity": 80,
+            "ticks": 96,
+            "gate_ticks": 48
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -49,6 +49,69 @@ Soul rarity zero disables soul drops according to the documented native format. 
 
 The batch validates selectors, expected values, ranges, drops and duplicate field claims before writing. Create/update code pointers, soul references and unexplained bytes remain intact. The low-level `aria.tables` API remains available for research but is not a complete semantic validator. Shared patch-ledger rules prevent overlapping writes; any API failure requires discarding the partially modified RomImage.
 
+## Soul drop-table mapping and spawn-scan boundary
+
+`soul_catalog(rom)` groups all 113 enemy soul references by
+`(type, index)` with holder names and rarities; `resolve_soul(rom,
+'2:12')` looks one up and `TacticalSoul.cmd enemies --soul 2:12`
+prints it. Indices stay numeric: soul kind names are not established
+from sources. Measured on the exact host: 111 distinct souls, 110
+with a single holder; soul (0,0) is shared natively by Belmont,
+Graham and Chaos. Types distribute 0:58, 1:21, 2:33, 3:1. Seven
+records carry soul rarity zero and all seven are bosses
+(Headhunter, Death, Legion, Balore, Belmont, Graham, Chaos),
+consistent with zero disabling soul drops; item rarity zero behaves
+differently (the workshop Potion drops), so the two formulas must not
+be conflated and neither formula is proven here. Soul type/index
+reassignment stays rejected (`test_ai_and_soul_reassignment_rejected`)
+until collection can be proven.
+
+`scripts/scan_soul_spawn.py --enemy zombie|skeleton --rarity N
+--rolls N --out local/x.json` builds a throwaway probe ROM (that
+enemy's soul rarity set, both item slots disabled), walks to its room
+with controller input only, records a no-attack calm baseline, then
+kill-loops while logging kill-aligned novel EWRAM actor codes
+(0x020004E4, stride 0x84, 224 slots). Victim update/create pages
+flag likely death-state codes. Results across zombie rarities 0, 1,
+255 and skeleton rarity 1, with fully deterministic kill rolls:
+
+| Code | Behavior | Reading |
+|---|---|---|
+| 0x80221cd | attack-correlated only; absent in 60 no-attack samples | Soma slash effect, not a drop |
+| 0x8042de9 | appears on non-kill hit rolls | hit transient, not a drop |
+| 0x807b3e5 | strictly kill-adjacent, same page as zombie update 0x807a9ed | likely zombie death-state |
+| 0x806e525 | strictly kill-adjacent at zombie kills only | kill-burst remnant (see verdict below), not a collectible crystal |
+| 0x806c5ad, 0x8045c9d | strictly kill-adjacent at skeleton kills only | same verdict class, per-victim codes |
+
+No persistent crystal actor appears at any tested rarity, so
+soul-crystal spawns are not observable in this enemy actor window:
+either pickups use another actor system, collection at melee range is
+faster than the ~26-frame sample grain, or the drop formula needs
+more kills than the bounded loop. Collection/grant, soul-inventory
+RAM, menu proof and the rarity formula remain the blockers for
+reassignment and grant APIs; REA MCP rejects GBA targets, so no
+decompiler evidence exists. Reports record calm codes, kill rolls,
+sightings, page flags and these limits under `local/`.
+
+Fine-grained follow-ups (v0.44, private probes under `local/`, not
+shipped) settled the two kill-locked codes further. A 2-frame
+post-kill trace shows `0x807b3e5` living ~15 frames (death/decay
+family) while `0x806e525` plays a ~16-frame animation then freezes
+permanently: its animation word locks, its slot persists for 282+
+frames, and walking Soma onto its position changes nothing. A
+magnetizing collectible with Soma camping its corpse for 300 frames
+must vanish; this one does not, so it is incompatible with a soul
+crystal and most consistent with a leaked kill-burst particle (about
+four spawn per kill, evicted only when slots recycle). Per-victim
+codes and frozen-anim signatures therefore mark kill FX, not drops.
+A reusable position method fell out along the way: actor world-x
+reads as the low halfword of record word 8 divided by 256,
+calibrated on a zombie walking 254→93 toward Soma; it placed the
+burst cluster at the corpse line and the 254.4 reading at the spawn
+edge. Corpse-anchored collection tests (walking the corpse line)
+clear nothing, and retreating exits the small room, so room-crossing
+collection timing stays untested.
+
 ## Encounter placements
 
 `enemy_encounters` stages enemy operations with `room_edits` so a touched entity array is relocated only once. Moves and clones therefore retain native loading-order sorting and stable entity IDs. They can compose with paired door connections. Combining these high-level operations with raw patches or full entity/door lists is rejected, so lower-level room mutations cannot invalidate the audit.

@@ -67,3 +67,14 @@ mGBA harness; do not label it as REA MCP/decompiler evidence.
 REA does not replace the framework's immutable-host gate, conflict ledger,
 transactions, resource budgets or native acceptance checks. A recovered function
 or pointer does not by itself establish ABI safety or unused runtime resources.
+
+## Current observation and successor tool use (2026-10-12)
+
+REA MCP currently advertises170 tools; binary_session answered open:false.
+The Ghidra provider reports GHIDRA_INSTALL_DIR unset and Java runtime missing.
+Historical unsupported-GBA admission remains a separate documented boundary;
+no new ROM-open attempt or decompiler evidence was produced. No setup changes.
+Use all applicable tools by hypothesis and availability, not an indiscriminate
+catalog sweep. See handoff.md for Muse Spark1.3 execution expectations, tool
+commands and the prioritized tear-projectile/SFX work. Summarize session output
+before returning it: the full availability/catalog response is very large.

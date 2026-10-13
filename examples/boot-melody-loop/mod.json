@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "boot-melody-loop",
+  "description": "Three finite passes of an original four-note boot melody, then silence.",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 64,
+    "notes": [
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 64,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 67,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 72,
+        "velocity": 80,
+        "ticks": 24
+      }
+    ],
+    "repeats": 3
+  }
+}

@@ -3,6 +3,10 @@
 This read-only backend inventories normal base-room doors and exposes routing
 changes for review. It does not repair doors, evaluate events or certify a campaign.
 
+For start-to-destination paths, reachable components and observed return routes,
+see [Campaign reachability audit](CAMPAIGN-AUDIT.md). This builds on the graph
+without adding event/collision or native progression certification.
+
 ```
 TacticalSoul.cmd world-graph --out local/original-world.json
 TacticalSoul.cmd world-graph --mod examples/three-room-art/mod.json --out local/three-room-world.json

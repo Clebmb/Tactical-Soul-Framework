@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "soul-cost-settings",
+  "soul_edits": [
+    {
+      "soul": "winged-skeleton",
+      "expect": {
+        "mana_cost": 12
+      },
+      "fields": {
+        "mana_cost": 6
+      }
+    }
+  ]
+}

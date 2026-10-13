@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "soul-gate",
+  "description": "Narrow invisible ownership barrier demo in save room (0,14); starts unowned. See README.",
+  "new_game_start": {"sector": 0, "room": 14, "position": [128, 160]},
+  "frame_hook": {
+    "file": "runtime.bin", "linked_address": "0x08680000",
+    "source": "runtime.c", "linker": "link.ld", "fingerprint": "runtime.build.json",
+    "dependencies": ["mod.json"]
+  }
+}

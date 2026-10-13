@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "boot-melody",
+  "description": "Original one-shot four-note sine melody at boot; no extracted assets.",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 64,
+    "notes": [
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 64,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 67,
+        "velocity": 80,
+        "ticks": 24
+      },
+      {
+        "key": 72,
+        "velocity": 80,
+        "ticks": 24
+      }
+    ]
+  }
+}

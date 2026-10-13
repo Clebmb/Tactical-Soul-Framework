@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "phrased-melody",
+  "description": "Original short-gate melody with explicit rest.",
+  "boot_melody": {
+    "tempo": 75,
+    "volume": 64,
+    "notes": [
+      {
+        "key": 60,
+        "velocity": 80,
+        "ticks": 96,
+        "gate_ticks": 6
+      },
+      {
+        "rest": 96
+      },
+      {
+        "key": 67,
+        "velocity": 80,
+        "ticks": 96,
+        "gate_ticks": 6
+      }
+    ]
+  }
+}

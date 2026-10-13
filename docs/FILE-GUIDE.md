@@ -215,13 +215,35 @@ See [Connection planning](CONNECTION-PLANNING.md) for the isolated existing-door
 
 ## v0.21 terrain discovery and living handoff
 
-[Terrain support discovery](TERRAIN-SUPPORT.md) adds paginated main-layer diagnostics and loaded brush IDs. The original 343-slot survey finds 4 registered, 311 static candidates and 28 blocked rooms; candidates are not write grants. [Muse Spark 1.3 handoff](../handoffprompt.md) is mandatory reading and must be updated at the end of every turn. Use `scripts/update_handoff.py` to refresh its latest-status section, then refresh inventory/package.
+[Terrain support discovery](TERRAIN-SUPPORT.md) adds paginated main-layer diagnostics and loaded brush IDs. The original 343-slot survey finds 4 registered, 311 static candidates and 28 blocked rooms; candidates are not write grants. [Muse Spark 1.3 handoff](../handoff.md) is mandatory reading and must be updated at the end of every turn. Use `scripts/update_handoff.py` to refresh its latest-status section, then refresh inventory/package.
 
 
 ## v0.22 project composition
 
-[Source project composition](PROJECT-COMPOSITION.md) adds ordered terrain/route/art/data modules, early ownership errors, asset fingerprints, transactional project staging and `plan-project`. Build/play accept project JSON directly. The modular bridge example reproduces the flat build exactly; existing single-file manifests remain supported. 202 tests pass with the private host. Current maturity estimate: 29% (28.6/100). Update `handoffprompt.md` every turn before final delivery.
+[Source project composition](PROJECT-COMPOSITION.md) adds ordered terrain/route/art/data modules, early ownership errors, asset fingerprints, transactional project staging and `plan-project`. Build/play accept project JSON directly. The modular bridge example reproduces the flat build exactly; existing single-file manifests remain supported. 202 tests pass with the private host. Current maturity estimate: 29% (28.6/100). Update `handoff.md` every turn before final delivery.
 
+
+## Campaign reachability
+
+`aria/campaign_audit.py` consumes the static world graph to report start-relative
+reachability, shortest required routes and observed returns. CLI: `audit-campaign`.
+`tests/test_campaign_audit.py` covers synthetic graphs and private nonmutation.
+See [Campaign audit contracts](CAMPAIGN-AUDIT.md).
+`aria/campaign_progression.py`, `tests/test_campaign_progression.py` and
+`examples/progression-policy/` add bounded authored flag-state exploration.
+See [Progression policies](PROGRESSION-POLICIES.md); no native events are written.
+
+## Audio source reconstruction helpers
+
+`aria/audio_synthesis.py` contains the bounded sampled ADSR reference model;
+`tests/test_audio_synthesis.py` covers it and event timing regressions.
+It also provides checked signed PCM resampling, loop seams and independent
+envelope clocks; diagnostic WAVs and the song renderer stay under `local/`.
+`aria/audio.py:resolve_note_voice` adds checked direct/rhythm instrument lookup;
+`tests/test_audio_voices.py` covers synthetic child-bank/pitch/pan and rejection cases.
+`tests/test_audio_ties.py` covers TIE/EOT events and `gate_tied_events` diagnostic
+gate conversion in `aria/audio_synthesis.py`.
+See [audio provenance and limits](AUDIO-RECON.md). No native audio writer.
 
 ## v0.23 sprite structure backend
 
@@ -236,3 +258,23 @@ See [Sprite inspection](SPRITES.md) for `aria/sprites.py`, registered common/Jul
 ## v0.25 original native sprite artwork
 
 [Sprite authoring](SPRITE-AUTHORING.md) documents `aria/sprite_assets.py`, the fixed shared bats/clouds page/palette, guarded compressed relocation, transaction/source protection, original `examples/sky-invaders` content and native evidence. Run `TacticalSoul.cmd play examples/sky-invaders/mod.json`; `preview-sprite` and `inspect-sprite` now accept `--mod`. `scripts/verify_sprite_assets.py --lifecycle` verifies final-example native entry/pause/reentry and a separate composed save/death/fresh-continue harness. 234 tests pass. Completion: 30% (30.0/100). Next: one ordinary enemy visual binding and combat lifecycle, plus checked project-module sprite composition. Read [REA workflow](REA-WORKFLOW.md): user requires the skill and connected MCP for binary investigation; skill installed locally, MCP not registered/exposed here.
+
+- `aria/native_events.py`, `scripts/verify_native_events.py`: read-only transient modal bit and controller-driven lifecycle proof; see [native events](NATIVE-EVENTS.md).
+
+- `scripts/verify_soul_progression.py`: native first red-soul acquisition/save/continue evidence, using a private existing-door redirect; no soul-grant ABI.
+
+- `aria/progression_traces.py`: bounded image-bound authored-policy versus observed-checkpoint comparison; see [progression traces](PROGRESSION-TRACES.md).
+
+- `examples/soul-gate/`, `scripts/verify_soul_gate.py`: standalone narrow native ownership barrier and unowned/owned lifecycle evidence; no general lock API.
+
+- `examples/soul-gate-abilities/`: custom SDK runtime combining the fixed barrier and healing with unchanged ABI/RAM claims; native checks use `scripts/verify_soul_gate.py --composed`.
+
+- `scripts/verify_soul_menu.py`: deterministic private soul-name label twins and native first red-soul MP-cost proof; no production soul-label/grant writer.
+
+- `aria/souls.py`, `examples/soul-cost/`, `scripts/verify_soul_cost.py`: checked named first red-soul mana-cost edits with native acceptance; see [soul authoring](SOULS.md).
+
+- `aria/music.py`, `docs/BOOT-MELODY.md`, `examples/boot-melody/`: checked original one-shot boot melody and native acceptance.
+
+- `docs/MUSIC-SAMPLES.md`, `examples/imported-melody/`, `scripts/verify_imported_melody.py`: original WAV linkage and native controls.
+
+- `docs/MUSIC-LIFECYCLE.md`, `scripts/verify_music_lifecycle.py`: original boot instrument scene takeover, native twins and passive control.

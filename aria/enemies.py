@@ -34,6 +34,30 @@ def resolve(rom,enemy=None,index=None):
     if len(matches)!=1:raise PatchError('Enemy name/key must match exactly one record')
     return matches[0]
 
+def soul_catalog(rom):
+    """Group enemy soul drops by (type,index) with holder names and rarities.
+
+    Read-only reverse index for reassignment planning; granting and collection
+    semantics are not established."""
+    groups={}
+    for row in catalog(rom):
+        key=(row['soul']['type'],row['soul']['index'])
+        groups.setdefault(key,[]).append({'enemy':row['key'],'name':row['name'],'index':row['index'],
+                                          'rarity':row['soul']['rarity'],'protected_encounter':row['protected_encounter']})
+    return [{'type':t,'index':i,'holder_count':len(holders),'holders':sorted(holders,key=lambda h:h['index'])}
+            for (t,i),holders in sorted(groups.items())]
+
+def resolve_soul(rom,spec):
+    if not isinstance(spec,str):raise PatchError('Soul lookup must be TYPE:INDEX text')
+    parts=spec.split(':')
+    if len(parts)!=2:raise PatchError('Soul lookup must look like 2:12')
+    try:type_id,index=int(parts[0]),int(parts[1])
+    except ValueError:raise PatchError('Soul type/index must be integers')
+    if type_id<0 or index<0:raise PatchError('Soul type/index must be nonnegative')
+    for entry in soul_catalog(rom):
+        if entry['type']==type_id and entry['index']==index:return entry
+    raise PatchError('No enemy drops soul '+spec)
+
 def resolve_drop(rom,value):
     if value is None:return 0
     if not isinstance(value,str):raise PatchError('Drop item must be an exact name/key or null')

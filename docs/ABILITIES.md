@@ -141,3 +141,13 @@ Current evidence is local/ability-verification.json and actual emulator frames. 
 ## Verified build evidence
 
 2026-10-10: 63 unit tests passed; 13 native ability checks passed. The existing equipment (7), enemy (8), room (5), and hook/framework (6) native checks also passed after the shared compiler/CLI changes. Callback: 772 bytes. Ability workshop ROM SHA-256: `84bf29b19d7838101edfff83fe2f3f887db50d49395c09aae5abe5b760ffe2ff`. Native evidence is local/ability-verification.json; frames are local/ability-workshop-active.png and local/ability-workshop-continue.png. Private native-test DLL and Zig are local tools, excluded from distribution; precompiled JSON builds and bundled mGBA launching require neither.
+
+## Fixed ownership-barrier composition example
+
+[Gate plus healing](../examples/soul-gate-abilities/README.md) demonstrates the existing custom runtime contract with the room14 barrier before the healing guard. Built-in ABI/config/RAM claims are unchanged; the fixed custom barrier is always enabled by this runtime and is not a general registered gate feature. Native tests disclose an HP-deficit fixture for healing; gate ownership/position are never injected.
+
+## Tear-style projectile soul request
+
+The existing SDK does not implement tear projectiles or gameplay SFX dispatch.
+See [custom projectile ability boundary](CUSTOM-PROJECTILE-ABILITIES.md) for
+current foundations, missing APIs and native acceptance criteria.

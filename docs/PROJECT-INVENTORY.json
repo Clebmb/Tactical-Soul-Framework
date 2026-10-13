@@ -7,13 +7,18 @@
     "BUILD.md",
     "README.md",
     "docs/ABILITIES.md",
+    "docs/AUDIO-RECON.md",
     "docs/BACKGROUND-DISCOVERY.md",
     "docs/BACKGROUND-RENDERING.md",
+    "docs/BOOT-MELODY.md",
     "docs/BYTE-INDEX-BACKGROUNDS.md",
+    "docs/CAMPAIGN-AUDIT.md",
     "docs/COMPATIBILITY.md",
     "docs/COMPLETION-ROADMAP.md",
     "docs/CONNECTION-PLANNING.md",
     "docs/CUSTOM-CONTENT.md",
+    "docs/CUSTOM-PROJECTILE-ABILITIES.md",
+    "docs/CUSTOM-ROOM.md",
     "docs/CUSTOM-TERRAIN.md",
     "docs/DATA-CONTRACTS.md",
     "docs/DOMINANCE.md",
@@ -25,6 +30,7 @@
     "docs/FILE-GUIDE.md",
     "docs/FOLDER-SPLIT.md",
     "docs/FRAMEWORK-ROADMAP.md",
+    "docs/GHIDRA-PLAN.md",
     "docs/GUI-EDITOR-ROADMAP.md",
     "docs/HOW-IT-WAS-BUILT.md",
     "docs/INPUT-REPLAYS.md",
@@ -34,8 +40,14 @@
     "docs/MIXED-ROOM-RESOURCES.md",
     "docs/MODS-YOU-CAN-MAKE-NOW.md",
     "docs/MULTIPLAYER-FEASIBILITY.md",
+    "docs/MUSIC-LIFECYCLE.md",
+    "docs/MUSIC-SAMPLES.md",
     "docs/NATIVE-CONNECTION-TESTING.md",
+    "docs/NATIVE-EVENTS.md",
     "docs/NATIVE-INTEGRATION.md",
+    "docs/OWNED-PROJECTILES.md",
+    "docs/PROGRESSION-POLICIES.md",
+    "docs/PROGRESSION-TRACES.md",
     "docs/PROJECT-COMPOSITION.md",
     "docs/REA-WORKFLOW.md",
     "docs/RENAMING.md",
@@ -48,6 +60,9 @@
     "docs/ROOM-PREVIEWS.md",
     "docs/ROOM-RESOURCE-AUDIT.md",
     "docs/ROOM-STATES.md",
+    "docs/SOUL-DECOMPILE.md",
+    "docs/SOUL-PROJECTILE-TRACE.md",
+    "docs/SOULS.md",
     "docs/SPRITE-AUTHORING.md",
     "docs/SPRITES.md",
     "docs/START-HERE.md",
@@ -65,32 +80,45 @@
     "docs/WORLD-GRAPH.md",
     "examples/README.md",
     "examples/ability-workshop/README.md",
+    "examples/boot-melody-loop/README.md",
+    "examples/boot-melody/README.md",
+    "examples/bridge-art/README.md",
     "examples/bridge-project/README.md",
     "examples/bridge-route/README.md",
     "examples/content-workshop/README.md",
     "examples/custom-terrain-workshop/README.md",
+    "examples/custom_room/README.md",
     "examples/enemy-workshop/README.md",
+    "examples/envelope-melody/README.md",
     "examples/equipment-workshop/README.md",
     "examples/geometry-workshop/README.md",
+    "examples/imported-melody/README.md",
     "examples/input-routes/README.md",
+    "examples/instrument-melody/README.md",
     "examples/named-content-workshop/README.md",
     "examples/original-room-art/README.md",
+    "examples/phrased-melody/README.md",
+    "examples/polyphonic-melody/README.md",
+    "examples/progression-policy/README.md",
     "examples/sky-invaders/README.md",
+    "examples/soul-cost/README.md",
+    "examples/soul-gate-abilities/README.md",
+    "examples/soul-gate/README.md",
     "examples/sparse-content-workshop/README.md",
     "examples/three-room-art/README.md",
     "examples/two-room-art/README.md",
-    "handoffprompt.md"
+    "handoff.md"
   ],
   "files": [
     {
       "path": ".gitignore",
       "size": 775,
-      "sha256": "360f6214d038d58097bb5c3b375bfd678e1be66477567aef8c79a6f550c5bf93"
+      "sha256": "31eceefcbca3c15062ddcd3bd88d63a2759e3873577b4719fd210ba846389e03"
     },
     {
       "path": "AGENTS.md",
-      "size": 26900,
-      "sha256": "9697979e7da428ad9cb4e58286a8b6e42ad1a2ac4de4117edb954056b85b062e"
+      "size": 33995,
+      "sha256": "a1a38f8a37fec07f529e5e82942fd18c028b948b4e5a286f4e10485fd4d1170d"
     },
     {
       "path": "aria/__init__.py",
@@ -108,14 +136,44 @@
       "sha256": "6ad93f14ae70b0806dd1f3b7f42dbd3d557fc51be7b7993c2f90c1fb2281d3aa"
     },
     {
+      "path": "aria/audio.py",
+      "size": 21053,
+      "sha256": "6d0faee0f9404459affd0bf002cdb13e7db5c0c862e08eed3e03d473294209ad"
+    },
+    {
+      "path": "aria/audio_binding.py",
+      "size": 1755,
+      "sha256": "126b43fadf3320545e22e8721423c35d30947848f2cb1d29d926cedfc8484c3a"
+    },
+    {
+      "path": "aria/audio_comparison.py",
+      "size": 3293,
+      "sha256": "b1c32c22a7753f3f8861140f1ba9085dcd67925c4b5628da3242d94ab8f0b9e3"
+    },
+    {
+      "path": "aria/audio_synthesis.py",
+      "size": 10353,
+      "sha256": "eb441bd46ebc0631e8e4cb4cf20f54873a86d3b613d5351957763a932320ce86"
+    },
+    {
       "path": "aria/backgrounds.py",
       "size": 8232,
       "sha256": "556a41984f74a78ecd2c6350d2d4097dea37308054b16a47567b0088355ce81e"
     },
     {
+      "path": "aria/campaign_audit.py",
+      "size": 4424,
+      "sha256": "62a002e102be121679dbea2e7ec136b61c378fc9dca3ae73bc7d46cf6dc50c38"
+    },
+    {
+      "path": "aria/campaign_progression.py",
+      "size": 7648,
+      "sha256": "e0ef03ce04441fed3163ce6e640e64512b0d56b55476a4a7b4d29064c50d2b72"
+    },
+    {
       "path": "aria/cli.py",
-      "size": 37656,
-      "sha256": "9c01972118f0bd782c6e36a26fc93e838c40e943a54bc64ea2301e0328561adb"
+      "size": 41951,
+      "sha256": "b7e544e52023d579e392d7cbb85086c9828d212c1728df152c46fc00d697d423"
     },
     {
       "path": "aria/compiler.py",
@@ -134,8 +192,8 @@
     },
     {
       "path": "aria/content.py",
-      "size": 5852,
-      "sha256": "5876dc91546b26d4d936a92ebfd71b0d2133a7b643cd706d5a9735acbd7130ed"
+      "size": 6580,
+      "sha256": "0610068c4ddaaf435b2b4c6e3b0703a84f15da081c1578ba0cba1012b4a60835"
     },
     {
       "path": "aria/core.py",
@@ -154,8 +212,8 @@
     },
     {
       "path": "aria/enemies.py",
-      "size": 6268,
-      "sha256": "b9163b1bb6ce234009e5b0f500a8e992bf6368313a6b7f0dd8d1a96af6d5c739"
+      "size": 7588,
+      "sha256": "1c755a824efe2a5b01d0132562924598887d976f7ade03f7d29a3df773046873"
     },
     {
       "path": "aria/equipment.py",
@@ -164,8 +222,8 @@
     },
     {
       "path": "aria/geometry.py",
-      "size": 9317,
-      "sha256": "34f3c211aee0041ba6a249835cbf814e516290777d9b6e1720759fc5a7514154"
+      "size": 11573,
+      "sha256": "09c2200fa59746f24dc09e5f125b856619232c06fca82823c9a5596ca87d11aa"
     },
     {
       "path": "aria/hooks.py",
@@ -188,9 +246,34 @@
       "sha256": "95b80e4518924d3f093c002c1ae7115d3fbd82e1ae01ffbba10cae8646023b47"
     },
     {
+      "path": "aria/music.py",
+      "size": 10897,
+      "sha256": "8d0a68a387023664004b50c1699d237edda25f72e29dbaac203767d4d1923293"
+    },
+    {
+      "path": "aria/native_events.py",
+      "size": 2487,
+      "sha256": "c18a77602cb9c5af8dd477b962ebcfc494e66533cadd2e79e99ac1d97afabf98"
+    },
+    {
+      "path": "aria/palette_tints.py",
+      "size": 2197,
+      "sha256": "2d30db4279acd08d89e0ed007ac689a4363c55ac1fa54e679383e869112b95ba"
+    },
+    {
+      "path": "aria/progression_traces.py",
+      "size": 4881,
+      "sha256": "aec55fee14f2c9d532146b853e88022b97ac082c3371f32e10c1084668c73a9e"
+    },
+    {
+      "path": "aria/projectiles.py",
+      "size": 6634,
+      "sha256": "1d5071963a0d1693b1572f7bd2acd242aaf7167d3a7cde5b61ffe5c49f52f683"
+    },
+    {
       "path": "aria/projects.py",
-      "size": 9675,
-      "sha256": "facf09aa468ae6105af0b2e66cd1c0190f110928bab2f02b4f79a9723c4d7eb4"
+      "size": 14467,
+      "sha256": "a5ef0cd9f292a524a3ea3353757bcf927f95c15e8d8c1f871b55340638c79370"
     },
     {
       "path": "aria/rendering.py",
@@ -228,6 +311,16 @@
       "sha256": "263e4806814b2510087bdff65b03e0a95e050f9ffe56708191808998ac1c35db"
     },
     {
+      "path": "aria/soul_projectiles.py",
+      "size": 16678,
+      "sha256": "a5a34dd8af79c2a9b3f5f060802c9240aa93f930fe3127243e3fa5a55ff76eee"
+    },
+    {
+      "path": "aria/souls.py",
+      "size": 2171,
+      "sha256": "1adcbdcb3efec5c1334d5ab177098f98fa43c36edfb16191a729b708def0e326"
+    },
+    {
       "path": "aria/sprite_assets.py",
       "size": 7498,
       "sha256": "6a67da03290d162883b7c274647dce9e17c53eb2ca91c6f30e0d568f9f45d575"
@@ -246,6 +339,11 @@
       "path": "aria/sprites.py",
       "size": 5008,
       "sha256": "7cc5e215e826be0392378c7e0d8f8c6f5ba5919137f7551b365a53fa92e65a40"
+    },
+    {
+      "path": "aria/starts.py",
+      "size": 2274,
+      "sha256": "044996abf5f4f943732c5d93601e5ed3695ba726c72a610561563f31044b50c4"
     },
     {
       "path": "aria/tables.py",
@@ -289,8 +387,13 @@
     },
     {
       "path": "docs/ABILITIES.md",
-      "size": 15725,
-      "sha256": "c9ca8beb6add83985a644f1ac3da427cc93d63dbb00f0dbd83f2bc7bef751b89"
+      "size": 16461,
+      "sha256": "cf6c5d318dcf2708c78ad7f45d83fba3f57255dcee801a3e9d5925e1ab903ae0"
+    },
+    {
+      "path": "docs/AUDIO-RECON.md",
+      "size": 28429,
+      "sha256": "e2810007d913c33ca5d28c0bd5092fa9994514d495ae6b6273cf665a87b1324f"
     },
     {
       "path": "docs/BACKGROUND-DISCOVERY.md",
@@ -303,9 +406,19 @@
       "sha256": "c052295c1334cd0644e13bbda8379e4e437ea1c47335e0b4f767e070d287d5bd"
     },
     {
+      "path": "docs/BOOT-MELODY.md",
+      "size": 8593,
+      "sha256": "fe2bbe749d68dc62be24c4125c406ede96f6aaddb1bd2ddb758493cfe4c569d8"
+    },
+    {
       "path": "docs/BYTE-INDEX-BACKGROUNDS.md",
       "size": 4562,
       "sha256": "9d85e846ff15ce698d4f915488986b376b870ea41869e981934e0a83a50809df"
+    },
+    {
+      "path": "docs/CAMPAIGN-AUDIT.md",
+      "size": 4719,
+      "sha256": "40bb009fc12d5258cd766511f9ee3557998f38e0c4024e4e57db8944528ae042"
     },
     {
       "path": "docs/COMPATIBILITY.md",
@@ -314,8 +427,8 @@
     },
     {
       "path": "docs/COMPLETION-ROADMAP.md",
-      "size": 23698,
-      "sha256": "77bac67a91800607fddcdb4d7a6e99adc0073df7f3a94e51f60997dabe4c980c"
+      "size": 36357,
+      "sha256": "f63628f70c0a326a9293d3f818caa7ccd803cfb02957df05c429cb9002358724"
     },
     {
       "path": "docs/CONNECTION-PLANNING.md",
@@ -326,6 +439,16 @@
       "path": "docs/CUSTOM-CONTENT.md",
       "size": 11968,
       "sha256": "f1796cc45b805c5e23b992c8ab45d1437b6dd1123b7d777fe9d0a4c21dac387f"
+    },
+    {
+      "path": "docs/CUSTOM-PROJECTILE-ABILITIES.md",
+      "size": 2903,
+      "sha256": "672b07bc225672c9a327ddd237e4e444efd18d90c364d1b4180a97ebf58c9d5d"
+    },
+    {
+      "path": "docs/CUSTOM-ROOM.md",
+      "size": 8364,
+      "sha256": "142dcd2575a5c6fefa07c9f3547bfbf09058aaa45ebd33a86545515d8f874807"
     },
     {
       "path": "docs/CUSTOM-TERRAIN.md",
@@ -349,13 +472,13 @@
     },
     {
       "path": "docs/ENEMIES.md",
-      "size": 13707,
-      "sha256": "dba1f3df9c6fb40cbd0d59ae28cdda4cd632dc331264a129184ef882c28f5fff"
+      "size": 17529,
+      "sha256": "6ae2c5dc07518d6082fa03b43c52431cdffa8b0f4ad8fa581b8670ed81addfea"
     },
     {
       "path": "docs/ENEMY-BINDING.md",
-      "size": 15901,
-      "sha256": "11f0545d51ba903fe9b034c783182ab97f8f85ba4d3f4c0cd63875b8735b3445"
+      "size": 17988,
+      "sha256": "67994b4e8c566b75a7eddfe41b8bc92cdacf03ffa557118fe5cad4102035c576"
     },
     {
       "path": "docs/EQUIPMENT.md",
@@ -369,8 +492,8 @@
     },
     {
       "path": "docs/FILE-GUIDE.md",
-      "size": 23170,
-      "sha256": "e2923456d77929320ac943b444b1cc1ade94d3ff7aefb301eafd1134daa27cde"
+      "size": 26041,
+      "sha256": "fe457606ef9d351e67564ce278187e82b7da263b78a9b9746bb3e0269d44aff0"
     },
     {
       "path": "docs/FOLDER-SPLIT.md",
@@ -381,6 +504,11 @@
       "path": "docs/FRAMEWORK-ROADMAP.md",
       "size": 10363,
       "sha256": "e32ec2b78367ff3acc53de1ce0e2069b234540dc9105e89a66efcdc7a3924988"
+    },
+    {
+      "path": "docs/GHIDRA-PLAN.md",
+      "size": 2303,
+      "sha256": "c78df37a88a9b6d540b8da3d347313a7c5e94306d5a32f5a805b0b1fe4aceb70"
     },
     {
       "path": "docs/GUI-EDITOR-ROADMAP.md",
@@ -428,9 +556,24 @@
       "sha256": "4985757581c38b097da5097300642ffa713ba06bfa08d374a2901774a6b6ed50"
     },
     {
+      "path": "docs/MUSIC-LIFECYCLE.md",
+      "size": 3889,
+      "sha256": "e4c6242940be8bd0a5576234423d6600dffbbca03401eb3aad427fe6a54eb85b"
+    },
+    {
+      "path": "docs/MUSIC-SAMPLES.md",
+      "size": 7724,
+      "sha256": "a5dac8bf5d0deacbdc0a3d809256488d5d6f4ee9949f82c29f0524239e71ac0d"
+    },
+    {
       "path": "docs/NATIVE-CONNECTION-TESTING.md",
       "size": 5494,
       "sha256": "bdf2a99ce637633144e4a144d3cae24f0e3dadaefdf025a5b9132098c75858c7"
+    },
+    {
+      "path": "docs/NATIVE-EVENTS.md",
+      "size": 7211,
+      "sha256": "4c454c29f0492f3c7bf11f34e6aa513f5e20043f6d197d9c25e86e9ba41aaa63"
     },
     {
       "path": "docs/NATIVE-INTEGRATION.md",
@@ -438,14 +581,29 @@
       "sha256": "3782c685d40eaa4c8c19ef3a0a06ea9f0dd5a8f8ef39e725d1e93a0289b0c64b"
     },
     {
+      "path": "docs/OWNED-PROJECTILES.md",
+      "size": 4536,
+      "sha256": "6ce1d19b7b3c786c94fa0a0d1aeb134b7ba5c5babeba7e0375402ef2b46b1b2d"
+    },
+    {
+      "path": "docs/PROGRESSION-POLICIES.md",
+      "size": 5661,
+      "sha256": "54ddcb7ef95f66357a7bb9d26257c01efc99fb10a91e3defcd03e2bca5e401d0"
+    },
+    {
+      "path": "docs/PROGRESSION-TRACES.md",
+      "size": 3603,
+      "sha256": "9c525596e5379c02ced4027eb083c2743a4629811de38bf60ecde636a334825b"
+    },
+    {
       "path": "docs/PROJECT-COMPOSITION.md",
-      "size": 9372,
-      "sha256": "e46ff0d2aa83f36f51b96273d4c67bd07f3d2ec1b36a93476579402a418fbc43"
+      "size": 13756,
+      "sha256": "87d51bee562a0d53ab51eeb8554b101177c1fc44957e6a89c8441d05759cfa7f"
     },
     {
       "path": "docs/REA-WORKFLOW.md",
-      "size": 4252,
-      "sha256": "15ed2c1027d3f33c86d5efb125a89c00e78843a4b3eb7468a381cfe44f8f86ef"
+      "size": 4945,
+      "sha256": "8b2261adb57bad6d9e494ed5b5eed5efc12d973eb212f1dffd11cb9d8949c2ee"
     },
     {
       "path": "docs/RENAMING.md",
@@ -459,13 +617,13 @@
     },
     {
       "path": "docs/ROM-AND-RAM.md",
-      "size": 5814,
-      "sha256": "77191dfa983c645b34753095c0e575cbaab5344814cabe43ad91759c27503f5c"
+      "size": 5929,
+      "sha256": "249f06069dc2e0bf960327098d425759ef96b61416f26366ae6279fc77a32390"
     },
     {
       "path": "docs/ROOM-ASSETS.md",
-      "size": 10973,
-      "sha256": "b1fa0eacacbd219079313491ec93ee783245c9c6d28b3d3622e7f460cd0f2a1e"
+      "size": 12115,
+      "sha256": "541a5696d8ae67ec8af5de4f087c2c683c085e9aa346e45d3e03b863f6693c61"
     },
     {
       "path": "docs/ROOM-CATALOG.md",
@@ -498,19 +656,34 @@
       "sha256": "35366a8b1d61d4317586e446e32c9871f20281feef30a9a8d8112de250198e8d"
     },
     {
+      "path": "docs/SOUL-DECOMPILE.md",
+      "size": 34094,
+      "sha256": "6d62a78aa6e61b5ac6fd94ec29662e965b0b2625cb26339fc9fa8a9391003a35"
+    },
+    {
+      "path": "docs/SOUL-PROJECTILE-TRACE.md",
+      "size": 23243,
+      "sha256": "c2bc63ca3bebf66c57228c49dee1f56262822cd32f419e64e5a07ef9c835d87e"
+    },
+    {
+      "path": "docs/SOULS.md",
+      "size": 3556,
+      "sha256": "1950326b00a62ac07c5efe1fe107611058dfa526b5681545bb3bda849ad17b5c"
+    },
+    {
       "path": "docs/SPRITE-AUTHORING.md",
       "size": 10079,
       "sha256": "77eebe6fb9189ad5aa88928ba3130e36b321d6d021b4614c7185abc8cfdc0c79"
     },
     {
       "path": "docs/SPRITES.md",
-      "size": 9966,
-      "sha256": "fe80dd40de14034cf4eddf6e346c2b08c1c911658fac8fa863fcafa83fb465a9"
+      "size": 10319,
+      "sha256": "207ae6a8b63527a0709eb7e84ed9edcd8a432ae0f56629f9b92cdda2e4804ddf"
     },
     {
       "path": "docs/START-HERE.md",
-      "size": 19131,
-      "sha256": "66a016028ef6ad9f46a62880716284b2eaa1ae588774b16ac21c017a6e8ac446"
+      "size": 19119,
+      "sha256": "ce936bee938243ff790415c52a20cd1086559238c0e8d5f298b4077d04bddfa9"
     },
     {
       "path": "docs/TACTICAL-SOUL.md",
@@ -519,8 +692,8 @@
     },
     {
       "path": "docs/TERRAIN-PAINTING.md",
-      "size": 7376,
-      "sha256": "954a125eb10d655d8525e632f0302673d14286808884223bdff8e43e1e268e76"
+      "size": 7370,
+      "sha256": "813db6b83535da5d9c58e01a36b2295a0304d6204a435898920817dbfe0da7e7"
     },
     {
       "path": "docs/TERRAIN-SUPPORT.md",
@@ -529,8 +702,8 @@
     },
     {
       "path": "docs/TESTING.md",
-      "size": 20239,
-      "sha256": "2d0d8528ef4a7be89c1cd5251155d19674ef1b5221f99cb2fd6d061da0ca4320"
+      "size": 20513,
+      "sha256": "3f34ef3a5ab1ab1e0917d43330b4c8f065f908381350ee00eef48cfd1978835b"
     },
     {
       "path": "docs/THREE-ROOM-ART.md",
@@ -569,8 +742,8 @@
     },
     {
       "path": "docs/WORLD-GRAPH.md",
-      "size": 4503,
-      "sha256": "4b70e2dbdade6d05983f721bb2d9e570a40cd8acf3a110ba272ece6c987a13ae"
+      "size": 4736,
+      "sha256": "cec9d4b00176b5e9c5291b244bfac2a7dbff725b91bbafce1208c8febd96d6c9"
     },
     {
       "path": "Dominance.cmd",
@@ -586,6 +759,81 @@
       "path": "examples/ability-workshop/README.md",
       "size": 858,
       "sha256": "bdba7770fbc7ee63f76fc52c50fc2594cbfc55e2a653bcc89952c84e150a5b8a"
+    },
+    {
+      "path": "examples/boot-melody/mod.json",
+      "size": 569,
+      "sha256": "a9e9f805d13ba4a37e4ebbf53a736410ad447d36d14712bf1f18d6107297d5e2"
+    },
+    {
+      "path": "examples/boot-melody/README.md",
+      "size": 479,
+      "sha256": "afb9d955b0071385b05f6a5a8065ef61d773545e0d64ed1d2f50cdb94282e9d9"
+    },
+    {
+      "path": "examples/boot-melody-loop/mod.json",
+      "size": 595,
+      "sha256": "a59493a70311f9e032fcf9c3ace822a2c998b8598f99246910105749af7cd819"
+    },
+    {
+      "path": "examples/boot-melody-loop/README.md",
+      "size": 487,
+      "sha256": "df02e5a9121fe311b2938c37606ab337a6821fcbc0b63337a8c8531143c20131"
+    },
+    {
+      "path": "examples/bridge-art/bridge-palette.json",
+      "size": 612,
+      "sha256": "da9d27802bdf4ba1298c4076a61e610a5a4600b60bb03cc5d2d2125bb9ed2ff9"
+    },
+    {
+      "path": "examples/bridge-art/bridge-tiles.json",
+      "size": 8331,
+      "sha256": "a69bf7f6d713bfe96674b33a2cd04773ceefea9c25df55763038a0823fed775b"
+    },
+    {
+      "path": "examples/bridge-art/gallery-bricks.json",
+      "size": 12329,
+      "sha256": "a15dd35edb831c6c8acffa3221a55831dc867947c526842f60ae84bdaa85093e"
+    },
+    {
+      "path": "examples/bridge-art/gallery-palette.json",
+      "size": 192,
+      "sha256": "b7e18549b25a32d179bb3b982f23cffb26ebed514c730c77e003aa3d9f82739e"
+    },
+    {
+      "path": "examples/bridge-art/make_art.py",
+      "size": 3461,
+      "sha256": "8601020d00d7aa21aeb55a2c98a42045999fc043191565eddfc4e833458b419e"
+    },
+    {
+      "path": "examples/bridge-art/mod.json",
+      "size": 10800,
+      "sha256": "fe638c76f26eb1a2a67b4d1bd515baf4b5b73e92319f1059bdfe789fd90dc8aa"
+    },
+    {
+      "path": "examples/bridge-art/neon-bricks.json",
+      "size": 12327,
+      "sha256": "a38ebafbb63e56f4568a5bd0f80b161e86bd30676eb684747cc245fbc55c2d51"
+    },
+    {
+      "path": "examples/bridge-art/neon-palette.json",
+      "size": 190,
+      "sha256": "bdffc27484f2ec8881239fa31a609614f65fdafa450b60dfc6fe2466e06cbe64"
+    },
+    {
+      "path": "examples/bridge-art/README.md",
+      "size": 1152,
+      "sha256": "ccff70b25a750c10d450e38ae7f0162f7195be2fbe2378a5683f10493f7d3307"
+    },
+    {
+      "path": "examples/bridge-art/save-bricks.json",
+      "size": 12329,
+      "sha256": "6a2479130c7336d1a39a5690d5c176dab311e10ec86d11d5d39ff09412a87bce"
+    },
+    {
+      "path": "examples/bridge-art/save-palette.json",
+      "size": 192,
+      "sha256": "c410e5d06e0d010614b4ed6ce38f18c50d32a9b54c7bbc2dabc48c469b2a18df"
     },
     {
       "path": "examples/bridge-project/modules/art.json",
@@ -733,6 +981,36 @@
       "sha256": "1cf4322fd2b740361fa99ea9c6e27fe0bd565e9c41b1b0342bef3aa3af361931"
     },
     {
+      "path": "examples/custom_room/flesh-palette.json",
+      "size": 607,
+      "sha256": "2a33de93d7077164caf746f44d8612736afe84727916c40d3422f3058d909028"
+    },
+    {
+      "path": "examples/custom_room/flesh-tiles.json",
+      "size": 34874,
+      "sha256": "7932dff8a402dd5ea21c441510568334b5f5611da2ba6218051cbbc71ea2a950"
+    },
+    {
+      "path": "examples/custom_room/make_example.py",
+      "size": 4783,
+      "sha256": "daa07fef2457b184e1d7c454eecd2c7fcd19c3648830a5abd9baf1dee815da64"
+    },
+    {
+      "path": "examples/custom_room/mod.json",
+      "size": 52488,
+      "sha256": "3265e3b97a8302f2a42a33e9f3bd75597f52ebdb0429a851ba4e51959f12b735"
+    },
+    {
+      "path": "examples/custom_room/README.md",
+      "size": 2204,
+      "sha256": "1b18cd6a6f4d33ddd9fc86259814357947f4ec195fedc36e98541fce7f162681"
+    },
+    {
+      "path": "examples/custom_room/run_custom_room.bat",
+      "size": 183,
+      "sha256": "aa8b354463c828228938b812d0ad6a71ee0fc8f98808ae6386445590cea045dd"
+    },
+    {
       "path": "examples/enemy-workshop/mod.json",
       "size": 2057,
       "sha256": "7984118628a05df1832153cb7d69b911361e126d912e4db8306030491a23a6f0"
@@ -741,6 +1019,26 @@
       "path": "examples/enemy-workshop/README.md",
       "size": 989,
       "sha256": "acf089a9fb62358bba946521b9687eff3d14f0e811ab2ac81a4a50cba018bc6c"
+    },
+    {
+      "path": "examples/envelope-melody/mod.json",
+      "size": 447,
+      "sha256": "5d41b9baa506bdb53151b8216c10de9888176b256ebd4c9f05e9fdfa2e37bf3a"
+    },
+    {
+      "path": "examples/envelope-melody/music.json",
+      "size": 449,
+      "sha256": "20eba1809a0a765a54416518434ba3c4a46bfaa75508bd82c3fa200185866b88"
+    },
+    {
+      "path": "examples/envelope-melody/project.json",
+      "size": 123,
+      "sha256": "94962e9e6bdfa7acaa580b57d648936f97c0528051e9428d2363f999dae84806"
+    },
+    {
+      "path": "examples/envelope-melody/README.md",
+      "size": 397,
+      "sha256": "a83b9633484732e8fdc3c6ae16019872c81c4f9812ebb59d86ccaaebe9a239bf"
     },
     {
       "path": "examples/equipment-workshop/mod.json",
@@ -793,6 +1091,31 @@
       "sha256": "9ea80df0caa8c33766bf1af14cd279fb8d76b709eb582db9b2f227bcf2d167a3"
     },
     {
+      "path": "examples/imported-melody/mod.json",
+      "size": 736,
+      "sha256": "12efc1df5e3e6b320bb93e2d9ccae8542b20280473536b01bd6f101b3cf79f20"
+    },
+    {
+      "path": "examples/imported-melody/music.json",
+      "size": 648,
+      "sha256": "a7a5db8ceedc239cb51307c6e9b5ba7552e5cc26cf89a5b924566654db7cda6c"
+    },
+    {
+      "path": "examples/imported-melody/project.json",
+      "size": 123,
+      "sha256": "7cd9c6e18b2c67fe0cc8a493e41dc6be9cffb6f880843f7a19495699750e327b"
+    },
+    {
+      "path": "examples/imported-melody/README.md",
+      "size": 687,
+      "sha256": "2a3ca7490dc6050a6d3a7af8c48bcf664fbeb46735eb54a935d550ac44b6c4f1"
+    },
+    {
+      "path": "examples/imported-melody/triangle.wav",
+      "size": 84,
+      "sha256": "ac86f632edf3e4a614a1118b3433bf920915e1175b23a0fe641c2f55bacd104b"
+    },
+    {
       "path": "examples/input-routes/README.md",
       "size": 516,
       "sha256": "bfcda517a90c99dd230eacd4f789c4df93c691c37e3be77c1b381d033a01c9f0"
@@ -801,6 +1124,36 @@
       "path": "examples/input-routes/room5-left-jump.json",
       "size": 631,
       "sha256": "b574e69ccfb6f861e8358fbd043a9cf9c76f0a109c7fc3e2b259fc4076480c10"
+    },
+    {
+      "path": "examples/instrument-melody/mod.json",
+      "size": 890,
+      "sha256": "247b4bf04120706102e9642593f2c094b25be1992c3c62cc234a174e5fc13e50"
+    },
+    {
+      "path": "examples/instrument-melody/music.json",
+      "size": 893,
+      "sha256": "d599afea63a71f945da24046f7a9d64baa44559efef0bc9d68b95f5d01433a7b"
+    },
+    {
+      "path": "examples/instrument-melody/project.json",
+      "size": 125,
+      "sha256": "7d54646266ceb7d1596f2211c1817ae9c968d2fa433f12d1152ba6df5b934f22"
+    },
+    {
+      "path": "examples/instrument-melody/README.md",
+      "size": 397,
+      "sha256": "5247654a2a9949d91a4c9ba118aaff4d057abe723af347ad528dc4debf79a907"
+    },
+    {
+      "path": "examples/instrument-melody/square.wav",
+      "size": 84,
+      "sha256": "0ad4dff8765a89fc657793d2836716d7fae5d83c98cd4cabac7ba202549a25d7"
+    },
+    {
+      "path": "examples/instrument-melody/triangle.wav",
+      "size": 84,
+      "sha256": "ac86f632edf3e4a614a1118b3433bf920915e1175b23a0fe641c2f55bacd104b"
     },
     {
       "path": "examples/label-workshop/mod.json",
@@ -863,6 +1216,46 @@
       "sha256": "5e25905333abe5db21de4fde6440d5860098f251ad17fdc3a4dc5d974940069d"
     },
     {
+      "path": "examples/phrased-melody/mod.json",
+      "size": 470,
+      "sha256": "8e186fca6cbd27023772a5766e158d6f77d566e5510e92b9c1711711fe1cba28"
+    },
+    {
+      "path": "examples/phrased-melody/README.md",
+      "size": 314,
+      "sha256": "9512e0667b94d013614b4ae22b7927d5a92dfc411b51366a34f1774e485a7167"
+    },
+    {
+      "path": "examples/polyphonic-melody/mod.json",
+      "size": 588,
+      "sha256": "ea5a1b7c0b2bc18062858edf71ada7f59ca6a9db7adc3b9259b65e023d48cc6c"
+    },
+    {
+      "path": "examples/polyphonic-melody/music.json",
+      "size": 587,
+      "sha256": "8ea3681c93cd337060c683dc91876b44213cc84eb35662267c922698a169d5a3"
+    },
+    {
+      "path": "examples/polyphonic-melody/project.json",
+      "size": 125,
+      "sha256": "3f27258afd78fabda5eee3209ca23bf8e8fbc198ed46cf333e5162b207ce048c"
+    },
+    {
+      "path": "examples/polyphonic-melody/README.md",
+      "size": 384,
+      "sha256": "f6cb3aac70c9eefbbfacec1b42bb6a727155f520c86ff5ca680dededaaea0aff"
+    },
+    {
+      "path": "examples/progression-policy/make_policies.py",
+      "size": 1366,
+      "sha256": "c7407c6576b2ed82aca8f0f1ea9a475a2f5da03813d909de1044e14762cb45e8"
+    },
+    {
+      "path": "examples/progression-policy/README.md",
+      "size": 1445,
+      "sha256": "f3ea2711ea72741a0eecc5cd6f3504d11ab6dbfa011cc8bb0d9fe06ab9ed2138"
+    },
+    {
       "path": "examples/README.md",
       "size": 614,
       "sha256": "4fbed6fa8b4918dbca9ca82ec1e3237202dd1356a9f384b99024a50f3a3d47fc"
@@ -906,6 +1299,106 @@
       "path": "examples/sky-invaders/README.md",
       "size": 1807,
       "sha256": "03e7ec41d1870f2ebc24cfb1c493226120d45a41cfc702402cda8c234690ead2"
+    },
+    {
+      "path": "examples/soul-cost/mod.json",
+      "size": 251,
+      "sha256": "69362c322075fb7166685cf69fa670dcfe077a54a8648a8e6291053ed06c7968"
+    },
+    {
+      "path": "examples/soul-cost/modules/cost.json",
+      "size": 239,
+      "sha256": "f7ea7c77b545863b7d4c6b823c3030f4955799b45dfbdd1c198a6f6ed4b30fa4"
+    },
+    {
+      "path": "examples/soul-cost/project.json",
+      "size": 124,
+      "sha256": "026e88ee986775fb94e94eb7682022192397e505b8713dded8c8648aaa8cead5"
+    },
+    {
+      "path": "examples/soul-cost/README.md",
+      "size": 813,
+      "sha256": "f34661b069018c1fe34c3332135cef81471e959a832b3f6b1a91677c893ce9dc"
+    },
+    {
+      "path": "examples/soul-gate/link.ld",
+      "size": 317,
+      "sha256": "a15ca2a7254d97ac348764cadc08cc0675664c6f95f99b4acf1ab6cc4a55d184"
+    },
+    {
+      "path": "examples/soul-gate/mod.json",
+      "size": 427,
+      "sha256": "38bff3b3251e9fdc376862abbdb514837b2c77d232b8232fa25ca14c84cb008c"
+    },
+    {
+      "path": "examples/soul-gate/README.md",
+      "size": 3104,
+      "sha256": "e16e1e3cb0238b38ba7f725de7ab506525ee2a7e6ae498f695b4801ab1d99897"
+    },
+    {
+      "path": "examples/soul-gate/runtime.bin",
+      "size": 138,
+      "sha256": "ff6276ddfc1f783d8c0aad767b9b49a1d9d4af94d8accb58571ce4b61c8dff86"
+    },
+    {
+      "path": "examples/soul-gate/runtime.build.json",
+      "size": 338,
+      "sha256": "be36d50c32b8c58cfb6ae25823132844151b93179359138c23e97742a5c7b63b"
+    },
+    {
+      "path": "examples/soul-gate/runtime.c",
+      "size": 924,
+      "sha256": "2dbd95769e3ebcd3fefbf0dfb27dc09377ef2622278911699c0300020f4f5768"
+    },
+    {
+      "path": "examples/soul-gate-abilities/mod.json",
+      "size": 459,
+      "sha256": "cc04dcd19c589055c6b13b0ebd1f6b276e1d7b70f076cf2202a2d67e05d63e97"
+    },
+    {
+      "path": "examples/soul-gate-abilities/README.md",
+      "size": 2701,
+      "sha256": "ddb484f6727e883490e365b73921bccc380a993602d23136c5ddfef044acea24"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/build.json",
+      "size": 255,
+      "sha256": "2111d2ff49ab05eca266aa0d0ca1be568e32b00af9a21b0b621de286f84c2a11"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/dominance.h",
+      "size": 2592,
+      "sha256": "76bbf45c9a052cc1c050a41a3963f064c4b1b03e4ddb2011ecdf9e9992564b38"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/features.h",
+      "size": 790,
+      "sha256": "8d437680c682e02bdb132b88e5468a24fa5c155b5869c31a3509ff9c302bab9a"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/gate.h",
+      "size": 784,
+      "sha256": "99b5ff475bdd9463bb37386dbc7817182cb0b676bfe9d3f22211729aae6c27fd"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/link.ld",
+      "size": 404,
+      "sha256": "edd591910fbbf60f838f41bc75707ec67c6354783ce89914de71c931e379c2bb"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/runtime.bin",
+      "size": 904,
+      "sha256": "ce48d72187636ec92d3ce51e8d77ccfc3082b991490e86c9cf3590735907f518"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/runtime.build.json",
+      "size": 592,
+      "sha256": "95239cc7505b2fc597888d08e0682733a7a2ea720aab32262571669983354ba3"
+    },
+    {
+      "path": "examples/soul-gate-abilities/runtime/runtime.c",
+      "size": 2022,
+      "sha256": "90f951622ef30bc11093744dc45da8eaaedaae1d492f27f118d12202b052c619"
     },
     {
       "path": "examples/sparse-content-workshop/mod.json",
@@ -999,13 +1492,13 @@
     },
     {
       "path": "framework/aos-usa-r0.json",
-      "size": 3667,
-      "sha256": "9d71a346380fd96ce4c2b81971168c2b9903158e231b7b06897b441dfce9c4eb"
+      "size": 3772,
+      "sha256": "139c7bc747aed68f8ea395367b36d4d837f1ccd1dae0dc38bc5336f615a03f17"
     },
     {
       "path": "framework/capabilities.json",
-      "size": 6936,
-      "sha256": "6a58859f228a0394f7953976a7ac6c90c16c725a0f66ded18f922db7be26fad1"
+      "size": 9321,
+      "sha256": "1831b003bc8f48a5acf974c477d0efa0dbe5fc097419fccd67ca6808b52d4a6c"
     },
     {
       "path": "framework/enemies.json",
@@ -1019,8 +1512,8 @@
     },
     {
       "path": "framework/roadmap.json",
-      "size": 8486,
-      "sha256": "d225cb544228510a3d8e6352bef6ae3c834577e48d27a2f4b7b48395f2038498"
+      "size": 10546,
+      "sha256": "4c85b948038cbf48e5a96c72732aca6d085e85b3171632023f7fa17186061684"
     },
     {
       "path": "framework/tables.json",
@@ -1033,9 +1526,9 @@
       "sha256": "fec724dfcd61402ce62e2583e41f0e03fa15c98cf8f3f29e7d36748a11e71e86"
     },
     {
-      "path": "handoffprompt.md",
-      "size": 24808,
-      "sha256": "2f8a5457166a3aaefaae38973cc326a3a95bcfce51ec9c98bdf6060358674bb5"
+      "path": "handoff.md",
+      "size": 40061,
+      "sha256": "e3d6f69144d863977d2926e189af575d2010bc9a8bc9a389cde28433cff67ec9"
     },
     {
       "path": "LICENSE",
@@ -1079,8 +1572,13 @@
     },
     {
       "path": "README.md",
-      "size": 24815,
-      "sha256": "e8267bcffa57ff6f677f946ce47456ca255a3bef7ee7031bbbdc9fe8b97af53d"
+      "size": 28851,
+      "sha256": "541acaf4bc3949e456a946a6c864ffe7720977df9f7ddaeb468a8b9cadb0a5a0"
+    },
+    {
+      "path": "scripts/analyze_sfx_render.py",
+      "size": 5226,
+      "sha256": "68a6df49f4d8caf47dd6f887c8aac5e6ee25d4e43ea83b6ad285742bf175727e"
     },
     {
       "path": "scripts/aria_tool.py",
@@ -1088,9 +1586,64 @@
       "sha256": "4415d24bf7da104d6a3b4782b5feb1f7ca76eccac08463bea11e1f2fa4f03b02"
     },
     {
+      "path": "scripts/attempt_soul_projectile_hit.py",
+      "size": 4923,
+      "sha256": "bd6da06cc72a486715702d42b29ce4cb9cb8a841264c6f5d937dd0278b31fa87"
+    },
+    {
       "path": "scripts/attribute_spawn_events.py",
       "size": 4564,
       "sha256": "43481f04bccb6459a9b19c0f0f0b65f59b4ad87992346ca207b2e97d7d6e762d"
+    },
+    {
+      "path": "scripts/attribute_zombie_kill_codes.py",
+      "size": 4023,
+      "sha256": "b55c965ed2fe5427cb6f465c6641c150cb5ef843afeadba790a43220053cb675"
+    },
+    {
+      "path": "scripts/capture_soul_audio_equal.py",
+      "size": 3772,
+      "sha256": "fd1b4570ad0104fc11d38c149b6aa4de4038f2e1de04c2cf9225a9a8fa0cf097"
+    },
+    {
+      "path": "scripts/capture_soul_projectile_oam.py",
+      "size": 7184,
+      "sha256": "75558dad1c77d12d15606b8ede46ac20dbe1756300b42abfc2620433993913c6"
+    },
+    {
+      "path": "scripts/capture_soul_projectile_tiles.py",
+      "size": 4410,
+      "sha256": "c61a862d372d45ef45b4b29c177524ec47bc83f7de1c996a6163f4b3071a7a91"
+    },
+    {
+      "path": "scripts/census_damage_candidates.py",
+      "size": 3601,
+      "sha256": "7a38ba166551cd5d944e0ee6179a4182a9cea23c266e197b02828b28efcfdb29"
+    },
+    {
+      "path": "scripts/confirm_spawn_copy.py",
+      "size": 3003,
+      "sha256": "fd65f13d8ae7954f30f55500918d9f6c484ab8218186b79b0ce74c0260ffe079"
+    },
+    {
+      "path": "scripts/decode_callees.py",
+      "size": 3555,
+      "sha256": "24e33a405836d7559eb3d56f9271ca4fa673a6b11f5a31ec71b590f0c2787e6b"
+    },
+    {
+      "path": "scripts/decode_drain.py",
+      "size": 4266,
+      "sha256": "42d93c48f8713fcda10c7078e6693b23a739d0829b797f02ba5a062b60731899"
+    },
+    {
+      "path": "scripts/decode_packet_helpers.py",
+      "size": 2370,
+      "sha256": "11a94f501c59116463f80adee6234385a5d1bc6e209c63a10e1a90635bfa809c"
+    },
+    {
+      "path": "scripts/decode_queue_builder.py",
+      "size": 4663,
+      "sha256": "edb885115e2d306309c9122a4cc06029668e934af2d7a70d79290d81791bfc80"
     },
     {
       "path": "scripts/dump_walker_source.py",
@@ -1099,8 +1652,8 @@
     },
     {
       "path": "scripts/emulator.py",
-      "size": 7188,
-      "sha256": "a6e4a6dc3e59976ff39a6bf35b30f09583271ba141ffcad6fddd50286cb8ead2"
+      "size": 9605,
+      "sha256": "3816ecc1a45c92631c255fe0d9197f4b86543323bf2a2a3200ae83e0c3eab1e8"
     },
     {
       "path": "scripts/import_indexed_png.py",
@@ -1108,9 +1661,39 @@
       "sha256": "e5511ffb97381f03280cfd1c93fa287b232e2aeba2a2ed2d707e24a2d1f59c63"
     },
     {
+      "path": "scripts/measure_mp_regen.py",
+      "size": 2923,
+      "sha256": "f9517e45d87f8c8695a75f08afd7b06d912198d67cbe69301fc013682f864f2f"
+    },
+    {
+      "path": "scripts/measure_soul_hit_damage.py",
+      "size": 3967,
+      "sha256": "1d564a3c156ea4effd1a08bb184c52afc3453f5bf46717386eefdc10119b8736"
+    },
+    {
+      "path": "scripts/measure_soul_hits_to_kill.py",
+      "size": 4007,
+      "sha256": "1f33e6f7439f1bd9c4a38dafb75c70341f71bccd73587ff74fb0866e6faa4bea"
+    },
+    {
       "path": "scripts/package_framework.py",
-      "size": 3150,
-      "sha256": "f9eebc9c74109797f373609f4d63c92c08627d18ba57cde3758075cd0ffcc923"
+      "size": 4407,
+      "sha256": "b606268ff1ef9fbd90a3bfb7a9e6b29f1023109524cf0e63fdae5a0840eddcab"
+    },
+    {
+      "path": "scripts/pin_damage_def_raised.py",
+      "size": 7797,
+      "sha256": "0096014140f0b90b5fb0ddf6a3152bbe83e39ee2035cde9357f50b73b11c4ef7"
+    },
+    {
+      "path": "scripts/pin_damage_high_hp.py",
+      "size": 6471,
+      "sha256": "93f90c06c5263d786798e7893d89f5a6c2f5614eedbf979c64b97b026003b285"
+    },
+    {
+      "path": "scripts/pin_damage_skeleton.py",
+      "size": 9281,
+      "sha256": "bd806fb054f7068add61a1b19a7f0ffa80c12c877fec5071e523374742d6ef05"
     },
     {
       "path": "scripts/preview_content.py",
@@ -1123,9 +1706,84 @@
       "sha256": "52e62050376c60325bb877f482ed5283a1c0d7d81d28988efe3511be64f0c031"
     },
     {
+      "path": "scripts/probe_cast_fizzle.py",
+      "size": 3695,
+      "sha256": "202e2dbc01de9e443f8b48d9880336d17093bd74a6e0705d45f15d17c0bed03d"
+    },
+    {
+      "path": "scripts/probe_cast_hold.py",
+      "size": 2940,
+      "sha256": "acda6df17d8deceace362f6478c40914515ed0d64a5193a38ad9409a34849448"
+    },
+    {
+      "path": "scripts/probe_projectile_lifecycle.py",
+      "size": 5282,
+      "sha256": "3096538f114e13a2ee565db84f376f5185d41958d5e5e434eb263faa31f05802"
+    },
+    {
       "path": "scripts/probe_skeleton.py",
       "size": 7220,
       "sha256": "9eb80ca12c20e24ad5ebb757c00a6676c843dd87d30ef00770ce5f8ee43b1456"
+    },
+    {
+      "path": "scripts/read_hitbox_descriptor.py",
+      "size": 2750,
+      "sha256": "b3845e2bd6d8636b10f24a28267ec5e30d2a1439145c710de6db610f666c7251"
+    },
+    {
+      "path": "scripts/render_sfx_0e4.py",
+      "size": 3993,
+      "sha256": "316493c733b73a8d8150c1a769aa7ecf6f236f9a77ef4efa94b3a008e8c631b5"
+    },
+    {
+      "path": "scripts/resolve_store_table.py",
+      "size": 4516,
+      "sha256": "7011838b40ab42d245900a1a60e371779933f2f3e3516acafecf17de844af772"
+    },
+    {
+      "path": "scripts/scan_enemy_hp.py",
+      "size": 5718,
+      "sha256": "b7f41148c8eef5535dd4dfb0c7a49ab5a3084898165960714d5589b69438c78c"
+    },
+    {
+      "path": "scripts/scan_hp_drain.py",
+      "size": 9637,
+      "sha256": "2fa6c470fd811d4e86a859603a075970f68d1075a770147175016333fd44e681"
+    },
+    {
+      "path": "scripts/scan_soul_projectile_words.py",
+      "size": 4625,
+      "sha256": "c620d41341bfd403049618024f94750f6e811676fe85be124e00e8650f21103a"
+    },
+    {
+      "path": "scripts/scan_soul_spawn.py",
+      "size": 7927,
+      "sha256": "78600c577c8550c08d54733eb3ed49bcdbd9330fa4bbfddfed1d827e3b8af937"
+    },
+    {
+      "path": "scripts/scan_word_stores.py",
+      "size": 3303,
+      "sha256": "9ca02b616267b1f9deaa78e7d19cdc753ee53941d5ed63096af541a2139ae91c"
+    },
+    {
+      "path": "scripts/test_cast_fizzle_gate.py",
+      "size": 3010,
+      "sha256": "ed7fc4ab6ade674888fb3bd1589b7ce88e24f388de41de8fb831f87fa9f8583f"
+    },
+    {
+      "path": "scripts/trace_sfx_0e4.py",
+      "size": 4827,
+      "sha256": "7732c2328efdbc1e620c504349c51f57a18fffee2d317721f094a7f152051739"
+    },
+    {
+      "path": "scripts/trace_soul_projectile.py",
+      "size": 7577,
+      "sha256": "6fa5838232c8970d2d8c7fc925e5aea5d1f9e85b2cb1bd306de89e8ded86d888"
+    },
+    {
+      "path": "scripts/trace_soul_projectile_twins.py",
+      "size": 6814,
+      "sha256": "7f4965dc7c4da6d4e1c6a143c93c91898157d2d4199be3756dc87af4a353c241"
     },
     {
       "path": "scripts/trace_sprite_consumers.py",
@@ -1133,19 +1791,54 @@
       "sha256": "84d498773aa542fa1bae5ded07b2ed2e26a44be4bff7b2e3596b1752986c556d"
     },
     {
+      "path": "scripts/track_slot2_hp.py",
+      "size": 3699,
+      "sha256": "e33d416905e4d09147e8ab90d68d7e48a6d69ca0b0754a10eefed0cadf522141"
+    },
+    {
+      "path": "scripts/track_soul_projectile_velocity.py",
+      "size": 4146,
+      "sha256": "7302ed25d84e187f097eea068f00dac842c103c96d738baf8f6f7a403c2a8445"
+    },
+    {
+      "path": "scripts/track_soul_vs_skeleton.py",
+      "size": 6873,
+      "sha256": "41ab14d4fdb25e4b9c81337c838ffbf19f498835bc667cdcd24c9c34bf26410b"
+    },
+    {
+      "path": "scripts/track_zombie_hp.py",
+      "size": 4722,
+      "sha256": "ac0e7c8cf07205d43b179986b47691c13411a7e6d4489375886e7dd35ed5dbfc"
+    },
+    {
       "path": "scripts/update_handoff.py",
-      "size": 1642,
-      "sha256": "104f1f2acf033cf3a1a5bbe16bfc96381a758e4c432f38927582028453fd53ed"
+      "size": 1630,
+      "sha256": "d64cc49c1776646a89d2f7dd0741dc05ad6a9c0ab30d21f7c6f8f2299cb5fe17"
     },
     {
       "path": "scripts/update_inventory.py",
-      "size": 3535,
-      "sha256": "b8ca177d6f0941dec59030aa63ba8472f3e560deb4835304a6382320ca7e6cc6"
+      "size": 3575,
+      "sha256": "7bd42262a31b445d71c83c9cbf662ba5d07e461521c7dec1f31981f7ca696c9c"
     },
     {
       "path": "scripts/verify_abilities.py",
       "size": 6712,
       "sha256": "6aecd7622711603933c65d4bc3ef0cdb89bf32792c97d44aa225a2d063746674"
+    },
+    {
+      "path": "scripts/verify_arrangement_lifecycle.py",
+      "size": 3691,
+      "sha256": "cdcfbb9e987b674b86d3bce498b3adff76cfa0b6479c6efb17ff307c114ac89c"
+    },
+    {
+      "path": "scripts/verify_audio_binding.py",
+      "size": 2597,
+      "sha256": "7c92af689ad71700824c8410db8f44a9022c617d196c79475b3a7e08e208bb57"
+    },
+    {
+      "path": "scripts/verify_audio_capture.py",
+      "size": 1849,
+      "sha256": "319e77bba6edcceef753297fef65528775377466eb7ac9619e7213f26fb40724"
     },
     {
       "path": "scripts/verify_background_rendering.py",
@@ -1156,6 +1849,21 @@
       "path": "scripts/verify_backgrounds.py",
       "size": 2001,
       "sha256": "74d0cb06fbaf1e0c84d3e15663951bfe3634520106a6337a9f6e5fdc1cfe0aff"
+    },
+    {
+      "path": "scripts/verify_boot_melody.py",
+      "size": 2686,
+      "sha256": "e1867cc066b98a570bafb0dba689abaac9f1a4e1f13911e5e55ba56cfc6320d7"
+    },
+    {
+      "path": "scripts/verify_boot_melody_loop.py",
+      "size": 2626,
+      "sha256": "a4653a0bab9cae2c860ed4c3fc074ad22a169cb66b33ab4233671ce1d2fdd2c3"
+    },
+    {
+      "path": "scripts/verify_bridge_art.py",
+      "size": 5312,
+      "sha256": "6a18bc50afaae5f1e333303e35e7b96dc2d86eda24edf65bb612f7bc57a69968"
     },
     {
       "path": "scripts/verify_bridge_route.py",
@@ -1178,6 +1886,16 @@
       "sha256": "c0f244eee1feeddebe93c77f3063b0f0284373dd6cfd7b162c6e9a4c260334dd"
     },
     {
+      "path": "scripts/verify_custom_room.py",
+      "size": 5098,
+      "sha256": "42c6c7c95ee4d79dde2df8dca65278cbb38d91687af036127b7169123ff5a24d"
+    },
+    {
+      "path": "scripts/verify_custom_room_palettes.py",
+      "size": 3123,
+      "sha256": "3ad16c0f741d97cb35cc9786eb7175a112c1d551adc6172992e31c25c0caf580"
+    },
+    {
       "path": "scripts/verify_enemies.py",
       "size": 4872,
       "sha256": "4319032ad53a2361ce06e918a3ebdc24b9d5dd501317afcb2f8dddbeb13e483e"
@@ -1198,9 +1916,44 @@
       "sha256": "d72df55a1260dbf6e47119fe2a84e9d81ef276dcd0d2b2056a4c55f541cd45eb"
     },
     {
+      "path": "scripts/verify_imported_melody.py",
+      "size": 4184,
+      "sha256": "e9cc5a3d1934f04aa9bc8d64f34f57a2acf8edb8b7b9d59143001574dbf7ae86"
+    },
+    {
       "path": "scripts/verify_labels.py",
       "size": 3649,
       "sha256": "f0f1deb6fb81d1a21b7d29ff8eb365ba6192f3e4f44c43ffcbda53aacf10887d"
+    },
+    {
+      "path": "scripts/verify_melody_phrasing.py",
+      "size": 2442,
+      "sha256": "11d57e1545596ffb882b13749601f8becc76ee1fa90dc3b0f11875de57d7a461"
+    },
+    {
+      "path": "scripts/verify_music_envelopes.py",
+      "size": 2672,
+      "sha256": "700b0659b4cb7eba07b5c932780efc2bffdfb71317d3466a775bf571185710c2"
+    },
+    {
+      "path": "scripts/verify_music_instruments.py",
+      "size": 3008,
+      "sha256": "e5f6b1a6a9d7c21c83ac2a05e3f36ec7d21a8c77e892d8f175cb2d0fa068f78e"
+    },
+    {
+      "path": "scripts/verify_music_lifecycle.py",
+      "size": 4170,
+      "sha256": "3f202add9924d42ea0ece8ff100469e159fe62a7176a471a84e0faf41d40a1e0"
+    },
+    {
+      "path": "scripts/verify_music_tracks.py",
+      "size": 3115,
+      "sha256": "06fde54c10dfe2e167d6c19b16fb8a1526569ecd65e409acca28a8d8126bd67d"
+    },
+    {
+      "path": "scripts/verify_native_events.py",
+      "size": 4509,
+      "sha256": "fde3e0a508b4b0835527e8a252cfe0f3d3a6199a42c0f1fa4dd1a05a9a5e55ed"
     },
     {
       "path": "scripts/verify_projects.py",
@@ -1243,6 +1996,31 @@
       "sha256": "be07204af4e785918fa4c615116b416318120b2317696c3e2f59364cc3bc2fbc"
     },
     {
+      "path": "scripts/verify_second_start.py",
+      "size": 3629,
+      "sha256": "4e24a199bd8e3ca3f6076072854366bc00981e4772460135c0bbe7929471fa0e"
+    },
+    {
+      "path": "scripts/verify_soul_cost.py",
+      "size": 2342,
+      "sha256": "9394824e981e208f14a53d8826c17e85708225cce820f139ebd4ac21fe68a982"
+    },
+    {
+      "path": "scripts/verify_soul_gate.py",
+      "size": 9416,
+      "sha256": "7d46ad86fd921058baab7901df436ccdf6dd0dad1e7f66c38cd3fd5948c9d5b3"
+    },
+    {
+      "path": "scripts/verify_soul_menu.py",
+      "size": 4445,
+      "sha256": "bde0d35de47c84f1a9e714450ae4f643598dbffd000bdb33e264a5510ac8bd3b"
+    },
+    {
+      "path": "scripts/verify_soul_progression.py",
+      "size": 6513,
+      "sha256": "e4a794848c590182ec3969acaa144adf720015daff045a6cf4740460e090349c"
+    },
+    {
       "path": "scripts/verify_sprite_assets.py",
       "size": 10013,
       "sha256": "5cd1b98d7737ebf02ae3dbc812c275d5796a390da9d750d8d7d01d3afefae51d"
@@ -1283,9 +2061,54 @@
       "sha256": "19e59789ad634a259447b7882eac544c852c38bbdd458708c860d8dd2bbc6e29"
     },
     {
+      "path": "tests/test_audio.py",
+      "size": 9833,
+      "sha256": "bc70ceab51226b861800448def978193fd5a57723c68478eb4f82821a1a05a2f"
+    },
+    {
+      "path": "tests/test_audio_binding.py",
+      "size": 1159,
+      "sha256": "4cbdfb94ac7457f16f57aa282c1c5a7972819dd18ff34fb94e0cd817c5280080"
+    },
+    {
+      "path": "tests/test_audio_capture.py",
+      "size": 819,
+      "sha256": "716fe156f1278939ddd6087d0f3fb04515350d898bfb2b21aac4e196d93aa9a5"
+    },
+    {
+      "path": "tests/test_audio_comparison.py",
+      "size": 1443,
+      "sha256": "66cf0ef69f071c0e4419453d6286d85929e5b5d723c00ea2c8ea9ad61f7e50a7"
+    },
+    {
+      "path": "tests/test_audio_synthesis.py",
+      "size": 6857,
+      "sha256": "3c7fdc01f8edab795f9d1081be7ede90c3461da99838e5ed05c369355e3c4404"
+    },
+    {
+      "path": "tests/test_audio_ties.py",
+      "size": 3301,
+      "sha256": "52900e3fd0cc890316c1a0a67031011f10141418df0529feb9b5905149196f0a"
+    },
+    {
+      "path": "tests/test_audio_voices.py",
+      "size": 2898,
+      "sha256": "fb75678905ea1a152cb83dadd03bed3fb120dbb2844aabf6154e0748f704f6c4"
+    },
+    {
       "path": "tests/test_backgrounds.py",
       "size": 5478,
       "sha256": "1b49b99fac7e5a706bb0802e2a5dace4aa5bddabedf461c297c02875f4b024dd"
+    },
+    {
+      "path": "tests/test_campaign_audit.py",
+      "size": 5222,
+      "sha256": "f8a23480b1cf27adc37512eadcf4088c71dacbb932662f309629333c0cf719ad"
+    },
+    {
+      "path": "tests/test_campaign_progression.py",
+      "size": 9100,
+      "sha256": "bb055c8d713befad56db5edea9bf04f8c066f0d56e5d9213f82479309cd9ab19"
     },
     {
       "path": "tests/test_connection_plans.py",
@@ -1298,14 +2121,19 @@
       "sha256": "7cf4e9089975058656b9e904ea35c48b9c313ce0fefff42ce079053bfd93df94"
     },
     {
+      "path": "tests/test_custom_room.py",
+      "size": 5320,
+      "sha256": "0aa9bbb127b84dd3e903eb6e05c43f508104c0d2d25973383385b5e12e27f409"
+    },
+    {
       "path": "tests/test_editor_docs.py",
       "size": 11095,
       "sha256": "a2b43c70795ce722735e6c981458eca8dbe97425843549883c6679d4f07f06fa"
     },
     {
       "path": "tests/test_enemies.py",
-      "size": 6284,
-      "sha256": "b2d6d26fcbb927ad8c643b654b984f71e6d4f82e4c4aca377d1e5cc096fcb2b0"
+      "size": 7206,
+      "sha256": "4b1cc38fc3f0ab17dd6071a9ab80bb0c22b5c033b1ee635839b46ac2ab26d8e5"
     },
     {
       "path": "tests/test_equipment.py",
@@ -1338,9 +2166,49 @@
       "sha256": "19632d65b603e94ae30f86124a8e2b805b87b6fe2a94e39872a632a573130881"
     },
     {
+      "path": "tests/test_music.py",
+      "size": 5843,
+      "sha256": "40f1e80760ba5b1f9ca472a490f373bf2dc48727ecdf945693fb6dee1e445920"
+    },
+    {
+      "path": "tests/test_music_envelopes.py",
+      "size": 3096,
+      "sha256": "be8761ec200c2c1023deadec91c44bac00c3ec48db95d497f4258c5d1c081518"
+    },
+    {
+      "path": "tests/test_music_instruments.py",
+      "size": 3829,
+      "sha256": "c230f9989471de0c5b8c91e6c6b08cf4b2e3973e42f85bd03fd263d6a16538cf"
+    },
+    {
+      "path": "tests/test_music_samples.py",
+      "size": 3450,
+      "sha256": "7b6eb16b0eeb8b1e03f69712c4cc2fd2d90cb85952fe21f92a7d72f2ed835415"
+    },
+    {
+      "path": "tests/test_music_tracks.py",
+      "size": 3683,
+      "sha256": "8d9273adbe5e8ef8922360c2d77fe67d0a1166a52f05ddc107f8c30b83cc6f4d"
+    },
+    {
+      "path": "tests/test_native_events.py",
+      "size": 2144,
+      "sha256": "9fcbf9801b3ce2b7f180b2f0dcb6c138d4733c10f8f0500522d3b4dd552269ab"
+    },
+    {
+      "path": "tests/test_progression_traces.py",
+      "size": 4409,
+      "sha256": "b0654641aea92282c3ad13e4a9d44517ca83397d53ed51b113e399a06fd3cfd0"
+    },
+    {
+      "path": "tests/test_projectiles.py",
+      "size": 4209,
+      "sha256": "7bd9857c82e09180100d5f2559402c5322dbf25b5c1be435dd36c07d93b9c4b3"
+    },
+    {
       "path": "tests/test_projects.py",
-      "size": 8808,
-      "sha256": "124939915dd37111f7cfc38191cb69249de2daf8df67118e3dab1a68da1c0266"
+      "size": 22898,
+      "sha256": "232cd5cac057a7ea334555c2c2e19768851e6c429b29cc00acf640fe4d79ab52"
     },
     {
       "path": "tests/test_rendering.py",
@@ -1354,8 +2222,8 @@
     },
     {
       "path": "tests/test_room_assets.py",
-      "size": 7193,
-      "sha256": "805402ddeef54596163990bbb83414f5f2ddd975f9b2624fdb47b44575c172de"
+      "size": 8342,
+      "sha256": "75b4747f625364f157376562f3e1c6964fbbe74a2224cdc2a6545b742503ebbb"
     },
     {
       "path": "tests/test_room_catalog.py",
@@ -1371,6 +2239,21 @@
       "path": "tests/test_room_states.py",
       "size": 2140,
       "sha256": "ad53e796753df374d8d3da362b61140ad28f055b265d26585aac5d6b9606c16a"
+    },
+    {
+      "path": "tests/test_soul_gate_abilities.py",
+      "size": 1511,
+      "sha256": "20f0860b26ac3cc169a46254c4fe5ce75c0fc800e6365c9096c867095db31c38"
+    },
+    {
+      "path": "tests/test_soul_projectiles.py",
+      "size": 10057,
+      "sha256": "3e9b020fa89df0e448ffd9942fdd0dc160c1e6dfbbcf4440efa52fb538fee4a2"
+    },
+    {
+      "path": "tests/test_souls.py",
+      "size": 2297,
+      "sha256": "d44df0627c263170093dbe58586d396a3bdb136fc1dc6e8092bea472e320ddbb"
     },
     {
       "path": "tests/test_sprite_assets.py",
@@ -1538,7 +2421,7 @@
     "abilities",
     "framework"
   ],
-  "framework_version": "0.38.0-foundation",
+  "framework_version": "0.54.0-foundation",
   "rendering": {
     "passed": [
       "native graphics chunk loads match preview resource mapping",
@@ -3384,5 +4267,99 @@
         "HP set to zero to trigger native death; no graphics/OAM/palette writes"
       ]
     }
+  },
+  "bridge_art": {
+    "status": "bridge_art_native_passed",
+    "output_sha256": "d86932c9a1ab8c860c2846e67acc29ec3e67f11b64c8324acbac829f36b95762",
+    "fixture_sha256": "37d54310833a79985f3842536929480eb582a3a186997479d1cf4d2c36059a36",
+    "changed_cells": [
+      54,
+      55,
+      56,
+      57,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93
+    ],
+    "samples": [
+      {
+        "stage": "entry",
+        "room_address": 139522708,
+        "state": 4,
+        "substate": 1,
+        "world_x": 11,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "east-to-nine",
+        "room_address": 139523316,
+        "state": 4,
+        "substate": 1,
+        "world_x": 7,
+        "world_y": 1439,
+        "hp": 278
+      },
+      {
+        "stage": "west-through-five-to-25",
+        "room_address": 139525868,
+        "state": 4,
+        "substate": 1,
+        "world_x": 231,
+        "world_y": 159,
+        "hp": 278
+      },
+      {
+        "stage": "east-through-five-to-nine",
+        "room_address": 139523316,
+        "state": 4,
+        "substate": 1,
+        "world_x": 7,
+        "world_y": 1439,
+        "hp": 278
+      },
+      {
+        "stage": "return",
+        "room_address": 139522708,
+        "state": 4,
+        "substate": 1,
+        "world_x": 504,
+        "world_y": 159,
+        "hp": 278
+      }
+    ],
+    "passed": [
+      "22 isolated room5 cells unchanged from the bridge-route design",
+      "metatile 6 visual reskinned onto imported chunk 24 / palette bank 8; all other visual bytes preserved",
+      "room5 collision stream byte-identical",
+      "imported tiles and palette load exactly at native VRAM 0x0600C000 and 0x05000100",
+      "input-only complete room5 crossing in both directions over the reskinned deck",
+      "exact art reload on natural room5 return",
+      "original unchanged"
+    ],
+    "fixtures": [
+      "checked hallway entry redirects to room5 upper bridge using its lower-left door record and upper spawn; separate private harness",
+      "no position, velocity, ability, HP, collision, graphics or palette RAM writes"
+    ],
+    "limitations": [
+      "harness entry differs from playable campaign route",
+      "neighbor network campaign/event access and full world not certified",
+      "no save statue on the bridge branch; lifecycle covered by the main-route examples"
+    ]
   }
 }

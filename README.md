@@ -2,7 +2,48 @@
 
 ![Tactical Soul Framework banner](assets/tsf_banner.png)
 
-**Status: v0.38.0-foundation — about 32% complete (32.0/100 on the tracked roadmap).**
+**Status: v0.54.0-foundation - about36% complete (35.8/100 on the tracked roadmap).**
+Original boot melodies support checked notes/repeats and confined mono8 WAV
+instruments, with native waveform, pitch, silence, exhaustion and selected
+menu/new-game/pause-resume evidence;
+484 tests pass. Melodies support four simultaneous tracks sharing eight original
+WAV instruments, with authored attack/decay/sustain/release settings, rests and
+shorter gates. Native controls cover selected envelope and isolated/mixed windows.
+Selected multitrack scene takeover passes; the Start-button sound probe is
+unresolved. Tear-style soul abilities with gameplay SFX remain unfinished; a
+bounded Winged Skeleton cast trace names two cast-correlated actors (soul code
+at slot 2, companion at slot 3, frames +7..+61, twin-identical) with no
+render/damage/SFX proof yet; record words 16/17 grow in both slots and are the
+prime position candidates: all monotonic over 27 samples at similar cross-slot
+rates, steady but not constant, scale unproven. The cast rewrites OAM entries
+0–8 and replaces OBJ palette 2 against a zero-change idle control, with stale
+state persisting after despawn. A zombie-room hit attempt shows unreliable
+casting (two 0-MP fizzles before one live cast, cause open) and a +1 EXP kill
+of an unidentified victim — a sword-kill control now matches the +1 EXP payout
+and places the burst codes in the zombie kill-remnant class, giving first
+kill-level projectile attribution without per-hit HP proof. A follow-up HP hunt
+found the per-hit confirm flag (slot 29 word 4) but not the HP word itself. The
+cast's tile set is now concrete (tiles 146/150/272/400/668, the 912–943 region
+and OBJ palette 2) for a future reskin. First casts fizzle (0 MP) regardless of range — the gate is count-based
+(2 early fizzles, then late fizzle-then-fire), so bindings must budget ~3
+presses per real cast; hold-length variants (1/5/15 frames) all fizzle, so the
+gate counts presses, not held input. Equal-length audio windows show a
+cast-attributed difference (1.75x peak / 1.7x RMS over a flat idle control)
+in mixed BGM+SFX output — no isolated SFX yet. First decompiler evidence
+pins the soul actor (`FUN_08026008`: spawn/fly/burst/cleanup states), its
+companion follower, the position/velocity record map (words 9/10 and 16/17),
+and the spawn sound (`0xe4` through global dispatcher `FUN_080d7910`, 652
+callers); zombie per-hit damage pinned at 22 single-frame (n=2; supersedes clamped 18→0) with `total_damage`/`casts_to_kill` helpers, while the damage formula damage = (45−DEF)//2 holds on three DEFs (1→22, 10→17, 5→20; soul follows facing but the skeleton still escapes — velocity/mailbox check next; descriptor 27 out as raw damage) and write permission stays open.
+See [soul decompilation](docs/SOUL-DECOMPILE.md). A slot-2 HP track came back negative (slash flashes only)
+— victim identity must come from the attributed code set, not guessed slots. The
+attributed holder (slot 30) carries no HP at word or halfword granularity —
+but behaviorally one live soul cast kills the zombie where the sword needs
+8–31 rolls.
+See [soul projectile trace](docs/SOUL-PROJECTILE-TRACE.md).
+Project modules retain single ownership and fingerprints.
+Soul-cost, room/art and ability examples remain available.
+Broad audio lifecycle, generic soul grants and total conversions remain unfinished.
+See [WAV instruments](docs/MUSIC-SAMPLES.md) and [boot melodies](docs/BOOT-MELODY.md).
 This is a working modding foundation for Castlevania: Aria of Sorrow (GBA, USA
 revision 0), not a finished editor. The goal is broad modding support; what's here
 now is a solid core of records, checked patches, allocation, room/entity/door
@@ -12,6 +53,12 @@ still ahead.
 
 ## What you can build today
 
+- **Original WAV instrument** - import a checked mono8 sample for a boot melody (`examples/imported-melody`).
+
+- **Original boot melodies** � author checked notes and finite repeats with original sine PCM (`examples/boot-melody`, `examples/boot-melody-loop`).
+
+- **Soul cost tuning** � checked Winged Skeleton MP cost with unchanged native acquisition (`examples/soul-cost`).
+
 - **Balance and economy remixes** — retune weapons, enemy stats and EXP, and
   item drops through named records with guard rails (`examples/enemy-workshop`,
   `examples/equipment-workshop`).
@@ -20,7 +67,11 @@ still ahead.
 - **Room experiments** — move enemies within a room, reconnect existing doors,
   repaint terrain in registered rooms, import original tiles and palettes
   (`examples/room-workshop`, `examples/geometry-workshop`,
-  `examples/original-room-art`, `examples/bridge-route`, `examples/three-room-art`).
+  `examples/original-room-art`, `examples/bridge-route`, `examples/bridge-art`,
+  `examples/three-room-art`).
+- **Flesh sanctuary** — start in a flesh-themed save room, exit right into a
+  zombie corridor, with red statue/save particles/zombies
+  ([custom_room](examples/custom_room/README.md)).
 - **Cosmetic sprite swap** — replace the shared bats/clouds art with your own
   indexed pixels (`examples/sky-invaders`).
 - **Original item icons** — draw new icons on registered pages
@@ -275,7 +326,7 @@ See [Connection planning](docs/CONNECTION-PLANNING.md) for the isolated existing
 
 ## v0.21 terrain discovery and living handoff
 
-[Terrain support discovery](docs/TERRAIN-SUPPORT.md) adds paginated main-layer diagnostics and loaded brush IDs. The original 343-slot survey finds 4 registered, 311 static candidates and 28 blocked rooms; candidates are not write grants. Ongoing work is tracked in [handoff notes](handoffprompt.md), refreshed with `scripts/update_handoff.py` ahead of each inventory/package refresh.
+[Terrain support discovery](docs/TERRAIN-SUPPORT.md) adds paginated main-layer diagnostics and loaded brush IDs. The original 343-slot survey finds 4 registered, 311 static candidates and 28 blocked rooms; candidates are not write grants. Ongoing work is tracked in [handoff notes](handoff.md), refreshed with `scripts/update_handoff.py` ahead of each inventory/package refresh.
 
 
 ## v0.22 project composition
